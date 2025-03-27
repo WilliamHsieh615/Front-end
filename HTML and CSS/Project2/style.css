@@ -1,0 +1,284 @@
+/* css reset 清除樣式 */
+/* ---------------css reset頭--------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ---------------css reset尾--------------- */
+/* ---------------固定盒模型模式--------------- */
+/* *,*:before,*:after{
+    box-sizing: border-box;
+} */
+/* ---------------固定盒模型模式--------------- */
+/* ---------------除錯模式--------------- */
+/* *{
+    outline: 1px solid black;
+} */
+/* ---------------除錯模式--------------- */
+
+.wrap{
+	margin: auto;
+	width: 1024px;
+}
+
+.bar{
+	background: rgb(244,244,244);
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	padding: 10px;
+}
+.bar li a{
+	text-decoration: none;
+	font-size: 18px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.bar li span{
+	margin-left: 5px;
+}
+.fb{
+	border-right: 2px solid gray;
+}
+
+.head{
+	display: flex;
+	margin: 20px 10px 30px;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu{
+	display: flex;
+}
+
+.menu li{
+	width: 100px;
+	text-align: center;
+}
+
+.menu li a{
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	color: gray;
+}
+
+.menu a:hover{
+	text-decoration: 3px underline;
+	text-underline-offset: 10px;
+}
+
+.picture{
+	width: 1002px;
+	height: 346px;
+	background-image: url(/image/banner.png);
+	display: flex;
+	align-items: center;
+}
+.picture a{
+	text-decoration: none;
+}
+.picture ul{
+	color: white;
+	font-size: 30px;
+	width: 1002px;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: rgba(0,0,0,0.5);
+}
+.picture li{
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+
+.main{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.course{
+	display: flex;
+	justify-content: space-around;
+
+
+}
+.item{
+	border-left: 1px solid rgb(245,245,245);
+    border-bottom: 2px solid rgb(216,216,216);
+    border-top: 1px solid rgb(245,245,245);
+    border-right: 1px solid rgb(245,245,245);
+	width: 300px;
+	padding: 10px;
+	
+}
+.item h2{
+	text-align: center;
+	font-size: 20px;
+	margin: 10px;
+	
+}
+.item p{
+	line-height: 1.5;
+}
+.item ul{
+	list-style-type: disc;
+	padding-left: 20px;
+	line-height: 1.5;
+}
+
+.tail{
+	display: flex;
+	justify-content: space-between;
+	color:gray;
+	margin: 30px 10px 20px 10px;
+	align-items: center;
+}
+.info a{
+	text-decoration: none;
+	color: gray;
+}
+.info li{
+	margin-bottom: 10px;
+}
+
+.tableStyle{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.tableStyle h2{
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 25px;
+}
+
+.tableinner{
+	margin: auto;
+	width: 800px;
+	height: 200px;
+}
+
+.tableinner th, .tableinner td {
+	text-align: left;
+	border-top: 1px solid rgb(245,245,245);
+	border-bottom: 1px solid rgb(245,245,245);
+	padding-top: 5px;
+	padding-left: 10px;
+}
+
+.tableinner th{
+	background-color: rgb(247,247,247);
+}
+
+.formStyle{
+	width: 1000px;
+	padding-top: 30px;
+	background: linear-gradient(#00644b,#009771);
+}
+
+.formStyle h2{
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	width: 200px;
+	margin: auto;
+	line-height: 1.5;	
+}
+.forminner {
+	height: 300px;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.forminner span{
+	position: absolute;
+	right: 20px;
+	bottom: 30px;
+}
+.forminner span input{
+	height: 30px;
+	width: 60px;
+	color:white;
+	background: rgb(88,192,146);
+	border-radius: 5px;
+}
+
+.forminner ul{
+	display: flex;
+	flex-direction:column;
+	height: 200px;
+	color: white;
+}
+
+.forminner ul input{
+	width: 450px;
+	height: 25px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.forminner span input{
+	border: none;
+}
+
+.forminner span input:hover{
+    background: rgb(140,220,178);
+}
+
+.forminner span input:active{
+    color: black;
+}
+
+.a {
+	cursor: pointer;
+}
+
+
