@@ -72,7 +72,7 @@ table {
 	justify-content: flex-end;
 	align-items: center;
 	height: 32px;
-	padding-right: 300px;
+	padding-right: 200px;
 }
 .bar a {
 	text-decoration: none;
@@ -254,6 +254,8 @@ table {
 	height: 200px;
 	border: 1px solid #AAAAAA;
 	border-radius: 3px;
+	resize: none;
+	overflow: hidden;
 }
 .formMain span input {
 	color: #fff;
