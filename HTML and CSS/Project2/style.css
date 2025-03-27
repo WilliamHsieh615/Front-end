@@ -249,6 +249,14 @@ table {
 	color:white;
 	background: rgb(88,192,146);
 	border-radius: 5px;
+	border: none;
+}
+.forminner span input:hover{
+    background: rgb(140,220,178);
+}
+
+.forminner span input:active{
+    color: black;
 }
 
 .forminner ul{
@@ -265,17 +273,10 @@ table {
 	margin-bottom: 10px;
 }
 
-.forminner span input{
-	border: none;
+.forminner textarea{
+	resize: none;
 }
 
-.forminner span input:hover{
-    background: rgb(140,220,178);
-}
-
-.forminner span input:active{
-    color: black;
-}
 
 .a {
 	cursor: pointer;
