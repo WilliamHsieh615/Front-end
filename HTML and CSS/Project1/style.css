@@ -244,6 +244,7 @@ table {
 	border: 1px solid #AAAAAA;
 	border-radius: 3px;
 	margin-bottom: 10px;
+	text-indent: 5px;
 }
 .formMain .formQA .forminner2 {
 	display: flex;
