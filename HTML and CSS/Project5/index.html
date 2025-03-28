@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="index.html" class="page">
+
+        <div class="wrap">
+
+            <h1>會員基本資料</h1>
+            <p>*為必填欄位</p>
+
+            <table class="profile">
+
+                <tr>
+                    <td><span>*</span></td>
+                    <th>
+                        <label for="name">姓名</label>
+                    </th>
+                    <td>
+                        <input id="name" type="text" placeholder="請輸入姓名" name="name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span>*</span></td>
+                    <th>
+                        <label for="male">性別</label>
+                    </th>
+                    <td>
+                        <input id="male" type="radio" name="sex" value="male">
+                        <label for="male">男生</label>
+                        <input id="female" type="radio" name="sex" value="female">
+                        <label for="female">女生</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span>*</span></td>
+                    <th>
+                        <label for="phone">聯絡電話</label>
+                    </th>
+                    <td>
+                        <input id="phone" type="tel" placeholder="請輸入聯絡電話" name="phone" pattern="(^(\+886|0)[0-9\-]{6,10}$" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <th>
+                        <label for="mail">電子郵件</label>
+                    </th>
+                    <td>
+                        <input id="mail" type="email" placeholder="請輸入電子郵件" name="mail">
+                    </td>
+                </tr>
+                <tr>
+                    <td><span>*</span></td>
+                    <th>
+                        <label for="birthday">生日</label>
+                    </th>
+                    <td>
+                        <input id="birthday" type="date" name="birthday" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <th>
+                        <label for="educational">教育程度</label>
+                    </th>
+                    <td>
+                        <select name="educational" id="educational">
+                            <option value="國小">國小</option>
+                            <option value="國中">國中</option>
+                            <option value="高中(高職)">高中(高職)</option>
+                            <option value="五專">五專</option>
+                            <option value="大學(四技)">大學(四技)</option>
+                            <option value="二技">二技</option>
+                            <option value="研究所">研究所</option>
+                            <option value="博士班">博士班</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <th>
+                        <label for="content">備注</label>
+                    </th>
+                    <td>
+                        <textarea name="content" id="content" cols="30" rows="5"></textarea>
+                    </td>
+                </tr>
+    
+            </table>
+            <ul class="listStyle">
+                <li>
+                    <input id="policy" type="checkbox" name="term" value="policy" required>
+                    <span>*</span><label for="policy">我已仔細閱讀<a href="privacy-policy.pdf" target="_blank">『隱私政策』</a>，並同意</label>
+                </li>
+                <li>
+                    <input id="info" type="checkbox" name="term" value="info"><label for="info" class="infoWord">我願意接收優惠訊息通知</label>
+                </li>
+            </ul>
+            <div class="buttonStyle">
+                <input type="submit" value="送出">
+                <input type="reset" value="清除">
+            </div>
+
+        </div>
+
+    </form>
+    
+</body>
+</html>

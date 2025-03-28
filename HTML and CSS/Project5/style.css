@@ -1,0 +1,142 @@
+/* css reset 清除樣式 */
+/* ---------------css reset頭--------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ---------------css reset尾--------------- */
+/* ---------------固定盒模型模式--------------- */
+/* *,*:before,*:after{
+    box-sizing: border-box;
+} */
+/* ---------------固定盒模型模式--------------- */
+/* ---------------除錯模式--------------- */
+/* *{
+    outline: 1px solid black;
+} */
+/* ---------------除錯模式--------------- */
+
+.wrap{
+	width: 800px;
+	margin: auto;
+	background: white;
+}
+.wrap h1{
+	font-size: 30px;
+	text-align: center;
+	padding: 30px;
+	
+}
+.wrap p{
+	margin: auto;
+	text-align: right;
+	width: 500px;
+	color: red;
+}
+.profile{
+	margin: auto;
+	width: 500px;
+	margin-bottom: 30px;
+	text-align: left;
+}
+
+.profile th {
+    vertical-align: middle;
+    padding-right: 10px;
+	line-height: 30px;
+}
+
+.profile td {
+    vertical-align: middle;
+}
+
+.profile textarea{
+	resize: none;
+	overflow: hidden;
+}
+
+.listStyle{
+	margin: auto;
+	width: 500px;
+}
+.listStyle li{
+	margin-bottom: 10px;
+}
+.listStyle li a{
+	text-decoration: none;
+	font-weight: bold;
+}
+.buttonStyle{
+	width: 500px;
+	margin: auto;
+	text-align: right;
+	padding-bottom: 30px;
+}
+.buttonStyle input{
+	background-color: skyblue;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+}
+.buttonStyle input:hover {
+    background-color: blue;
+}
+.buttonStyle input:active{
+    color: black;
+}
+
+.a {
+	cursor: pointer;
+}
+.wrap span{
+	color: red;
+}
+.listStyle .infoWord{
+	color: black;
+	margin-left: 13px;
+}
