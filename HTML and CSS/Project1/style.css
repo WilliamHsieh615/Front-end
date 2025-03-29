@@ -71,8 +71,7 @@ table {
     display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	height: 32px;
-	padding-right: 200px;
+	padding: 8px 200px 8px 0px;
 }
 .bar a {
 	text-decoration: none;
@@ -90,11 +89,11 @@ table {
 }
 
 .headerFooter {
-	height: 76px;
 	margin: auto;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	margin: 20px 0px 20px;
 }
 .headerFooter .menu {
 	width: 250px;
@@ -141,11 +140,9 @@ table {
 .main{
 	display: flex;
 	justify-content: space-between;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	margin: 50px 0px 50px;
 }
 .main .course {
-	width: 350px;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -153,7 +150,7 @@ table {
     flex-direction: column;
     align-items: center;
 	justify-content: flex-end;
-    padding: 20px 0;
+    padding: 20px 20px;
 }
 .main .course .jQuery {
 	margin-bottom: 30px;
@@ -180,7 +177,6 @@ table {
 
 .tableStyle {
 	width: 920px;
-	height: 305px;
 	margin: auto;
 	margin-bottom: 50px;
 }
@@ -193,7 +189,7 @@ table {
 .tableStyle tr {
 	border-top: 1px solid #CCCCCC;
 	border-bottom: 1px solid #CCCCCC;
-	line-height: 1.5;
+	line-height: 40px;
 }
 .tableStyle th {
 	text-align: left;
@@ -211,7 +207,6 @@ table {
 
 .formMain {
 	background: linear-gradient(#E4FFF8,#A2DDCE);
-	height: 455px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -223,6 +218,7 @@ table {
 	line-height: 1.2;
 	width: 240px;
 	text-align: center;
+	margin: 30px 0px 30px;
 }
 .formMain .formQA {
 	display: flex;
@@ -265,6 +261,7 @@ table {
 	height: 38px;
 	border: 1px solid #00251A;
 	border-radius: 3px;
+	margin: 30px 0px 30px;
 }
 .formMain span input:hover{
 	background: #AAAAAA;
