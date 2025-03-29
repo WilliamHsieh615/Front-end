@@ -225,6 +225,7 @@ table {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	gap: 30px;
 }
 .formMain .formQA label {
 	line-height: 1.5;
@@ -233,10 +234,10 @@ table {
 .formMain .formQA .forminner1 {
 	display: flex;
 	flex-direction: column;
-	margin-right: 30px;
+	/* margin-right: 30px; */
 }
 .formMain .formQA .forminner1 input {
-	width: 351px;
+	width: 350px;
 	height: 38px;
 	border: 1px solid #AAAAAA;
 	border-radius: 3px;
@@ -246,6 +247,7 @@ table {
 .formMain .formQA .forminner2 {
 	display: flex;
 	flex-direction: column;
+	/* margin-left: 30px; */
 }
 .formMain .formQA .forminner2 textarea {
 	width: 350px;
