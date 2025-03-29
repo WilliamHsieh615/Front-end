@@ -50,9 +50,9 @@ table {
 }
 /* ---------------css reset尾--------------- */
 /* ---------------固定盒模型模式--------------- */
-/* *,*:before,*:after{
+*,*:before,*:after{
     box-sizing: border-box;
-} */
+}
 /* ---------------固定盒模型模式--------------- */
 /* ---------------除錯模式--------------- */
 /* *{
@@ -60,14 +60,9 @@ table {
 } */
 /* ---------------除錯模式--------------- */
 
-.wrap {
-    width: 1110px;
-    margin: auto;
-}
-
 .bar {
     background: #F6F6F8;
-	margin: auto;
+	margin: 0 auto;
     display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -77,6 +72,9 @@ table {
 	text-decoration: none;
 	font-size: 16px;
 	color: #4267B2;
+}
+.bar a:hover{
+	color: pink;
 }
 .bar img {
 	vertical-align: bottom;
@@ -89,7 +87,7 @@ table {
 }
 
 .headerFooter {
-	margin: auto;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -139,7 +137,8 @@ table {
 
 .main{
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: center;
 	margin: 50px 0px 50px;
 }
 .main .course {
@@ -151,6 +150,7 @@ table {
     align-items: center;
 	justify-content: flex-end;
     padding: 20px 20px;
+	margin: 20px 20px;
 }
 .main .course .jQuery {
 	margin-bottom: 30px;
@@ -176,8 +176,7 @@ table {
 }
 
 .tableStyle {
-	width: 920px;
-	margin: auto;
+	margin: 0 auto;
 	margin-bottom: 50px;
 }
 .tableStyle caption h2 {
@@ -192,6 +191,7 @@ table {
 	line-height: 40px;
 }
 .tableStyle th {
+	width: 230px;
 	text-align: left;
 	font-weight: bold;
 	vertical-align: middle;
@@ -273,9 +273,11 @@ table {
 .headerFooter .info li {
 	line-height: 1.5;
 }
-
 .headerFooter .info li a {
 	text-decoration: none;
 	color: #00CC99;
+}
+.headerFooter .info li a:hover{
+	color: blue;
 }
 
