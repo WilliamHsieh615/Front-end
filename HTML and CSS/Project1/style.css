@@ -314,6 +314,9 @@ img{
 	color: #00251A;
 }
 
+.headerFooter .info{
+	margin-left: 20px;
+}
 .headerFooter .info li {
 	line-height: 1.5;
 }
