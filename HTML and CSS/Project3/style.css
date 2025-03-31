@@ -1,4 +1,5 @@
-/* ---------------css reset--------------- */
+/* ==============================<<Mode>>============================== */
+/* ---------------css reset start--------------- */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -47,31 +48,35 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* ---------------css reset--------------- */
-/* ---------------固定盒模型模式--------------- */
+/* ---------------css reset end--------------- */
+/* ---------------fix box-sizing--------------- */
 *,*:before,*:after{
     box-sizing: border-box;
 }
-/* ---------------固定盒模型模式--------------- */
-/* ---------------圖片自適應模式--------------- */
+/* ---------------fix box-sizing--------------- */
+/* ------------auto-resizing image------------ */
 img{
 	max-width: 100%;
 	height: auto;
 }
-/* ---------------圖片自適應模式--------------- */
-/* ---------------除錯模式--------------- */
+/* ------------auto-resizing image------------ */
+/* -------------------debug------------------- */
 /* *{
     outline: 1px solid black;
 } */
-/* ---------------除錯模式--------------- */
+/* -------------------debug------------------- */
+/* ==============================<<Mode>>============================== */
 
-/* ---------------共用-------------- */
 
+
+/* --------------------common start-------------------- */
+/* ----------wrap---------- */
 .wrap {
 	margin: 0 auto;
 	max-width: 1024px;
 }
-
+/* ----------wrap---------- */
+/* ----------bar---------- */
 .bar {
 	height: 76px;
 	background-color: #4A4A4A80;
@@ -114,7 +119,17 @@ img{
         padding: 20px;
     }
 }
-
+/* ----------bar---------- */
+/* ----------header---------- */
+.header{
+	width: 100%;
+	height: 560px;
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* ----------header---------- */
+/* ----------footer---------- */
 .footer {
 	height: 132px;
 	background: rgb(50, 50, 41);
@@ -147,16 +162,97 @@ img{
 	height: 32px;
 	display: block;
 }
+/* ----------footer---------- */
+/* ----------h2---------- */
+h2{
+	font-size: 36px;
+	color: #00CC99;
+}
+h2 .text {
+	font-size: 20px;
+	color: #9B9B9B;
+	margin-left: 10px;
+}
+/* ----------h2---------- */
+/* ----------arrowButton---------- */
+.arrowButton{
+	width: 226px;
+	height: 58px;
+	font-size: 20px;
+	color: #FFFFFF;
+	background: #00CC99;
+	text-align: center;
+	line-height: 58px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+.arrowButton:hover{
+	background: gray;
+}
+.arrow{
+	margin-left: 20px;
+}
+/* ----------arrowButton---------- */
+/* ----------form---------- */
+.form{
+	background-color: #EBEBEB;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.form .context {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+.form .context p{
+	color: #323223;
+	font-size: 30px;
+	font-family: PingFang TC;
+	line-height: 1.2;
+}
+.form .formStyle{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 20px;
+}
+.form .formStyle input{
+	display: block;
+	width: 460px;
+	height: 56px;
+	color: #9B9B9B;
+	font-size: 20px;
+	font-family: PingFang TC;
+	text-indent: 10px;
+	border: none;
+	border-radius: 5px;
+}
+.form .formStyle button{
+	width: 140px;
+	height: 51px;
+	background: #00CC99;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-family: PingFang TC;
+	border: none;
+	border-radius: 5px;
+	letter-spacing: 20px;
+	text-indent: 20px;
+	cursor: pointer;
+}
+.form .formStyle button:hover{
+	background: gray;
+}
+/* ----------form---------- */
+/* ---------------------common end--------------------- */
 
-/* ---------------index--------------- */
+/* --------------------index start-------------------- */
 
 .indexHeader{
 	background-image: url(image/bg_index.png);
-	width: 100%;
-	height: 560px;
-	background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 .indexHeader .headerObject {
 	height: 484px;
@@ -164,33 +260,15 @@ img{
 	flex-direction: column;
 	justify-content: center;
 	gap:50px;
+	padding-left: 30px;
 }
 .indexHeader .headerObject p {
 	color: #00CC99;
 	font-size: 48px;
 	line-height: 1.2;
-	padding-left: 30px;
 }
 .indexHeader .headerObject .word {
 	color: #FFFFFF;
-}
-.indexHeader .headerObject a {
-	width: 226px;
-	height: 62px;
-	font-size: 20px;
-	color: #FFFFFF;
-	background: #00CC99;
-	text-align: center;
-	line-height: 62px;
-	text-decoration: none;
-	border-radius: 5px;
-	margin-left: 30px;
-}
-.indexHeader .headerObject a:hover{
-	background: gray;
-}
-.indexHeader .headerObject .button{
-	margin-left: 20px;
 }
 @media (max-width: 510px) {    
     .indexHeader .headerObject {
@@ -218,14 +296,7 @@ img{
 	margin: 60px 0;
 }
 .indexMain h2{
-	font-size: 36px;
-	color: #00CC99;
 	margin: 0 0 50px 50px;
-}
-.indexMain h2 .text {
-	font-size: 20px;
-	color: #9B9B9B;
-	margin-left: 10px;
 }
 .indexMain a{
 	text-decoration: none;
@@ -297,65 +368,17 @@ img{
 
 .indexForm{
 	height: 390px;
-	background-color: #EBEBEB;
-	display: flex;
-	justify-content: space-around;
-}
-.indexForm .context {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 20px;
-}
-.indexForm .context p{
-	color: #323223;
-	font-size: 30px;
-	line-height: 1.2;
-	font-family: PingFang TC;
-}
-.indexForm .formStyle{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-end;
-	gap: 20px;
-}
-
-.indexForm .formStyle input{
-	display: block;
-	width: 460px;
-	height: 56px;
-	color: #9B9B9B;
-	font-size: 20px;
-	font-family: PingFang TC;
-	text-indent: 10px;
-	border: none;
-	border-radius: 5px;
-}
-
-.indexForm .formStyle button{
-	width: 140px;
-	height: 51px;
-	background: #00CC99;
-	color: #FFFFFF;
-	font-size: 20px;
-	font-family: PingFang TC;
-	border: none;
-	border-radius: 5px;
-	letter-spacing: 20px;
-	text-indent: 20px;
-}
-.indexForm .formStyle button:hover{
-	background: gray;
 }
 @media (max-width: 850px) {
 	.indexForm {
         flex-direction: column;
         padding: 20px;
     }
-    
-    .indexForm .formStyle input {
+    .indexForm .formStyle, .indexForm .formStyle input{
         width: 100%;
+    }
+	.indexForm .formStyle button {
+        width: auto;
     }
 }
 @media (max-width: 430px) {
@@ -363,42 +386,279 @@ img{
 		font-size: 20px;
 	}
 }
+/* --------------------index end-------------------- */
 
-/* ---------------course--------------- */
+/* --------------------course start-------------------- */
 
 .courseHeader{
-
+	background-image: url(image/bg_course.png);
+	position: relative;
+}
+.courseHeader::before{
+	position: absolute;
+	content: "";
+	background-image: url(image/html.png);
+	width: 94px;
+	height: 132px;
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	top: 100px;
+	right: 150px;
+}
+.courseHeader::after{
+	position: absolute;
+	content: "";
+	background-image: url(image/CSS.png);
+	width: 94px;
+	height: 132px;
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	top: 100px;
+	right: 50px;
+}
+.courseHeader .headerObject {
+	height: 484px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap:50px;
+	padding-left: 30px;
+}
+.courseHeader .headerObject p {
+	color: #FFFFFF;
+	font-size: 48px;
+	line-height: 0.8;
+}
+.courseHeader .headerObject p span {
+	color: #00CC99;
+	font-size: 24px;
+}
+@media (max-width: 800px) {
+    .courseHeader .headerObject p {
+        font-size: 32px;
+    }
+}
+@media (max-width: 481px) {
+    .courseHeader::before, .courseHeader::after{
+        top: 130px;
+    }
+}
+@media (max-width: 360px) { 
+    .courseHeader .headerObject p, .courseHeader .headerObject p span {
+        font-size: 20px;
+        line-height: 1.5;
+    }
 }
 
 .courseMain {
+	max-width: 620px;
+	margin: 50px auto;
+	padding: 0 10px;
+}
+.courseMain .introduce {
+	display: flex;
+	align-items: center;
+	gap: 36px;
+}
+.courseMain .introduce .photo{
+	width: 155px;
+	height: 155px;
+	border-radius: 50%;
+	background-image: url(image/teacher2.png);
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.courseMain .introduce h1{
+	font-size: 36px;
+	font-family: PingFang TC;
+	line-height: 1.5;
+	color: #00CC99;
+}
+.courseMain .introduce h1 span{
+	color: #323228;
 
 }
-
-.courseContent {
-
+.courseMain .introduce ul{
+	line-height: 1.5;
+	list-style-type: disc;
+	font-family: PingFang TC;
 }
+.courseMain .content h2, .courseMain .listStyle h2{
+	margin: 50px 0 30px;
+}
+.courseMain .content ol{
+	list-style-type: decimal;
+	padding-left: 20px;
+	line-height: 1.5;
+}
+.courseMain .listStyle li{
+	height: 60px;
+	line-height: 60px;
+	text-indent: 30px;
+}
+.courseMain .listStyle .odd{
+	background: #EBEBEB;
+}
+
 
 .courseForm {
-
+	height: 396px;
 }
-
-.courseArticle {
-
+.courseForm a{
+	display: block;
 }
+@media (max-width: 600px) {
+	.courseForm {
+        flex-direction: column;
+    }
+}
+@media (max-width: 400px) {
+	.courseForm .context p{
+		font-size: 20px;
+	}
+	.courseForm a {
+		width: 60%;
+	}
+}
+/* --------------------course end-------------------- */
 
-/* ---------------QA--------------- */
+/* --------------------QA start-------------------- */
 
 .QAHeader{
+	background-image: url(image/bg_QA.png);
+}
+.QAHeader .headerObject{
+	height: 484px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	position: relative;
+	text-align: center;
+}
+.QAHeader .headerObject p {
+	color: #FFFFFF;
+	font-size: 48px;
+	line-height: 1.2;
+}
+.QAHeader .headerObject p span {
+	color: #00CC99;
+	font-size: 24px;
+}
+.QAHeader .headerObject .search {
+    position: relative;
+    width: 620px;
+}
 
+.QAHeader .headerObject input {
+	width: 100%;
+	height: 52px;
+	border: none;
+	border-radius: 5px;
+	padding: 0 50px 0 20px;
+	font-size: 20px;
+}
+.QAHeader .headerObject button{
+	position: absolute;
+	background: none;
+	border: none;
+	cursor: pointer;
+	top: 10px;
+	right: 10px;
+}
+.QAHeader .headerObject button img {
+    width: 28px;
+    height: 28px;
+}
+@media (max-width: 650px) {
+    .QAHeader .headerObject p {
+        font-size: 36px;
+    }
+    .QAHeader .headerObject p span {
+        font-size: 20px;
+    }
+    .QAHeader .headerObject .search {
+        width: 90%;
+    }
+    .QAHeader .headerObject input {
+        font-size: 18px;
+    }
+    .QAHeader .headerObject button img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.QAMain {
+	max-width: 780px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	padding: 0 10px;
+}
+.QAMain h2{
+	margin: 50px 0 30px;
+}
+.QAMain a{
+	text-decoration: none;
+	color: #9B9B9B;
+}
+.QAMain .odd{
+	font-size: 20px;
+	color: #323223;
+	font-family: PingFang TC;
+	line-height: 3;
+}
+.QAMain .even{
+	color: #9B9B9B;
+	font-family: PingFang TC;
+	line-height: 2;
+}
+
+.QAMain .pay .payList li {
+	list-style-type: decimal;
+	margin-left: 20px;
+}
+.QAMain .refund .refundList li {
+	list-style-type: disc;
+	margin-left: 20px;
 }
 
 
-QAMain {
-
+.QAForm {
+    height: 591px;
+}
+.QAForm textarea {
+	width: 460px;
+	height: 202px;
+	font-size: 20px;
+	line-height: 1.2;
+	color: #9B9B9B;
+	font-family: PingFang TC;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	resize: none;
+	overflow: hidden;
+}
+@media (max-width: 950px) {
+	.QAForm {
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px) {
+	.QAForm .context p{
+		font-size: 20px;
+	}
+	.QAForm .formStyle {
+		padding: 20px;
+	}
+	.QAForm .formStyle, .QAForm .formStyle input, .QAForm .formStyle textarea{
+        width: 100%;
+	}
 }
 
-.QAArticle {
-    
-}
-
-
+/* --------------------QA end-------------------- */
