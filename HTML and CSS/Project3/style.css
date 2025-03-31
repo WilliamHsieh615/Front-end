@@ -270,7 +270,7 @@ h2 .text {
 .indexHeader .headerObject .word {
 	color: #FFFFFF;
 }
-@media (max-width: 510px) {    
+@media (max-width: 550px) {    
     .indexHeader .headerObject {
         padding: 20px;
         text-align: left;
@@ -381,7 +381,7 @@ h2 .text {
         width: auto;
     }
 }
-@media (max-width: 430px) {
+@media (max-width: 450px) {
 	.indexForm .context p{
 		font-size: 20px;
 	}
@@ -445,7 +445,7 @@ h2 .text {
         top: 130px;
     }
 }
-@media (max-width: 360px) { 
+@media (max-width: 400px) { 
     .courseHeader .headerObject p, .courseHeader .headerObject p span {
         font-size: 20px;
         line-height: 1.5;
