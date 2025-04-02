@@ -162,6 +162,10 @@ img{
 	height: 32px;
 	display: block;
 }
+.footerMenu a:hover{
+	transform: scale(1.2);
+  	transition: transform 0.5s;
+}
 /* ----------footer---------- */
 /* ----------h2---------- */
 h2{
@@ -335,6 +339,11 @@ h2 .text {
 	text-align: center;
 	border-radius: 5px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.indexMain .course li:hover{
+	transform: scale(1.1);
+  	transition: transform 0.5s;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .indexMain .course li h3{
 	font-size: 20px;
