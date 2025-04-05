@@ -474,10 +474,13 @@ img{
 	align-items: center;
 	gap: 36px;
 }
-@media (max-width: 520px) {
+@media (max-width: 530px) {
 	.courseMain .introduce {
         flex-direction: column;
     }
+	.courseMain h1{
+		text-align: center;
+	}
 }
 .courseMain .introduce .photo{
 	width: 155px;
