@@ -456,6 +456,9 @@ img{
 	color: rgba(0, 0, 0, 0.3);
 	z-index: 10;
 }
+.up:hover{
+	color: black;
+}
 .down{
 	font-size: 50px;
 	position: fixed;
@@ -463,6 +466,9 @@ img{
 	right: 50px;
 	color: rgba(0, 0, 0, 0.3);
 	z-index: 10;
+}
+.down:hover{
+	color: black;
 }
 
 .ad{
