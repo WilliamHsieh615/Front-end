@@ -345,6 +345,7 @@ img{
 .forminner ul{
 	display: flex;
 	flex-direction:column;
+	justify-content: center;
 	align-items: flex-end;
 	color: white;
 	line-height: 20px;
@@ -353,8 +354,7 @@ img{
 	display: block;
 	width: 450px;
 	height: 38px;
-	margin-top: 5px;
-	margin-bottom: 10px;
+	margin: 5px 0 10px;
 	text-indent: 10px;
 	padding-right: 20px;
 }
@@ -373,41 +373,36 @@ img{
     color: black;
 }
 @media (max-width: 1000px) {
-    .formStyle{
-		width: 80%;
-		padding: 20px;
-	}
-}
-@media (max-width: 900px) {
-    .formStyle{
-		width: 80%;
-		padding: 20px;
+	.forminner{
+		margin: 0 20px;
 	}
 	.forminner ul input{
-		width: 300px;
-	}
-	.forminner textarea{
-		width: 100%;
+		width: 400px;
 	}
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .forminner {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		margin-top: 20px;
 	}
-	.forminner ul input{
-		width: 300px;
+	.forminner ul {
+		width: 100%;
+		align-items: center;
 	}
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 	.formStyle h2{
 		width: 200px;
 		font-size: 20px;
 	}
-	.forminner ul input{
+	.forminner textarea{
 		width: 100%;
+	}
+	.forminner ul input{
+		width: 250px;
 	}
 }
 
