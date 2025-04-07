@@ -50,11 +50,6 @@ $(document).ready(function () {
         $('.ad').toggleClass('animate__animated animate__hinge');
     });
 
-    // $('.adTitle').click(function (e) { 
-    //     e.preventDefault();
-    //     $('.message').addClass('show');
-    // });
-
     $('.adTitle').click(function (e) {
         e.preventDefault();
         $(".message .one, .message .two, .message .three, .message .fa-xmark").hide();
