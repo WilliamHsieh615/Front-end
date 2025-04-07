@@ -496,8 +496,8 @@ img{
 	opacity:0.8;
 }
 .ad .adTitle:hover{
-	background: red;
 	color: yellow;
+	opacity:1;
 }
 .ad .cencel{
 	display: block;
@@ -511,6 +511,9 @@ img{
 	position: absolute;
 	bottom: 0;
 	left: 0;
+}
+.ad .cencel:hover{
+	background: black;
 }
 .ad .fa-hand-pointer{
 	padding-right: 10px;
@@ -537,6 +540,7 @@ img{
 	color: red;
 	font-size: 50px;
 	line-height: 2;
+	
 }
 
 .message .fa-xmark{
@@ -546,6 +550,10 @@ img{
 	border: 5px solid white;
 	border-radius: 25%;
 	margin-top: 100px;
+}
+.message .fa-xmark:hover{
+	color: blue;
+	border: 5px solid blue;
 }
 .message.show{
 	opacity: 0.8;
