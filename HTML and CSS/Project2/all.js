@@ -61,6 +61,12 @@ $(document).ready(function () {
         $('.message').remove();
     });
 
+    $('.header .menu .product').click(function (e) { 
+        e.preventDefault();
+        $('.list').toggleClass('add');
+        $(this).toggleClass('active');
+        
+    });
 
 
 

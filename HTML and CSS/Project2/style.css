@@ -73,7 +73,7 @@ img{
 }
 
 .bar{
-	background: rgb(244,244,244);
+	background: #EBEBEB;
 	display: flex;
 	justify-content: right;
 	align-items: center;
@@ -119,11 +119,59 @@ img{
 	padding: 10px;
 	text-decoration: none;
 	text-align: center;
-	color: gray;
+	color: rgb(156,156,156);
 }
 .header .menu li a:hover{
 	text-decoration: 3px underline;
 	text-underline-offset: 10px;
+	color: gray;
+}
+.header .menu .fa-circle-down{
+	margin-left: 3px;
+}
+
+.list{
+	display: flex;
+	justify-content: center;
+	align-items:start;
+	gap: 100px; 
+	background: #EBEBEB;
+	padding: 30px 0;
+	display: none;
+}
+.list.add{
+	display: flex;
+}
+.list li{
+	display: flex;
+	justify-content: left;
+	align-items:start;
+	gap:50px;
+	line-height: 2;
+}
+.list li h2{
+	writing-mode:vertical-lr;
+	font-size: 20px;
+	color: rgb(156,156,156);
+}
+.list li a{
+	text-decoration: none;
+	color: rgb(156,156,156);
+}
+.list li a:hover, .header .menu .product.active{
+	text-decoration: 3px underline;
+	text-underline-offset: 8px;
+	color: gray;
+}
+@media (max-width: 720px) {
+    .list{
+		gap: 30px; 
+	}
+}
+@media (max-width: 650px) {
+    .list{
+		flex-wrap: wrap;
+	}
 }
 
 .picture{
@@ -176,12 +224,27 @@ img{
 	right: 50px;
 	z-index: 5;
 }
-
 .picture .swiper .swiper-pagination-bullet{
 	background: white;
 	width: 16px;
     height: 16px;
 }
+@media (max-width: 600px) {
+    .picture .text{
+		top: 30%;
+	}
+	.picture .badge .html5, .picture .badge .css3{
+		display: none;
+	}
+}
+@media (max-width: 500px) {
+    .picture .text{
+		height: 100%;
+		top:0;
+		font-size: 20px;
+	}
+}
+
 
 .main{
 	margin-top: 20px;
@@ -227,6 +290,7 @@ img{
 .tableStyle{
 	margin-top: 50px;
 	margin-bottom: 50px;
+	padding: 0 10px;
 }
 .tableStyle h2{
 	text-align: center;
@@ -251,9 +315,9 @@ img{
 
 .formStyle{
 	background: linear-gradient(#00644b,#009771);
+	margin: 0 auto;
 	padding: 50px 0;
 }
-
 .formStyle h2{
 	text-align: center;
 	font-size: 24px;
@@ -276,6 +340,7 @@ img{
 	border-radius: 3px;
 	resize: none;
 	overflow: hidden;
+	padding: 10px;
 }
 .forminner ul{
 	display: flex;
@@ -307,6 +372,44 @@ img{
 .forminner .enter:active{
     color: black;
 }
+@media (max-width: 1000px) {
+    .formStyle{
+		width: 80%;
+		padding: 20px;
+	}
+}
+@media (max-width: 900px) {
+    .formStyle{
+		width: 80%;
+		padding: 20px;
+	}
+	.forminner ul input{
+		width: 300px;
+	}
+	.forminner textarea{
+		width: 100%;
+	}
+}
+@media (max-width: 700px) {
+    .forminner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.forminner ul input{
+		width: 300px;
+	}
+}
+@media (max-width: 400px) {
+	.formStyle h2{
+		width: 200px;
+		font-size: 20px;
+	}
+	.forminner ul input{
+		width: 100%;
+	}
+}
 
 .footer{
 	display: flex;
@@ -315,6 +418,7 @@ img{
 	margin: 30px 10px 20px 10px;
 	align-items: center;
 }
+
 .footer .logo{
 	background: url(image/Logo.png) no-repeat center;
     background-size: cover;
@@ -334,6 +438,14 @@ img{
 }
 .footer .info a:hover{
 	color: black;
+}
+@media (max-width: 450px) {
+	.footer{
+		display: block;
+	}
+	.footer .logo{
+		margin-bottom: 20px;
+	}
 }
 
 .up{
@@ -423,11 +535,13 @@ img{
 
 .message .fa-xmark{
 	font-size: 50px;
-	color: red;
+	color: white;
 	cursor: pointer;
+	border: 5px solid white;
+	border-radius: 25%;
+	margin-top: 100px;
 }
 .message.show{
 	opacity: 0.8;
 	z-index: 10;
 }
-
