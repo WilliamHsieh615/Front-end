@@ -245,7 +245,6 @@ img{
 	}
 }
 
-
 .main{
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -297,10 +296,10 @@ img{
 	margin-bottom: 30px;
 	font-size: 24px;
 }
-.tableinner{
+.tableStyle .tableinner{
 	margin: 0 auto;
 }
-.tableinner th, .tableinner td {
+.tableStyle .tableinner th, .tableStyle .tableinner td {
 	width: 230px;
 	height: 42px;
 	text-align: left;
@@ -309,8 +308,11 @@ img{
 	vertical-align: middle;
 	padding-left: 10px;
 }
-.tableinner th{
+.tableStyle .tableinner th{
 	background-color: rgb(247,247,247);
+}
+.tableStyle .tableinner span{
+	color: #00CC99;
 }
 
 .formStyle{
@@ -326,14 +328,16 @@ img{
 	margin: 0 auto;
 	line-height: 1.5;	
 }
-.forminner {
+.formStyle .forminner {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	gap: 30px;
 	margin: 20px 0;
+	padding: 0 20px;
 }
-.forminner textarea{
+.formStyle .forminner textarea{
 	width: 450px;
 	height: 250px;
 	border: 1px solid #AAAAAA;
@@ -342,68 +346,43 @@ img{
 	overflow: hidden;
 	padding: 10px;
 }
-.forminner ul{
+.formStyle .forminner ul{
 	display: flex;
 	flex-direction:column;
 	justify-content: center;
-	align-items: flex-end;
 	color: white;
 	line-height: 20px;
-}
-.forminner ul input{
-	display: block;
+	padding-bottom: 30px;
+	position: relative;
 	width: 450px;
+}
+.formStyle .forminner ul label{
+	display: block;
+}
+.formStyle .forminner ul input{
+	display: block;
+	width: 100%;
 	height: 38px;
 	margin: 5px 0 10px;
 	text-indent: 10px;
 	padding-right: 20px;
 }
-.forminner .enter{
+.formStyle .forminner .enter{
 	height: 30px;
 	width: 60px;
 	color:white;
 	background: rgb(88,192,146);
-	border-radius: 5px;
 	border: none;
+	border-radius: 5px;
+	position: absolute;
+	bottom: -10px;
+	right: 0;
 }
-.forminner .enter:hover{
+.formStyle .forminner .enter:hover{
     background: rgb(140,220,178);
 }
-.forminner .enter:active{
+.formStyle .forminner .enter:active{
     color: black;
-}
-@media (max-width: 1000px) {
-	.forminner{
-		margin: 0 20px;
-	}
-	.forminner ul input{
-		width: 400px;
-	}
-}
-@media (max-width: 800px) {
-    .forminner {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin-top: 20px;
-	}
-	.forminner ul {
-		width: 100%;
-		align-items: center;
-	}
-}
-@media (max-width: 500px) {
-	.formStyle h2{
-		width: 200px;
-		font-size: 20px;
-	}
-	.forminner textarea{
-		width: 100%;
-	}
-	.forminner ul input{
-		width: 250px;
-	}
 }
 
 .footer{
