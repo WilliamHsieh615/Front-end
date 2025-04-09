@@ -61,15 +61,22 @@ table {
 /* ---------------除錯模式--------------- */
 
 .wrap{
-	width: 800px;
-	margin: auto;
-	background: white;
+	max-width: 800px;
+	margin: 0 auto;
 }
-.wrap h1{
+
+.pure-form.pure-form-aligned .pure-form.pure-form-stacked .pure-g{
+	display: flex;
+}
+
+
+
+
+
+/* .wrap h1{
 	font-size: 30px;
 	text-align: center;
 	padding: 30px;
-	
 }
 .wrap p{
 	margin: auto;
@@ -139,4 +146,4 @@ table {
 .listStyle .infoWord{
 	color: black;
 	margin-left: 13px;
-}
+} */

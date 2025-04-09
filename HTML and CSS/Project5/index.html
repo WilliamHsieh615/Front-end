@@ -2,115 +2,192 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="Content-language" content="zh-tw">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>會員基本資料</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.0/dist/tw-city-selector.min.js"></script>
+
+    <script src="all.js"></script>
+
+    
+
 </head>
 <body>
 
-    <form action="index.html" class="page">
+    <div class="wrap">
 
-        <div class="wrap">
+        <form class="pure-form pure-form-aligned" action="index.html">
 
             <h1>會員基本資料</h1>
-            <p>*為必填欄位</p>
+            <p><span class="pure-form-message-inline">*</span>為必填欄位</p>
 
-            <table class="profile">
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="name"><span class="pure-form-message-inline">*</span>姓名</label>
+                    <input id="name" type="text" placeholder="請輸入姓名" name="name" required />
+                </div>
+                
+                <div class="pure-control-group">
+                    <label for="display"><span class="pure-form-message-inline">*</span>性別</label>
+                    <label for="male" class="pure-radio">
+                        <input id="male" type="radio" name="sex" checked="" value="male" />男性
+                    </label>
+                    <label for="female" class="pure-radio">
+                        <input id="female" type="radio" name="sex" value="female" />女性
+                    </label>
+                    <label for="display" class="pure-radio">
+                        <input id="display" type="radio" name="sex" value="display" checked />不透露
+                    </label>
+                </div>
 
-                <tr>
-                    <td><span>*</span></td>
-                    <th>
-                        <label for="name">姓名</label>
-                    </th>
-                    <td>
-                        <input id="name" type="text" placeholder="請輸入姓名" name="name" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span>*</span></td>
-                    <th>
-                        <label for="male">性別</label>
-                    </th>
-                    <td>
-                        <input id="male" type="radio" name="sex" value="male">
-                        <label for="male">男生</label>
-                        <input id="female" type="radio" name="sex" value="female">
-                        <label for="female">女生</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span>*</span></td>
-                    <th>
-                        <label for="phone">聯絡電話</label>
-                    </th>
-                    <td>
-                        <input id="phone" type="tel" placeholder="請輸入聯絡電話" name="phone" pattern="(^(\+886|0)[0-9\-]{6,10}$" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <th>
-                        <label for="mail">電子郵件</label>
-                    </th>
-                    <td>
-                        <input id="mail" type="email" placeholder="請輸入電子郵件" name="mail">
-                    </td>
-                </tr>
-                <tr>
-                    <td><span>*</span></td>
-                    <th>
-                        <label for="birthday">生日</label>
-                    </th>
-                    <td>
-                        <input id="birthday" type="date" name="birthday" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <th>
-                        <label for="educational">教育程度</label>
-                    </th>
-                    <td>
-                        <select name="educational" id="educational">
-                            <option value="國小">國小</option>
-                            <option value="國中">國中</option>
-                            <option value="高中(高職)">高中(高職)</option>
-                            <option value="五專">五專</option>
-                            <option value="大學(四技)">大學(四技)</option>
-                            <option value="二技">二技</option>
-                            <option value="研究所">研究所</option>
-                            <option value="博士班">博士班</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <th>
-                        <label for="content">備注</label>
-                    </th>
-                    <td>
-                        <textarea name="content" id="content" cols="30" rows="5"></textarea>
-                    </td>
-                </tr>
-    
-            </table>
-            <ul class="listStyle">
-                <li>
-                    <input id="policy" type="checkbox" name="term" value="policy" required>
-                    <span>*</span><label for="policy">我已仔細閱讀<a href="privacy-policy.pdf" target="_blank">『隱私政策』</a>，並同意</label>
-                </li>
-                <li>
-                    <input id="info" type="checkbox" name="term" value="info"><label for="info" class="infoWord">我願意接收優惠訊息通知</label>
-                </li>
-            </ul>
-            <div class="buttonStyle">
-                <input type="submit" value="送出">
-                <input type="reset" value="清除">
+                <div class="pure-control-group">
+                    <label for="birthday"><span class="pure-form-message-inline">*</span>生日</label>
+                    <input id="birthday" type="date" name="birthday" required />
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="phone"><span class="pure-form-message-inline">*</span>聯絡電話</label>
+                    <input id="phone" type="tel" placeholder="請輸入聯絡電話" name="phone" pattern="(^(\+886|0)[0-9\-]{6,10}$" required />
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="mail">電子郵件</label>
+                    <input id="mail" type="email" placeholder="請輸入電子郵件" name="mail" />
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="educational">教育程度</label>
+                    <select name="educational" id="educational">
+                        <option value="國小">國小</option>
+                        <option value="國中">國中</option>
+                        <option value="高中(高職)">高中(高職)</option>
+                        <option value="五專">五專</option>
+                        <option value="大學(四技)">大學(四技)</option>
+                        <option value="二技">二技</option>
+                        <option value="研究所">研究所</option>
+                        <option value="博士班">博士班</option>
+                    </select>
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="content">備注</label>
+                    <textarea name="content" id="content" cols="30" rows="5"></textarea>
+                </div>
+
+                    
+                <div id="tw-selector" class="pure-form pure-form-stacked">
+                    <label>地址</label>
+                  
+                    <div class="pure-g">
+                        <!-- 郵遞區號 -->
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <label for="zipcode">郵遞區號</label>
+                            <input id="zipcode" type="text" class="zipcode pure-input-1" name="zipcode" readonly />
+                        </div>
+                
+                        <!-- 縣市 -->
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <label for="county">縣市</label>
+                            <select id="county" class="county pure-input-1" name="county"></select>
+                        </div>
+                
+                        <!-- 鄉鎮市區 -->
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <label for="district">鄉鎮市區</label>
+                            <select id="district" class="district pure-input-1" name="district"></select>
+                        </div>
+                    </div>
+                
+                    <!-- 地址細節 -->
+                    <div class="pure-u-1">
+                        <label for="address-detail">地址細節</label>
+                        <input type="text" class="pure-input-1" name="address-detail" required />
+                    </div>
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="username"><span class="pure-form-message-inline">*</span>帳號</label>
+                    <input id="username" type="text" placeholder="請輸入帳號" />
+                </div>
+                <div class="pure-control-group">
+                    <label for="password"><span class="pure-form-message-inline">*</span>密碼</label>
+                    <input id="password" type="password" placeholder="請輸入密碼" />
+                </div>
+
+                <ul class="listStyle">
+                    <li>
+                        <input id="policy" type="checkbox" name="term" value="policy" required>
+                        <span>*</span><label for="policy">我已仔細閱讀<a href="privacy-policy.pdf" target="_blank">『隱私政策』</a>，並同意</label>
+                    </li>
+                    <li>
+                        <input id="info" type="checkbox" name="term" value="info"><label for="info" class="infoWord">我願意接收優惠訊息通知</label>
+                    </li>
+                </ul>
+
+                <div class="buttonStyle">
+                    <input type="submit" value="送出">
+                    <input type="reset" value="清除">
+                </div>
+  
+            </fieldset>
+        </form>
+
+        <form class="pure-form pure-form-stacked">
+    <fieldset>
+        <legend>Legend</legend>
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-1-3">
+                <label for="multi-first-name">First Name</label>
+                <input id="multi-first-name" class="pure-u-23-24" type="text" />
             </div>
-
+            <div class="pure-u-1 pure-u-md-1-3">
+                <label for="multi-last-name">Last Name</label>
+                <input id="multi-last-name" class="pure-u-23-24" type="text" />
+            </div>
+            <div class="pure-u-1 pure-u-md-1-3">
+                <label for="multi-email">E-Mail</label>
+                <input id="multi-email" class="pure-u-23-24" type="email" required="" />
+            </div>
+            <div class="pure-u-1 pure-u-md-1-3">
+                <label for="multi-city">City</label>
+                <input id="multi-city" class="pure-u-23-24" type="text" />
+            </div>
+            <div class="pure-u-1 pure-u-md-1-3">
+                <label for="multi-state">State</label>
+                <select id="multi-state" class="pure-input-1-2">
+                    <option>AL</option>
+                    <option>CA</option>
+                    <option>IL</option>
+                </select>
+            </div>
         </div>
+        <label for="multi-terms" class="pure-checkbox">
+            <input id="multi-terms" type="checkbox" /> I&#x27;ve read the terms and conditions
+        </label>
+        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+    </fieldset>
+</form>
 
-    </form>
+        <script>
+            new TwCitySelector({
+              el: '#tw-selector',
+              elCounty: '.county',
+              elDistrict: '.district',
+              elZipcode: '.zipcode'
+            });
+        </script>
+        
+    </div>  
+    
     
 </body>
 </html>
