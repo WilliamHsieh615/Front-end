@@ -45,27 +45,21 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).toggleClass('animate__animated animate__flip');
     });
-    $('.ad .adTitle').click(function (e) { 
+
+    function slideText(className, text, delay) {
+        $(className).hide().text(text).delay(delay).slideDown();
+      }
+      
+      $('.ad .adTitle').click(function (e) {
         e.preventDefault();
         $('.ad').toggleClass('animate__animated animate__hinge');
-    });
-
-    $('.adTitle').click(function (e) {
-        e.preventDefault();
         $(".message .one, .message .two, .message .three, .message .fa-xmark").hide();
         $('.message').addClass('show');
-        $(".message .one")
-        .text("Sorry...您錯過優惠了...")
-        .delay(2000).slideDown();
-        $(".message .two")
-        .text("下次請早")
-        .delay(3000).slideDown();
-        $(".message .three")
-        .text("請原價購買")
-        .delay(4000).slideDown();
-        $(".fa-solid.fa-xmark")
-        .delay(5000).slideDown();
-    });
+        slideText(".message .one", "Sorry...您錯過優惠了...", 2000);
+        slideText(".message .two", "下次請早", 3000);
+        slideText(".message .three", "請原價購買", 4000);
+        $(".fa-solid.fa-xmark").delay(5000).slideDown();
+      });
 
     $('.message .fa-xmark').click(function (e) { 
         e.preventDefault();
