@@ -61,90 +61,87 @@ table {
 /* ---------------除錯模式--------------- */
 
 .wrap{
-    width: 1302px;
-    height: 932px;
-    margin: auto;
-    background: rgb(112,241,174);
-    display: flex;
-    align-items: center;
+	max-width: 800px;
+	margin: auto;
+	padding: 0 10px;
 }
-.title{
-    display: flex;
-    color: rgb(31,77,65);
-    margin-left: 128px;
-    margin-right: 88px;
+.formStyle{
+	margin: 50px 0;
+	padding: 30px;
+	border-radius: 8px;
+  	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap:20px;
+	
 }
-.title h1{
-    writing-mode: vertical-lr;
-    font-size: 60px;
-    margin-right: 25px;
+h1{
+	font-size: 2em;
+	text-align: center;
+	margin: 30px 0;
 }
-.title p{
-    writing-mode: vertical-lr;
-    font-size: 30px;
-    margin-top: 10px;
-    letter-spacing: 10px;
-    font-weight: bold;
+p{
+	margin: 10px 0;
+
 }
-.card{
-    width: 717px;
-    height: 419px;
-    background: rgb(237,237,237);
-    display: flex;
-    flex-direction:column;
-    justify-content: space-between;
-    border-radius: 15px;
-    font-weight: bold;
-    padding: 35px;
-    overflow:hidden;
-    position:relative;
-    box-shadow: 0px 0px 20px gray ;
+span{
+	color: red;
+	font-size: 20px;
+	padding-right: 3px;
 }
-.card img{
-    width: 180px;
-    height: auto;
+
+.sex label[for="male"],
+.sex label[for="female"],
+.sex label[for="third"]{
+	width: 68px;
+	text-align: left;
+	margin: 10px 0;
 }
-.card p{
-    font-size: 30px;
-    color: rgb(73,118,128);
-    margin-left: 10px;
+
+.address .address-style .item{
+	margin: 10px 0;
 }
-.card h2{
-    font-size: 40px;
-    color: rgb(39,93,76);
-    margin-left: 110px;
+
+.address .address-style input[id="address-detail"]{
+	width: 50%;
 }
-.card ul{
-    font-size: 20px;
-    color: rgb(82,131,141);
-    margin-left: 10px;
+
+.address select, .educational select{
+	height: 38px;
 }
-.card li{
-    margin-bottom: 2px;
+
+textarea{
+	width: 50%;
+	height: 200px;
+	resize: none;
+	overflow: hidden;
 }
-.box1,.box2,.box3{
-    clip-path:polygon(25% 0%, 75% 0%,100% 50%,75% 100%,25% 100%,0% 50%);
-    position:absolute
+
+@media (max-width: 480px){
+	.address .address-style input[id="address-detail"]{
+		width: 100%;
+	}
+	textarea{
+		width: 100%;
+	};
 }
-.box1{
-    width:256px;
-    height:220px;
-    background: rgb(87, 190, 127);
-    top:0px;
-    top: -60px;
-    right: -120px;
+
+.checkboxStyle input{
+	margin-right: 10px;
 }
-.box2{
-    width:200px;
-    height:170px;
-    background: rgb(134, 209, 170);
-    top: 170px;
-    right: -80px;
+.checkboxStyle input[id="policy"]{
+	margin-right 16px;
 }
-.box3{
-    width:150px;
-    height:128px;
-    background: rgb(114, 156, 146);
-    top: 100px;
-    right: 80px;
+.checkboxStyle input[id="info"]{
+	margin-right: 23px;
+}
+.checkboxStyle a{
+	text-decoration: none;
+}
+
+.buttonStyle{
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
 }
