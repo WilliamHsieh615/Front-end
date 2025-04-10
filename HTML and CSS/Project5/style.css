@@ -116,7 +116,7 @@ textarea{
 }
 
 @media (max-width: 480px){
-	.address input[id="address-detail"]{
+	.address .address-style input[id="address-detail"]{
 		width: 100%;
 	}
 	textarea{
