@@ -137,3 +137,9 @@ textarea{
 .checkboxStyle a{
 	text-decoration: none;
 }
+
+.buttonStyle{
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
