@@ -1,4 +1,4 @@
-<h1 style="color: blud; font-size: 30px;">六角學院前端課程作品</h1>
+<h1>六角學院前端課程作品</h1>
 
 <h2>HTML 5 + CSS 3</h2>
 
