@@ -73,7 +73,8 @@ table {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap:20px
+	gap:20px;
+	
 }
 h1{
 	font-size: 2em;
@@ -82,18 +83,20 @@ h1{
 }
 p{
 	margin: 10px 0;
+
 }
 span{
 	color: red;
 	font-size: 20px;
 	padding-right: 3px;
 }
+
 .sex label[for="male"],
 .sex label[for="female"],
-.sex label[for="third"] {
+.sex label[for="third"]{
 	width: 68px;
 	text-align: left;
-	margin-right: 0;
+	margin: 10px 0;
 }
 
 .address .address-style .item{
@@ -122,7 +125,6 @@ textarea{
 	textarea{
 		width: 100%;
 	};
-		
 }
 
 .checkboxStyle input{
