@@ -50,9 +50,9 @@ table {
 }
 /* ---------------css reset尾--------------- */
 /* ---------------固定盒模型模式--------------- */
-/* *,*:before,*:after{
+*,*:before,*:after{
     box-sizing: border-box;
-} */
+}
 /* ---------------固定盒模型模式--------------- */
 /* ---------------除錯模式--------------- */
 /* *{
@@ -62,88 +62,78 @@ table {
 
 .wrap{
 	max-width: 800px;
-	margin: 0 auto;
+	margin: auto;
+	padding: 0 10px;
 }
-
-.pure-form.pure-form-aligned .pure-form.pure-form-stacked .pure-g{
-	display: flex;
-}
-
-
-
-
-
-/* .wrap h1{
-	font-size: 30px;
-	text-align: center;
+.formStyle{
+	margin: 50px 0;
 	padding: 30px;
+	border-radius: 8px;
+  	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap:20px
 }
-.wrap p{
-	margin: auto;
-	text-align: right;
-	width: 500px;
+h1{
+	font-size: 2em;
+	text-align: center;
+	margin: 30px 0;
+}
+p{
+	margin: 10px 0;
+}
+span{
 	color: red;
+	font-size: 20px;
+	padding-right: 3px;
 }
-.profile{
-	margin: auto;
-	width: 500px;
-	margin-bottom: 30px;
+.sex label[for="male"],
+.sex label[for="female"],
+.sex label[for="third"] {
+	width: 68px;
 	text-align: left;
+	margin-right: 0;
 }
 
-.profile th {
-    vertical-align: middle;
-    padding-right: 10px;
-	line-height: 30px;
+.address .address-style .item{
+	margin: 10px 0;
 }
 
-.profile td {
-    vertical-align: middle;
+.address .address-style input[id="address-detail"]{
+	width: 50%;
 }
 
-.profile textarea{
+.address select, .educational select{
+	height: 38px;
+}
+
+textarea{
+	width: 50%;
+	height: 200px;
 	resize: none;
 	overflow: hidden;
 }
 
-.listStyle{
-	margin: auto;
-	width: 500px;
-}
-.listStyle li{
-	margin-bottom: 10px;
-}
-.listStyle li a{
-	text-decoration: none;
-	font-weight: bold;
-}
-.buttonStyle{
-	width: 500px;
-	margin: auto;
-	text-align: right;
-	padding-bottom: 30px;
-}
-.buttonStyle input{
-	background-color: skyblue;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	padding: 10px 20px;
-}
-.buttonStyle input:hover {
-    background-color: blue;
-}
-.buttonStyle input:active{
-    color: black;
+@media (max-width: 480px){
+	.address input[id="address-detail"]{
+		width: 100%;
+	}
+	textarea{
+		width: 100%;
+	};
+		
 }
 
-.a {
-	cursor: pointer;
+.checkboxStyle input{
+	margin-right: 10px;
 }
-.wrap span{
-	color: red;
+.checkboxStyle input[id="policy"]{
+	margin-right 16px;
 }
-.listStyle .infoWord{
-	color: black;
-	margin-left: 13px;
-} */
+.checkboxStyle input[id="info"]{
+	margin-right: 23px;
+}
+.checkboxStyle a{
+	text-decoration: none;
+}
