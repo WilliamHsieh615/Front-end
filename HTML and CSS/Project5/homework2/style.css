@@ -79,13 +79,15 @@ img{
 	width: 1138px;
 	height: 888px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	background: #FFFFFF;
+	gap: 12px;
+	padding: 8px;
 }
 .card1, .card2{
-	width: 555px;
-	height: 872px;
+	width: 50%;
+	height: 100%;
 	border-radius:12px;
 	background: #EAF0ED;
 	display: flex;

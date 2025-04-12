@@ -61,8 +61,98 @@ img{
 }
 /* ------------auto-resizing image------------ */
 /* -------------------debug------------------- */
-*{
+/* *{
     outline: 1px solid black;
-}
+} */
 /* -------------------debug------------------- */
 /* ==============================<<Mode>>============================== */
+
+body{
+	max-width: 1413px;
+	height: 966px;
+	margin: 0 auto;
+	background: #F5F5F5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+h2{
+	color: #3F5D45;
+	line-height: 1.4;
+}
+p{
+	font-size: 14px;
+	color: #3F5D45;
+	line-height: 1.4;
+}
+
+.wrap{
+	max-width: 1286px;
+	height: 814px;
+	margin: 0 auto;
+	background: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 42px;
+	padding: 8px 0;
+}
+.main1{
+	background: #EAF0ED;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 36px;
+	padding: 24px 28px;
+}
+.main1 .card{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 12px;
+}
+.main1 .card .content{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	padding: 8px 0;
+}
+.main2{
+	background: #EAF0ED;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 72px;
+	padding: 12px 40px;
+}
+.main2 .card{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+}
+.main3{
+	background: #EAF0ED;
+	border-radius: 6px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 28px;
+}
+.main3 .card{
+	display: flex;
+	gap: 12px;
+}
+.main3 .card .content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 12px;
+}
+
+

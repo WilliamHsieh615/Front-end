@@ -61,8 +61,33 @@ img{
 }
 /* ------------auto-resizing image------------ */
 /* -------------------debug------------------- */
-*{
+/* *{
     outline: 1px solid black;
-}
+} */
 /* -------------------debug------------------- */
 /* ==============================<<Mode>>============================== */
+
+body{
+	max-width: 985px;
+	height: 667px;
+	background: #F5F5F5;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.wrap{
+	background: #B3D4D1;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+p{
+	max-width: 351px;
+	font-size: 24px;
+	color: #FFFFFF;
+	line-height: 1.5;
+	letter-spacing: 3%;
+	padding: 0 56px;
+}

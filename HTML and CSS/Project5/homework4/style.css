@@ -90,39 +90,49 @@ body{
 	justify-content: space-between;
 }
 .header .menu{
-	font-size: 20px;
-	color: #3F5D45;
-	line-height: 1.2;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 12px;
 }
+.header .menu a{
+	display: block;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 1.2;
+	color: #3F5D45;
+}
+.header .menu a:hover{
+	text-decoration: underline 3px solid #3F5D45;
+	text-underline-offset: 10px;
+}
 .main{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
+	margin: 0 auto;
+	max-width: 608px;
 	line-height: 1.4;
 }
-.main h1{
+.main h3{
 	font-size: 20px;
-	width: 608px;
 }
 .main p{
-	width: 608px;
+	margin: 16px 0;
 }
 .footer{
 	background: #3F5D45;
 	padding: 16px 0;
 }
 .footer .list{
-	color: #FFFFFF;
-	line-height: 1.4;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 12px;
+}
+.footer .list a{
+	text-decoration: none;
+	color: #FFFFFF;
+	line-height: 1.4;
+}
+.footer .list a:hover{
+	color: black;
 }
 

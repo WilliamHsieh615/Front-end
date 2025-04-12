@@ -61,8 +61,92 @@ img{
 }
 /* ------------auto-resizing image------------ */
 /* -------------------debug------------------- */
-*{
+/* *{
     outline: 1px solid black;
-}
+} */
 /* -------------------debug------------------- */
 /* ==============================<<Mode>>============================== */
+
+body{
+	max-width: 450px;
+	height: 719px;
+	background: #F5F5F5;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrap{
+	max-width: 310px;
+	background: #FFFFFF;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 16px;
+	padding: 6px;
+}
+
+.order{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid #EAF0ED;
+}
+.order .title, .purchase .title{
+	height: 66px;
+	font-size: 24px;
+	text-align: center;
+	line-height: 66px;
+	color: #829886;
+	background: #EAF0ED;
+}
+.order .list{
+	line-height: 1.4;
+	color: #829886;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 16px;
+	gap: 8px;
+}
+.order .list li{
+	width: 266px;
+	display: flex;
+	justify-content: space-between;
+}
+.order .list .total{
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+.purchase{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.purchase .list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #EAF0ED;
+	gap: 16px;
+	padding: 16px;
+}
+.purchase .list .product{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.purchase .list .name{
+	line-height: 1.4;
+	color: #829886;
+	margin-bottom: 2px;
+}
+.purchase .list .price{
+	font-size: 20px;
+	line-height: 1.4;
+	color: #829886;
+}
