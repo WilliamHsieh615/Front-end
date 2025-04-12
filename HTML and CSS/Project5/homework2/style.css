@@ -70,6 +70,7 @@ img{
 .wrap{
 	max-width: 1313px;
 	height: 1062px;
+	margin: 0 auto;
 	background: #F5F5F5;
 	display: flex;
 	justify-content: center;
