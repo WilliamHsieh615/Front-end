@@ -80,10 +80,6 @@ body{
 .wrap{
 	max-width: 310px;
 	background: #FFFFFF;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 16px;
 	padding: 6px;
 }
 
@@ -94,7 +90,6 @@ body{
 	border: 1px solid #EAF0ED;
 }
 .order .title, .purchase .title{
-	height: 66px;
 	font-size: 24px;
 	text-align: center;
 	line-height: 66px;

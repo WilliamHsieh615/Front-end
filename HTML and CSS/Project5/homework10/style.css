@@ -97,17 +97,20 @@ body{
 	background-color: #FFFFFF;
 	border: 1px solid #EAF0ED;
 }
-.aside .list1{
+.aside h2 a{
 	background: #3F5D45;
 	color: #FFFFFF;
 }
-.aside .list2{
+.aside li a:hover{
 	background: #EAF0ED;
 }
 .main{
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
+}
+.main li img{
+	display: block;
 }
 .main li ul{
 	display: flex;
@@ -136,4 +139,8 @@ body{
 	line-height: 82px;
 	text-align: center;
 	background: #EAF0ED;
+}
+.main li a:hover{
+	background: #3F5D45;
+	color: #FFFFFF;
 }
