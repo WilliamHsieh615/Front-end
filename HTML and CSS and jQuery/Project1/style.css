@@ -485,6 +485,18 @@ img{
 	font-size: 20px;
 	position: relative;
 	opacity:0.8;
+	animation: blink 1s ease-in-out 0.5s infinite alternate;
+}
+@keyframes blink{
+	0%,
+    100% {
+        color: white;
+    }
+
+    50% {
+        color: yellow;
+		opacity:1;
+    }
 }
 .ad .adTitle:hover{
 	color: yellow;
