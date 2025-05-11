@@ -11,6 +11,5 @@
 
 ## HTML 5 + CSS 3 + jQuery
 
-- [六角學院網頁（Project1）](https://williamhsieh615.github.io/Front-end/HTML%20and%20CSS%20and%20jQuery/Project1/index.html)
-- [六角學院網頁（Project2）](https://williamhsieh615.github.io/Front-end/HTML%20and%20CSS%20and%20jQuery/Project2/index.html)
+- [六角學院網頁](https://williamhsieh615.github.io/Front-end/HTML%20and%20CSS%20and%20jQuery/Project1/index.html)
 
