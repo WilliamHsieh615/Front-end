@@ -1,0 +1,261 @@
+/* ====================<< Mode >>==================== */
+/* ========== CSS Reset Start (Meyer + Custom) ========== */
+
+/* --- Reset default styles for common HTML elements --- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* --- Ensure HTML5 elements are block-level --- */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* --- Set base line-height for body --- */
+body {
+	line-height: 1;
+}
+
+/* --- Remove default list styling --- */
+ol, ul {
+	list-style: none;
+}
+
+/* --- Remove default quote styling --- */
+blockquote, q {
+	quotes: none;
+}
+blockquote::before, blockquote::after,
+q::before, q::after {
+	content: '';
+	content: none;
+}
+
+/* --- Reset table spacing --- */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ========== CSS Reset End ========== */
+
+
+/* ========== Basic Utility Styles ========== */
+
+/* --- Set font-family for body --- */
+body {
+	font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+}
+
+/* --- Remove underline and default link color --- */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* --- Responsive image scaling --- */
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* --- Remove form element default styles --- */
+input, button, textarea, select {
+	font: inherit;
+	color: inherit;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+/* --- Show pointer cursor on buttons --- */
+button {
+	cursor: pointer;
+}
+
+/* --- Use border-box for all elements to include padding/border in size --- */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+/* ========== Debug Tools (for development only) ========== */
+
+/* --- Add 1px outline to all elements for layout debugging --- */
+/* * {
+	outline: 1px solid black;
+} */
+
+/* ====================<< Mode >>==================== */
+
+html,
+body {
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.container {
+    height: 100%;
+}
+
+.panel-manager {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.scroll-container {
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw * 4);
+    height: 100vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.scroll-container .panel {
+    flex: 0 0 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2rem;
+    
+}
+.scroll-container .panel .gallery-image {
+    max-width: 80%;
+    max-height: 70%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.scroll-container .panel .image-caption {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+:root{
+    --animation-primary: blink 1.5s infinite;
+    --color-primary: #555;
+}
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+#gallery-1_1, #gallery-1_2, #gallery-1_3, #gallery-1_4, #gallery-2_1, #gallery-2_2, #gallery-2_3, #gallery-2_4, #gallery-3_1, #gallery-3_2, #gallery-3_3, #gallery-3_4, #gallery-4_1, #gallery-4_2, #gallery-4_3, #gallery-4_4 {
+    position: relative;
+}
+.up-to-1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    animation: var(--animation-primary);
+    color: var(--color-primary);
+}
+.up-to-1 span {
+    display: block;
+    padding: 1rem;
+}
+.down-to-2, .down-to-3 , .down-to-4 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: var(--animation-primary);
+    color: var(--color-primary);
+}
+.down-to-2 span, .down-to-3 span, .down-to-4 span {
+    display: block;
+    padding: 1rem;
+}
+
+.scroll-btn-right-1_1, .scroll-btn-right-2_1, 
+.scroll-btn-right-3_1, .scroll-btn-right-4_1 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    animation: var(--animation-primary);
+    color: var(--color-primary);
+}
+.scroll-btn-right-1_1 span, .scroll-btn-right-2_1 span, 
+.scroll-btn-right-3_1 span, .scroll-btn-right-4_1 span {
+    padding: 0.5rem;
+}
+
+.scroll-btn-left-1_2, .scroll-btn-left-1_3, .scroll-btn-left-1_4, 
+.scroll-btn-left-2_2, .scroll-btn-left-2_3, .scroll-btn-left-2_4, 
+.scroll-btn-left-3_2, .scroll-btn-left-3_3, .scroll-btn-left-3_4,
+.scroll-btn-left-4_2, .scroll-btn-left-4_3, .scroll-btn-left-4_4 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    margin-left: 2rem;
+    animation: var(--animation-primary);
+    color: var(--color-primary);
+}
+.scroll-btn-right-1_2, .scroll-btn-right-1_3, 
+.scroll-btn-right-2_2, .scroll-btn-right-2_3, 
+.scroll-btn-right-3_2, .scroll-btn-right-3_3, 
+.scroll-btn-right-4_2, .scroll-btn-right-4_3 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    margin-right: 2rem;
+    animation: var(--animation-primary);
+    color: var(--color-primary);
+}
+
+
