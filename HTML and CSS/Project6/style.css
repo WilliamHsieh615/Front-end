@@ -106,6 +106,21 @@ button {
 
 /* ====================<< Mode >>==================== */
 
+:root{
+    --animation-primary: blink 1.5s infinite;
+    --color-primary: #555;
+    --color-secondary: #333;
+}
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
 html,
 body {
     height: 100%;
@@ -128,7 +143,7 @@ body {
 
 h2 {
     font-size: 3rem;
-    color: #333;
+    color: var(--color-secondary);
     margin-bottom: 1rem;
 }
 
@@ -164,27 +179,14 @@ h2 {
 .scroll-container .panel .image-caption {
     margin-top: 1rem;
     font-size: 1.5rem;
-    color: #333;
+    color: var(--color-secondary);
 }
 
-:root{
-    --animation-primary: blink 1.5s infinite;
-    --color-primary: #555;
-}
-@keyframes blink {
-    0%,
-    100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.3;
-    }
-}
 
-#gallery-1_1, #gallery-1_2, #gallery-1_3, #gallery-1_4, #gallery-2_1, #gallery-2_2, #gallery-2_3, #gallery-2_4, #gallery-3_1, #gallery-3_2, #gallery-3_3, #gallery-3_4, #gallery-4_1, #gallery-4_2, #gallery-4_3, #gallery-4_4 {
+.gallery {
     position: relative;
 }
-.up-to-1 {
+.up {
     position: absolute;
     top: 0;
     left: 50%;
@@ -195,11 +197,11 @@ h2 {
     animation: var(--animation-primary);
     color: var(--color-primary);
 }
-.up-to-1 span {
+.up span {
     display: block;
     padding: 1rem;
 }
-.down-to-2, .down-to-3 , .down-to-4 {
+.down {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -210,13 +212,12 @@ h2 {
     animation: var(--animation-primary);
     color: var(--color-primary);
 }
-.down-to-2 span, .down-to-3 span, .down-to-4 span {
+.down span {
     display: block;
     padding: 1rem;
 }
 
-.scroll-btn-right-1_1, .scroll-btn-right-2_1, 
-.scroll-btn-right-3_1, .scroll-btn-right-4_1 {
+.right {
     position: absolute;
     top: 50%;
     right: 0;
@@ -226,15 +227,11 @@ h2 {
     animation: var(--animation-primary);
     color: var(--color-primary);
 }
-.scroll-btn-right-1_1 span, .scroll-btn-right-2_1 span, 
-.scroll-btn-right-3_1 span, .scroll-btn-right-4_1 span {
+.right span {
     padding: 0.5rem;
 }
 
-.scroll-btn-left-1_2, .scroll-btn-left-1_3, .scroll-btn-left-1_4, 
-.scroll-btn-left-2_2, .scroll-btn-left-2_3, .scroll-btn-left-2_4, 
-.scroll-btn-left-3_2, .scroll-btn-left-3_3, .scroll-btn-left-3_4,
-.scroll-btn-left-4_2, .scroll-btn-left-4_3, .scroll-btn-left-4_4 {
+.scroll-btn-left {
     position: absolute;
     top: 50%;
     left: 0;
@@ -244,10 +241,7 @@ h2 {
     animation: var(--animation-primary);
     color: var(--color-primary);
 }
-.scroll-btn-right-1_2, .scroll-btn-right-1_3, 
-.scroll-btn-right-2_2, .scroll-btn-right-2_3, 
-.scroll-btn-right-3_2, .scroll-btn-right-3_3, 
-.scroll-btn-right-4_2, .scroll-btn-right-4_3 {
+.scroll-btn-right {
     position: absolute;
     top: 50%;
     right: 0;
@@ -256,6 +250,11 @@ h2 {
     margin-right: 2rem;
     animation: var(--animation-primary);
     color: var(--color-primary);
+}
+
+.up:hover, .down:hover, .right:hover, .scroll-btn-left:hover, .scroll-btn-right:hover {
+    color: var(--color-secondary);
+    animation: none;
 }
 
 
