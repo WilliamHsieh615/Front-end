@@ -11,7 +11,7 @@
 | Project 7 | 時空之門 | 動畫與視差效果 | HTML, CSS (SCSS) | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project7/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project7) |
 | Project 8 | 送你一道彩虹 | 顏色動畫與互動效果| HTML, CSS (SCSS)| [🔗 作品](https://williamhsieh615.github.io/Front-end/Project8/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project8) |
 | Project 9 | 六角學院網頁 | 互動效果的形象網頁 | HTML, CSS, JavaScript (jQuery)| [🔗 作品](https://williamhsieh615.github.io/Front-end/Project9/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project9) |
-| Project 10 | 六角學院學習網 | 視差滾動效果的網頁 | HTML, CSS (SCSS), Bootstrap, JavaScript(jQuery)| [🔗 作品](https://williamhsieh615.github.io/Front-end/Project10/index.html) | [🔗 觀看原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project10) |
+| Project 10 | 六角學院學習網 | 視差滾動效果的網頁 | HTML, CSS (SCSS), Bootstrap, JavaScript(jQuery)| [🔗 作品](https://williamhsieh615.github.io/Front-end/Project10/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project10) |
 | Project 11 | 送給阿嬤的念佛計數器 | JavaScript計算與介面設計 | HTML, CSS, JavaScript | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project11/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project11) |
 
 
