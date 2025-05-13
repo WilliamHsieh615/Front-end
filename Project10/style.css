@@ -1,0 +1,60 @@
+.space {
+    width: 500px;
+    height: 500px;
+    border: 10px solid black;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    background: purple;
+    position: relative;
+    margin: 200px auto 0;
+}
+
+.btn_space {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    display: block;
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    background: white;
+    border: 10px solid black;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: skyblue;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    border: 10px solid blue;
+    background: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.btn_hide {
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+}
