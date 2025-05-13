@@ -2,133 +2,141 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>履歷表</title>
+    <meta http-equiv="Content-language" content="zh-tw">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>會員基本資料</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.0/dist/tw-city-selector.min.js"></script>
+    
+
 </head>
 <body>
 
     <div class="wrap">
-        <div class="header">
-            <div class="me">
-                <img src="image/img-c-portrait-1804963_1920.png" alt="梅介其">
-                <h1>梅介其</h1>
-                <p>breanne.zulauf</p>
-                <p>Web Developer</p>
+
+        <form class="pure-form pure-form-aligned formStyle" action="index.html">
+
+            <h1>會員基本資料</h1>
+            <p><span>*</span>為必填欄位</p>
+
+            <div class="pure-control-group name">
+                <label for="name"><span>*</span>姓名</label>
+                <input id="name" type="text" placeholder="請輸入姓名" name="name" autocomplete="name" required />
             </div>
-            <ul class="menu">
-                <li><a href="#"><img src="image/Icon-location.png" alt="location"><span>Taipei / San Francisco</span></a></li>
-                <li><a href="mailto:breanne.zulauf@gerson.tw"><img src="image/Icon-mail.png" alt="mail"><span>breanne.zulauf@gerson.tw</span></a></li>
-                <li><a href="#"><img src="image/icon-github.png" alt="github"><span>breanne.zulauf</span></a></li>
+
+            <div class="pure-control-group sex">
+                <label for="display"><span>*</span>性別</label>
+
+                <label for="male">
+                    <input id="male" type="radio" name="sex" value="male" /> 男性
+                </label>
+                <label for="female">
+                    <input id="female" type="radio" name="sex" value="female" /> 女性
+                </label>
+                <label for="third">
+                    <input id="third" type="radio" name="sex" value="third" checked /> 不透露
+                </label>
+            </div>
+
+            <div class="pure-control-group">
+                <label for="birthday"><span>*</span>生日</label>
+                <input id="birthday" type="date" name="birthday" autocomplete="bday" required />
+            </div>
+
+            <div class="pure-control-group">
+                <label for="phone"><span>*</span>聯絡電話</label>
+                <input id="phone" type="tel" placeholder="請輸入聯絡電話" name="phone" pattern="^(\+886|0)[0-9\-]{6,10}$" autocomplete="tel" required />
+            </div>
+
+            <div class="pure-control-group">
+                <label for="mail"><span>*</span>電子郵件</label>
+                <input id="mail" type="email" placeholder="請輸入電子郵件" name="mail" autocomplete="email" required />
+            </div>
+
+            <div id="tw-selector" class="pure-control-group address">
+
+                <label><span>*</span>地址</label>
+
+                <div class="address-style">
+                    <div class="item">
+                        <label for="zipcode">郵遞區號</label>
+                        <input id="zipcode" type="text" class="zipcode" name="zipcode" readonly />
+                    </div>
+
+                    <div class="item">
+                        <label for="county">縣市</label>
+                        <select id="county" class="county" name="county"></select>
+                    </div>
+
+                    <div class="item">
+                        <label for="district">鄉鎮市區</label>
+                        <select id="district" class="district" name="district"></select>
+                    </div>
+
+
+                    <div class="item">
+                        <label for="address-detail">詳細地址</label>
+                        <input id="address-detail" type="text" name="address-detail" required />
+                    </div>
+                </div>
+            </div>
+
+            <div class="pure-control-group educational">
+                <label for="educational">教育程度</label>
+                <select name="educational" id="educational">
+                    <option value="國小">國小</option>
+                    <option value="國中">國中</option>
+                    <option value="高中(高職)">高中(高職)</option>
+                    <option value="五專">五專</option>
+                    <option value="大學(四技)">大學(四技)</option>
+                    <option value="二技">二技</option>
+                    <option value="研究所">研究所</option>
+                    <option value="博士班">博士班</option>
+                </select>
+            </div>
+
+            <div class="pure-control-group">
+                <label class="" for="content">備注</label>
+                <textarea class="" name="content" id="content"></textarea>
+            </div>
+
+            <ul class="pure-form checkboxStyle">
+                <li>
+                    <label for="policy" class="pure-checkbox">
+                        <input id="policy" type="checkbox" name="term" value="policy" required><span>*</span>我已仔細閱讀<a href="privacy-policy.pdf" target="_blank" rel="noopener noreferrer">『隱私政策』</a>，並同意
+                    </label>
+                </li>
+                <li>
+                    <label for="info" class="pure-checkbox">
+                        <input id="info" type="checkbox" name="term" value="info">我願意接收優惠訊息通知
+                    </label>
+                </li>
             </ul>
-        </div>
 
-        <div class="main">
-            <div class="skills">
-                <h2>Modern Web Skills</h2>
-                <ul class="skills-list">
-                    <li class="skill-item border1">
-                        <img src="image/img-skill-icon-1.png" alt="Web Layout">
-                        <h3>Web Layout</h3>
-                        <ul>
-                            <li>RWD + Sass</li>
-                            <li>Boostrap 3</li>
-                            <li>FB pixel、schema.org</li>
-                            <li>大型電子商務版型規劃經驗（2 years）</li>
-                        </ul>
-                    </li>
-                    <li class="skill-item border2">
-                        <img src="image/img-skill-icon-2.png" alt="JavaScript & Node.js">
-                        <h3>JavaScript & Node.js</h3>
-                        <ul>
-                            <li>jQuery animation</li>
-                            <li>AJAX/JSON</li>
-                            <li>Vue.js (1 years)</li>
-                            <li>Node.js / express</li>
-                        </ul>
-                    </li>
-                    <li class="skill-item border3">
-                        <img src="image/img-skill-icon-3.png" alt="Dev Helper">
-                        <h3>Dev Helper</h3>
-                        <ul>
-                            <li>Git / Github</li>
-                            <li>Heroku / AWS EC2、S3</li>
-                            <li>gulp / webpack</li>
-                            <li>介接歐付寶、玉山銀行金流經驗</li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="buttonStyle">
+                <input type="submit" value="送出" class="pure-button pure-button-primary">
+                <input type="reset" value="清除" class="pure-button pure-button-secondary">
             </div>
-            <div class="experience">
-                <h2>Experience</h2>
-                <div class="experience-list">
-                    <div class="experience-item item1-position">
-                        <p class="period">2016/01 - Present</p>
-                        <h3>Web Developer 資深工程師</h3>
-                        <p class="company">六角超有創意有限公司</p>
-                        <p class="detail">Implemented a system for creating campaign landing pages from the CMS.</p>
-                    </div>
-                    <div class="experience-item text-right item2-position">
-                        <p class="period">2015/03 - 2015/06</p>
-                        <h3>Web Developer軟體工程師</h3>
-                        <p class="company">甜點資訊開發股份有限公司</p>
-                        <p class="detail">Implemented a system for creating campaign landing pages from the CMS.</p>
-                    </div>
-                    <div class="experience-item item3-position">
-                        <p class="period">2010/01 - 2015/3</p>
-                        <h3>Web Developer 網頁工程師</h3>
-                        <p class="company">前端無極限有限公司</p>
-                        <p class="detail">Implemented a system for creating campaign landing pages from the CMS.</p>
-                    </div>
-                    <img src="image/dot-start.png" alt="dot-start" class="dot-start-position">
-                    <img src="image/dot-timeItem.png" alt="dot-timeItem" class="dotItem1-position">
-                    <img src="image/dot-timeItem.png" alt="dot-timeItem" class="dotItem2-position">
-                    <img src="image/dot-timeItem.png" alt="dot-timeItem" class="dotItem3-position">
-                    <div class="vertical-line"></div>
-                    <div class="horizontal-line"></div>
-                </div>
-            </div>
-            <div class="works">
-                <h2>Works 作品</h2>
-                <ul class="works-list">
-                    <li class="works-item">
-                        <a href="#">
-                            <p class="item1-image"></p>
-                            <h3>Works 1 title</h3>
-                            <p>Lorem ipsum dolor sit amet</p>
-                        </a>
-                    </li>
-                    <li class="works-item">
-                        <a href="#">
-                            <p class="item2-image"></p>
-                            <h3>Works 2 title</h3>
-                            <p>Lorem ipsum dolor sit amet</p>
-                        </a>
-                    </li>
-                    <li class="works-item">
-                        <a href="#">
-                            <p class="item3-image"></p>
-                            <h3>Works 3 title</h3>
-                            <p>Lorem ipsum dolor sit amet</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="introduce">
-                <h2>About 梅介其</h2>
-                <div class="introduce-content">
-                    <img src="image/img-about-c-portrait.png" alt="梅介其">
-                    <div class="introduce-text">
-                        <p>具有八年的網頁開發以及介面設計經驗，在 Github 上參與數個開源專案，熟悉原生 JavaScript EM6 開發，以及 VueJS, reactJS 等前端框架。盡為受。幾業本造意當子二，方火動李方然他。住小科登務如卻。後洋一如線達告子喜港友變目不族風西排書終小學：年辦行中夫輪中詩的國、組上會隨可冷灣的進和有是不信使成因給？</p>
-                        <p>作而上不選現該時業、公準間在持我天本見連國問轉技雜和據果股會們病觀利學……子照自充則生好國夠用原行增發狀難樓新起為對時我生比：使色最交傳，的設學，作夠門友調管更張奇了覺有結畫會單公！</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="footer">
-            <p>© 2017 梅介其. ALL RIGHTS RESERVED</p>
-        </div>
+        </form>
+
+        <script>
+            new TwCitySelector({
+              el: '#tw-selector',
+              elCounty: '.county',
+              elDistrict: '.district',
+              elZipcode: '.zipcode'
+            });
+        </script>
+
     </div>
     
 </body>

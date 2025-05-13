@@ -1,22 +1,50 @@
-const el_btn_plus = document.querySelector(".btn_plus");
-const el_btn_minus = document.querySelector(".btn_minus");
-const el_btn_clear = document.querySelector(".btn_clear");
-const el_btn_hide = document.querySelector(".btn_hide")
-const el_box = document.querySelector(".box");
-let count = 0;
-el_btn_plus.addEventListener("click", function (e) {
-    count++;
-    el_box.textContent = count;
-})
-el_btn_minus.addEventListener("click", function (e) {
-    count--;
-    el_box.textContent = count;
-})
-el_btn_clear.addEventListener("click", function (e) {
-    count = 0;
-    el_box.textContent = count;
-})
-el_btn_hide.addEventListener("click", function (e) {
-    count = count + 100;
-    el_box.textContent = count;
-})
+$(document).ready(function () {
+
+    var showSkill = false;
+
+    $('.scrollTop').click(function (e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        var targetPos = $(target).offset().top;
+        $('html, body').animate({ scrollTop: targetPos }, 1000);
+    });
+
+    $(window).scroll(function () {
+        var scrollPos = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        console.log(scrollPos, windowHeight);
+
+        $('.scrollTop').each(function () {
+            var target = $(this).attr('href');
+            var targetPos = $(target).offset().top;
+            var targetHeight = $(target).outerHeight();
+            if (targetPos - 1 <= scrollPos && targetPos + targetHeight > scrollPos) {
+                $('.scrollTop').removeClass('active')
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active')
+            }
+        });
+
+        var skillTop = $('#skills').position().top;
+        if (skillTop <= (scrollPos + windowHeight / 2) && !showSkill) {
+            showSkill = true;
+            $('#skills .progress-bar').each(function () {
+                var thisValue = $(this).data('progress');
+                $(this).css('width', thisValue + '%');
+            });
+        }
+
+        $('.animated').each(function () {
+            var thisPos = $(this).offset().top;
+            if ((scrollPos + windowHeight) >= thisPos) {
+                $(this).addClass('fadeIn');
+            }
+        });
+
+        $('#profiles').css('background-position-y', -(scrollPos / 2) + 'px')
+        $('#header-ele').css('transform', 'translateY( ' + (scrollPos / 2) + 'px )')
+
+    });
+
+});
