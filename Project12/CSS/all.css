@@ -1,0 +1,165 @@
+/* ====================<< Mode >>==================== */
+/* ========== CSS Reset Start (Meyer + Custom) ========== */
+/* --- Reset default styles for common HTML elements --- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* --- Ensure HTML5 elements are block-level --- */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* --- Set base line-height for body --- */
+body {
+  line-height: 1;
+}
+
+/* --- Remove default list styling --- */
+ol, ul {
+  list-style: none;
+}
+
+/* --- Remove default quote styling --- */
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: "";
+  content: none;
+}
+
+/* --- Reset table spacing --- */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ========== CSS Reset End ========== */
+/* ========== Basic Utility Styles ========== */
+/* --- Set font-family for body --- */
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+
+/* --- Remove underline and default link color --- */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Responsive image scaling --- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Remove form element default styles --- */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* --- Show pointer cursor on buttons --- */
+button {
+  cursor: pointer;
+}
+
+/* --- Use border-box for all elements to include padding/border in size --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ========== Debug Tools (for development only) ========== */
+/* --- Add 1px outline to all elements for layout debugging --- */
+/* ====================<< Mode >>==================== */
+.wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: #FBFBFB;
+}
+
+.container_card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0 312px;
+}
+.container_card .card {
+  width: 416px;
+  margin: 40px 0;
+  font-family: "Noto Sans TC", sans-serif;
+}
+.container_card .card .date {
+  line-height: 1.5;
+  margin: 16px 0;
+}
+.container_card .card .tag_1,
+.container_card .card .tag_2 {
+  color: #0027D5;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-right: 8px;
+}
+.container_card .card .tag_important {
+  background: #0027D5;
+  color: #FFFFFF;
+  line-height: 1.5;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 40px;
+}
+.container_card .card h3 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 16px 0;
+}
+.container_card .card .content {
+  color: #4B4B4B;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.container_card .card .readMore {
+  display: block;
+}
+.container_card .card .readMore_css {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 8px 16px;
+}
+.container_card .card .readMore_css:hover {
+  background: black;
+  color: white;
+}
+
+/* ------------------------------ *//*# sourceMappingURL=all.css.map */
