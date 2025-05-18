@@ -13,7 +13,7 @@
 | Project 9 | 六角互動網站 | 加入 jQuery 增加頁面互動功能的形象官網 | HTML、CSS、JavaScript (jQuery)| [🔗 作品](https://williamhsieh615.github.io/Front-end/Project9/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project9) |
 | Project 10 | 學習平台首頁 | 利用 Bootstrap 與 jQuery 製作視差滾動效果 | HTML、CSS (SCSS)、Bootstrap、JavaScript (jQuery)| [🔗 作品](https://williamhsieh615.github.io/Front-end/Project10/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project10) |
 | Project 11 | 送給阿嬤的念佛計數器 | JavaScript 實作計數功能，設計互動介面送給阿嬤使用 | HTML、CSS、JavaScript | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project11/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project11) |
-| Project 12 | 個人品牌網站 | 多頁式結構的RWD個人品牌網站設計 | HTML、CSS (SCSS)、JavaScript (jQuery) | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project12/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project12) |
+| Project 12 | 個人品牌網站 | 多頁式結構的RWD個人品牌網站設計 | HTML、CSS (SCSS)、JavaScript (jQuery) | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project12/blog.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project12) |
 
 
 
