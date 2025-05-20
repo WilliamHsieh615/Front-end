@@ -5,19 +5,19 @@
 }
 
 .container_card {
+    max-width: 1320px;
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
-    margin: 0 312px;
+    margin: 0 auto;
 
     .card {
         width: 416px;
-        margin: 40px 0;
-        font-family: $primary-font_fmnily;
+        margin: 40px 12px;
+        font-family: $primary-font_family;
 
         .date {
             line-height: 1.5;
-            margin: 16px 0;
+            margin: 8px 0;
         }
 
         .tag_1,
@@ -35,20 +35,19 @@
             font-weight: 700;
             padding: 6px 12px;
             border-radius: 40px;
-
         }
 
         h3 {
             font-weight: 700;
             font-size: 28px;
             line-height: 1.5;
-            margin: 16px 0;
+            margin: 8px 0;
         }
 
         .content {
             color: #4B4B4B;
             line-height: 1.5;
-            margin: 0 0 16px;
+            margin-bottom: 16px;
 
             display: -webkit-box;
             -webkit-box-orient: vertical;

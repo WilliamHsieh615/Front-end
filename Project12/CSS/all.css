@@ -104,19 +104,19 @@ button {
 }
 
 .container_card {
+  max-width: 1320px;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  margin: 0 312px;
+  margin: 0 auto;
 }
 .container_card .card {
   width: 416px;
-  margin: 40px 0;
+  margin: 40px 12px;
   font-family: "Noto Sans TC", sans-serif;
 }
 .container_card .card .date {
   line-height: 1.5;
-  margin: 16px 0;
+  margin: 8px 0;
 }
 .container_card .card .tag_1,
 .container_card .card .tag_2 {
@@ -137,12 +137,12 @@ button {
   font-weight: 700;
   font-size: 28px;
   line-height: 1.5;
-  margin: 16px 0;
+  margin: 8px 0;
 }
 .container_card .card .content {
   color: #4B4B4B;
   line-height: 1.5;
-  margin: 0 0 16px;
+  margin-bottom: 16px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
