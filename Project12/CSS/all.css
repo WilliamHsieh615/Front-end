@@ -96,6 +96,10 @@ button {
 
 /* ========== Debug Tools (for development only) ========== */
 /* --- Add 1px outline to all elements for layout debugging --- */
+* {
+  outline: 1px solid black;
+}
+
 /* ====================<< Mode >>==================== */
 .wrap {
   max-width: 1920px;
@@ -701,6 +705,73 @@ footer p {
     font-size: 24px;
   }
 }
+.swiper .card {
+  width: 100%;
+  background: #FBFBFB;
+}
+.swiper .card img {
+  width: 100%;
+}
+.swiper .card .date {
+  margin: 8px 0;
+}
+.swiper .card .tag_1,
+.swiper .card .tag_2 {
+  color: #0027D5;
+  font-size: 24px;
+  margin-right: 3px;
+}
+.swiper .card .tag_important {
+  width: 88px;
+  background: #0027D5;
+  color: #FFFFFF;
+  border: 1px solid #0027D5;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 40px;
+  animation: shine1 1.5s infinite ease-in-out;
+}
+.swiper .card h3 {
+  font-weight: 700;
+  font-size: 28px;
+  margin: 8px 0;
+}
+.swiper .card .content {
+  color: #4B4B4B;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+.swiper .card .readMore {
+  display: block;
+}
+.swiper .card .readMore_css {
+  display: inline-block;
+  color: #4B4B4B;
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 8px 16px;
+}
+.swiper .card .readMore_css:hover {
+  background: #4B4B4B;
+  color: white;
+}
+.swiper .arrow_container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+.swiper .arrow_CSS {
+  font-size: 44px;
+  color: #0027D5;
+}
+.swiper .arrow_CSS:hover {
+  color: #B2BEF2;
+}
+
 .section_article {
   border-top: 1px solid #6C757D;
   border-bottom: 1px solid #6C757D;
@@ -831,6 +902,10 @@ footer p {
 }
 .article_main .changePage .next {
   margin-left: auto;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 @keyframes shine1 {
