@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>最新文章</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/all.css">
 </head>
 
@@ -19,8 +21,8 @@
             <a href="blog.html" class="link_JS">部落格</a>
         </nav>
         <section class="section_article">
-            <img src="image/blog/About Section.png" alt="Section">
-            <div class="card">
+            <img src="image/blog/About Section.png" alt="Section" data-aos="fade-right">
+            <div class="card" data-aos="fade-left">
                 <p class="date">2024/10/21</p>
                 <a href="#"><span class="tag tag_1">前端開發 x 職涯成長</span></a>
                 <a href="#"><span class="tag tag_important">最新文章</span></a>
@@ -29,12 +31,12 @@
         </section>
         <main>
             <div class="article_main">
-                <div class="preface">
+                <div class="preface" data-aos="zoom-in-right">
                     <h3>前言</h3>
                     <p>嗨，我是 Alyse，一名前端工程師兼職涯諮詢師。一直以來，我都很喜歡在部落格分享學習與工作心得，也常有讀者問：「我想轉職/自學前端，該從哪裡開始？」</p>
                     <p>其實自學的過程既自由又具挑戰性。我整理了三大關鍵，幫助你在短期內建立紮實基礎，並快速累積實戰經驗。希望能替你的前端之路帶來一些啟發與動力！</p>
                 </div>
-                <div class="para para1">
+                <div class="para para1" data-aos="zoom-in-left">
                     <img src="image/article/content1.png" alt="content1">
                     <h3>打好基礎：HTML、CSS、JavaScript</h3>
                     <div class="part part1">
@@ -62,9 +64,9 @@
                             <li>學會事件監聽、API 資料串接等常見應用，增添網站互動性。</li>
                         </ol>
                     </div>
-                    <div class="annotation">小結：在學習基礎語法時，同步進行小專案實作（如 Todo List、計算機、切版作品集）會讓你進步更快，也能累積展示用作品。</div>
+                    <div class="annotation" data-aos="flip-up">小結：在學習基礎語法時，同步進行小專案實作（如 Todo List、計算機、切版作品集）會讓你進步更快，也能累積展示用作品。</div>
                 </div>
-                <div class="para para2">
+                <div class="para para2" data-aos="zoom-in-right">
                     <img src="image/article/content2.png" alt="content2">
                     <h3>擅用主流框架與工具</h3>
                     <div class="part part1">
@@ -74,7 +76,7 @@
                             <li>Vue：上手容易、檔案結構直覺，適合對「漸進式開發」有興趣的開發者。</li>
                         </ul>
                     </div>
-                    <div class="annotation">TIP：可以先看官方文件或跟著基礎教學做出小專案，感受哪個框架更順手。</div>
+                    <div class="annotation" data-aos="flip-up">TIP：可以先看官方文件或跟著基礎教學做出小專案，感受哪個框架更順手。</div>
                     <div class="part part2">
                         <h4>版本控制、協作與建置</h4>
                         <ul>
@@ -92,7 +94,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="para para3">
+                <div class="para para3" data-aos="zoom-in-left">
                     <img src="image/article/content3.png" alt="content3">
                     <h3>持續練習與參與社群</h3>
                     <div class="part part1">
@@ -117,12 +119,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="conclusion">
+                <div class="conclusion" data-aos="zoom-in-right">
                     <img src="image/article/content4.png" alt="content4">
                     <h3>結語</h3>
                     <p>自學前端可能遇到卡關、挫折，但同時也具備很高的自主性。只要把 基礎、框架、實踐 三大面向做好，就能在前端這條路上穩步前進。若你在學習過程中需要更多建議或想要職涯諮詢，歡迎透過<a
                             href="#">聯絡方式</a>與我聯繫！</p>
-                    <div class="annotation">「程式替你開路，諮詢替你指路，一起走向更寬廣的未來。」</div>
+                    <div class="annotation" data-aos="flip-up">「程式替你開路，諮詢替你指路，一起走向更寬廣的未來。」</div>
                     <p>感謝你的閱讀，如果這篇文章對你有幫助，別忘了幫忙分享，或在下方留言告訴我你的想法，也讓更多人一起受益吧！</p>
                 </div>
                 <div class="extend">
@@ -134,10 +136,10 @@
                     </ul>
                 </div>
                 <div class="changePage">
-                    <button type="button">
+                    <button type="button" data-aos="fade-right">
                         <i class="bi bi-chevron-left"></i> 上一頁
                     </button>
-                    <button type="button" class="next">
+                    <button type="button" class="next" data-aos="fade-left">
                         下一頁 <i class="bi bi-chevron-right"></i>
                     </button>
                 </div>
@@ -146,8 +148,8 @@
 
 
         <section class="section_link">
-            <a href="mailto:alysewang@hexschool.com" class="email">alysewang@hexschool.com</a>
-            <ul class="icon">
+            <a href="mailto:alysewang@hexschool.com" class="email" data-aos="fade-right">alysewang@hexschool.com</a>
+            <ul class="icon" data-aos="fade-left">
                 <li><a href="#"><img src="image/index/youtube.png" alt="youtube icon"></a></li>
                 <li><a href="#"><img src="image/index/ podcasts.png" alt="podcasts icon"></a></li>
                 <li><a href="#"><img src="image/index/facebook.png" alt="facebook icon"></a></li>
@@ -161,6 +163,14 @@
         </footer>
 
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="JS/all.js"></script>
+    <script src="JS/blog.js"></script>
+    <script>
+        AOS.init({ duration: 1000, });
+    </script>
 
 </body>
 

@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLOG</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/all.css">
 
 </head>
@@ -21,8 +23,10 @@
         </nav>
         <header class="blog_header">
             <div class="banner">
-                <img src="image/index/banner1.png" alt="banner1">
-                <div class="banner_right">
+                <img src="image/index/banner1.png" alt="banner1" data-aos="fade-right" data-aos-offset="300"
+                    data-aos-easing="ease-in-sine">
+                <div class="banner_right" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                    data-aos-duration="500">
                     <div class="title">
                         <h1>BLOG</h1>
                         <p>前端工程師 & 職涯諮詢師</p>
@@ -32,8 +36,8 @@
             </div>
         </header>
         <section class="section_article">
-            <img src="image/blog/About Section.png" alt="Section">
-            <div class="card">
+            <img src="image/blog/About Section.png" alt="Section" data-aos="fade-right">
+            <div class="card" data-aos="fade-left">
                 <p class="date">2024/10/21</p>
                 <a href="#"><span class="tag tag_1">前端開發 x 職涯成長</span></a>
                 <a href="#"><span class="tag tag_important">最新文章</span></a>
@@ -50,7 +54,7 @@
                 <input type="text" placeholder="搜尋你感興趣的文章" class="searchInput">
             </div>
             <ul class="container_card">
-                <li class="card">
+                <li class="card" data-aos="zoom-in">
                     <img src="image/blog/photo1.png" alt="photo1">
                     <p class="date">2024/10/11</p>
                     <a href="#"><span class="tag tag_1">#React</span></a>
@@ -60,7 +64,7 @@
                         到底該怎麼入門？」為了幫大家減少摸索的時間，我整理出三個循序漸進的關鍵步驟，帶你更輕鬆地掌握 React 核心概念，真正把理論應用在實際專案中。</p>
                     <a href="#" class="readMore_css readMore_JS">閱讀內文</a>
                 </li>
-                <li class="card">
+                <li class="card" data-aos="zoom-in">
                     <img src="image/blog/photo2.png" alt="photo2">
                     <p class="date">2024/09/07</p>
                     <a href="#"><span class="tag tag_1">#作品集</span></a>
@@ -71,7 +75,7 @@
                     </p>
                     <a href="#" class="readMore_css readMore_JS">閱讀內文</a>
                 </li>
-                <li class="card">
+                <li class="card" data-aos="zoom-in">
                     <img src="image/blog/photo3.png" alt="photo3">
                     <p class="date">2024/09/03</p>
                     <a href="#"><span class="tag tag_1">#CSS設計</span></a>
@@ -82,7 +86,7 @@
                         CSS，打造兼具美感與功能性的網頁。</p>
                     <a href="#" class="readMore_css readMore_JS">閱讀內文</a>
                 </li>
-                <li class="card">
+                <li class="card" data-aos="zoom-in">
                     <img src="image/blog/photo4.png" alt="photo4">
                     <p class="date">2024/07/09</p>
                     <a href="#"><span class="tag tag_1">#轉職工程師</span></a>
@@ -93,7 +97,7 @@
                     </p>
                     <a href="#" class="readMore_css readMore_JS">閱讀內文</a>
                 </li>
-                <li class="card">
+                <li class="card" data-aos="zoom-in">
                     <img src="image/blog/photo5.png" alt="photo5">
                     <p class="date">2024/07/08</p>
                     <a href="#"><span class="tag tag_1">#面試準備</span></a>
@@ -105,7 +109,7 @@
                     </p>
                     <a href="#" class="readMore_css readMore_JS">閱讀內文</a>
                 </li>
-                <li class="card">
+                <li class="card" data-aos="zoom-in">
                     <img src="image/blog/photo6.png" alt="photo6">
                     <p class="date">2024/06/29</p>
                     <a href="#"><span class="tag tag_1">#Vue3</span></a>
@@ -115,7 +119,7 @@
                         的導入更是大幅提升可讀性與維護性。這篇文章將帶你快速瞭解 Vue 3 的獨特魅力，並透過簡單範例幫助你更順利地切換到新版本的思維模式。</p>
                     <a href="#" class="readMore_css readMore_JS">閱讀內文</a>
                 </li>
-                <li class="card">
+                <li class="card" data-aos="zoom-in">
                     <img src="image/blog/photo7.png" alt="photo7">
                     <p class="date">2024/05/04</p>
                     <a href="#"><span class="tag tag_1">#Git</span></a>
@@ -125,7 +129,7 @@
                         不僅能記錄程式碼變動，更能確保每位成員都在正確的分支上完成任務。透過這篇文章，你將了解常見的 Git 流程，並學會在前端專案中輕鬆管理與協作。</p>
                     <a href="#" class="readMore_css readMore_JS">閱讀內文</a>
                 </li>
-                <li class="card">
+                <li class="card" data-aos="zoom-in">
                     <img src="image/blog/photo8.png" alt="photo8">
                     <p class="date">2024/05/01</p>
                     <a href="#"><span class="tag tag_1">#SEO</span></a>
@@ -135,7 +139,7 @@
                         概念與技術是讓網站脫穎而出的關鍵。這篇文章將分享我在前端實作時，常用的 SEO 小技巧與實務做法，幫助你顯著提升網站曝光度。</p>
                     <a href="#" class="readMore_css readMore_JS">閱讀內文</a>
                 </li>
-                <li class="card">
+                <li class="card" data-aos="zoom-in">
                     <img src="image/blog/photo9.png" alt="photo9">
                     <p class="date">2024/02/17</p>
                     <a href="#"><span class="tag tag_1">#專案維護</span></a>
@@ -146,7 +150,7 @@
                     </p>
                     <a href="#" class="readMore_css readMore_JS">閱讀內文</a>
                 </li>
-                <li class="card">
+                <li class="card" data-aos="zoom-in">
                     <img src="image/blog/photo10.png" alt="photo10">
                     <p class="date">2024/02/17</p>
                     <a href="#"><span class="tag tag_1">#TypeScript</span></a>
@@ -156,7 +160,7 @@
                         的出現正是為了改善這種情況。它能在開發階段即發現型別錯誤，並帶來更友善的程式碼提示。本篇文章將介紹如何在前端專案中導入 TypeScript，並透過真實案例展示它為開發流程帶來的優勢。</p>
                     <a href="#" class="readMore_css readMore_JS">閱讀內文</a>
                 </li>
-                <li class="card">
+                <li class="card" data-aos="zoom-in">
                     <img src="image/blog/photo11.png" alt="photo11">
                     <p class="date">2024/02/07</p>
                     <a href="#"><span class="tag tag_1">#測試框架</span></a>
@@ -172,8 +176,8 @@
             </div>
         </main>
         <section class="section_link">
-            <a href="mailto:alysewang@hexschool.com" class="email">alysewang@hexschool.com</a>
-            <ul class="icon">
+            <a href="mailto:alysewang@hexschool.com" class="email" data-aos="fade-right">alysewang@hexschool.com</a>
+            <ul class="icon" data-aos="fade-left">
                 <li><a href="#"><img src="image/index/youtube.png" alt="youtube icon"></a></li>
                 <li><a href="#"><img src="image/index/ podcasts.png" alt="podcasts icon"></a></li>
                 <li><a href="#"><img src="image/index/facebook.png" alt="facebook icon"></a></li>
@@ -187,8 +191,12 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="JS/all.js"></script>
     <script src="JS/blog.js"></script>
+    <script>
+        AOS.init({ duration: 1000, });
+    </script>
 
 </body>
 
