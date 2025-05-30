@@ -526,7 +526,7 @@ footer p {
   background: #F1F1F1;
   padding: 8px 16px;
 }
-.index_main .banner form a {
+.index_main .banner form button {
   display: inline-block;
   color: #0027D5;
   border: 1px solid #0027D5;
@@ -534,7 +534,7 @@ footer p {
   padding: 8px 16px;
   animation: shine1 1.5s infinite ease;
 }
-.index_main .banner form a:hover {
+.index_main .banner form button:hover {
   background: #0027D5 !important;
   color: white !important;
 }

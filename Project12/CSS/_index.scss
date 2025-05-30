@@ -274,7 +274,7 @@
                 }
             }
 
-            a {
+            button {
                 display: inline-block;
                 color: $primary-color;
                 border: 1px solid $primary-color;
@@ -283,7 +283,7 @@
                 animation: shine1 1.5s infinite ease;
             }
 
-            a:hover {
+            button:hover {
                 background: $primary-color !important;
                 color: white !important;
             }
