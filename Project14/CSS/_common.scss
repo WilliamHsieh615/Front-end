@@ -74,8 +74,6 @@ header {
     }
 }
 
-
-
 @media (max-width: 600px) {
     header {
         .bar {
@@ -88,7 +86,7 @@ header {
                 padding: 30px 0;
                 flex-direction: column;
                 position: absolute;
-                top: 58px;
+                top: 56px;
                 left: 0;
                 right: 0;
                 z-index: -1;
