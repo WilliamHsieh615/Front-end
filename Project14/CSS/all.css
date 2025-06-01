@@ -679,9 +679,12 @@ h1 {
   height: 32px;
   background: #3D1101;
   color: #FFFFFF;
-  font-size: 19px;
+  font-size: 20px;
   text-align: center;
-  line-height: 1.5;
+  line-height: 32px;
+}
+.product-main .content .operate .search-icon:hover {
+  font-size: 25px;
 }
 .product-main .content .operate ul {
   display: flex;
@@ -693,10 +696,17 @@ h1 {
   background: #3D1101;
   margin: 0 15px;
 }
+.product-main .content .operate .checkout {
+  display: block;
+  color: #3D1101;
+}
 .product-main .content .operate .cart {
   display: block;
   color: #3D1101;
   font-size: 27px;
+}
+.product-main .content .operate .checkout:hover, .product-main .content .operate .cart:hover {
+  color: gray;
 }
 .product-main .content .meals {
   display: flex;

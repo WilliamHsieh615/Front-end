@@ -68,9 +68,12 @@
                 height: 32px;
                 background: $secondary_color;
                 color: #FFFFFF;
-                font-size: 19px;
+                font-size: 20px;
                 text-align: center;
-                line-height: 1.5;
+                line-height: 32px;
+            }
+            .search-icon:hover{
+                font-size: 25px;
             }
 
             ul {
@@ -85,10 +88,18 @@
                 margin: 0 15px;
             }
 
+            .checkout {
+                display: block;
+                color: $secondary_color;
+            }
+
             .cart {
                 display: block;
                 color: $secondary_color;
                 font-size: 27px;
+            }
+            .checkout:hover, .cart:hover{
+                color: gray;
             }
         }
 

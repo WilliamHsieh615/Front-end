@@ -119,24 +119,26 @@
                 <div id="map"></div>
 
                 <form action="index.html" method="post">
-                    <label for="" name>姓名</label>
-                    <input type="text" name="name" id="name" placeholder="六角講師吃尾牙">
-                    <label for="phone">電話</label>
-                    <input type="tel" name="phone" id="phone" placeholder="02-1234567">
+                    <label for="name" name>姓名<span>*</span></label>
+                    <input type="text" name="name" id="name" placeholder="六角講師吃尾牙" required>
+                    <label for="phone">電話<span>*</span></label>
+                    <input type="tel" name="phone" id="phone" placeholder="02-1234567" required>
                     <label for="email">信箱</label>
                     <input type="email" name="email" id="email" placeholder="test@gmail.com">
-                    <label for="number">人數</label>
-                    <input type="number" name="number" id="number">
+                    <label for="date">日期<span>*</span></label>
+                    <input type="date" name="date" id="date" required>
+                    <label for="number">人數<span>*</span></label>
+                    <input type="number" name="number" id="number" required>
                     <label>是否需要素食</label>
                     <div class="radio">
-                        <label for="vege" style="margin-right: 36px;">是<input type="radio" name="vege" id="vege"
+                        <label for="yes" style="margin-right: 36px;">是<input type="radio" name="vege" id="yes"
                                 style="border: 1px solid #4A90E2;" checked></label>
-                        <label for="vege">否<input type="radio" name="vege" id="vege"
+                        <label for="no">否<input type="radio" name="vege" id="no"
                                 style="border: 1px solid #4A90E2;"></label>
                     </div>
                     <div class="button">
-                        <input type="button" value="取消" class="cencel">
-                        <input type="button" value="送出" class="submit">
+                        <input type="reset" value="取消" class="cencel">
+                        <input type="submit" value="送出" class="submit">
                     </div>
                 </form>
             </div>
