@@ -270,10 +270,10 @@ h1 {
 .login_and_register-main {
   display: flex;
   flex-direction: column;
-  text-align: center;
   gap: 35px;
 }
 .login_and_register-main .login_and_register-title {
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -297,7 +297,6 @@ h1 {
   padding: 15px;
 }
 .login_and_register-main form h3 {
-  text-align: center;
   font-family: "NotoSansCJKtc-Black", sans-serif;
   font-weight: 500;
   font-size: 18px;
