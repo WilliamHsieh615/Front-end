@@ -15,6 +15,7 @@
 | 11 | 念佛計數器｜送給阿嬤的互動工具 | JavaScript 實作計數功能，設計互動介面送給阿嬤使用 | HTML、CSS、JavaScript | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project11/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project11) |
 | 12 | 個人品牌網站 | 打造具響應式設計的個人品牌官網，含部落格與作品展示 | HTML、CSS（SCSS）、JavaScript（jQuery） | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project12/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project12) |
 | 13 | 待辦事項清單 | 開發簡潔的待辦清單應用，練習資料處理與 DOM 操作 | HTML、CSS（SCSS）、JavaScript | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project13/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project13) |
+| 14 | 六角餐廳 | 模擬餐廳主頁設計，整合 jQuery 與 SCSS，實作 RWD 響應式選單與頁面滾動效果，練習 DOM 操作與模組化開發 | HTML、CSS（SCSS）、JavaScript（jQuery） | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project14/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project14) |
 
 
 
