@@ -1,4 +1,4 @@
-document.querySelectorAll('.item').forEach(item => {
+document.querySelectorAll('.cart_main .item').forEach(item => {
     let startX = 0;
 
     item.addEventListener('touchstart', e => {
@@ -20,4 +20,4 @@ document.querySelectorAll('.item').forEach(item => {
             item.classList.remove('show-trash');
         }
     });
-}); 
+});

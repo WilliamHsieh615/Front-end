@@ -1150,8 +1150,6 @@ article::after {
     padding: 30px;
     border-bottom: none;
     position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
   }
   .cart_main .cart .sum {
     width: 100%;
@@ -1174,10 +1172,7 @@ article::after {
     transform: translateX(100%);
     transition: all 0.5s ease-in-out;
   }
-  .cart_main .cart .item.swiped {
-    transform: translateX(-100px);
-  }
-  .cart_main .cart .item.swiped .trashIcon {
+  .cart_main .cart .item.show-trash .trashIcon {
     transform: translateX(0);
   }
   .cart_main .transactionDetail {
