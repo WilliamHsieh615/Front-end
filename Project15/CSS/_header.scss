@@ -1,0 +1,128 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 30px 40px;
+
+    h1 {
+        width: 220px;
+        height: 40px;
+        background: url("../image/desktop/logo/logo-all-dark.svg") no-repeat center center / cover;
+        display: block;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+
+        a {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    .list {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-left: auto;
+
+        a {
+            display: block;
+            font-weight: 600;
+            line-height: 22px;
+            text-align: center;
+
+            &:hover {
+                transform: scale(120%);
+                transition: all 0.5s ease;
+            }
+        }
+    }
+
+    .cart_wrapper {
+        display: inline-block;
+        width: 30px;
+        height: 25px;
+        position: relative;
+
+        .cart {
+            display: inline-block;
+            font-size: 24px;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: translateX(20px);
+            }
+        }
+
+        .cart_line {
+            width: 30px;
+            height: 1px;
+            background: $secondary-color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    .hamburgerMenu {
+        font-size: 24px;
+        display: none;
+    }
+}
+
+@media (max-width: 710px) {
+    header {
+        justify-content: space-between;
+        gap: 10px;
+        padding: 30px;
+        position: relative;
+
+        .list {
+            background: #FFFFFF;
+            flex-direction: column;
+            gap: 0;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.3s ease-in-out;
+
+            a {
+                padding: 10px 0;
+                border-top: 1px solid $primary-color;
+                border-bottom: 1px solid $primary-color;
+            }
+
+            a:hover {
+                background: $primary-color;
+            }
+
+            &.showMenu {
+                opacity: 1;
+                z-index: 1;
+            }
+        }
+
+        .hamburgerMenu {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        h1 {
+            width: 180px;
+            height: 28px;
+            background: url("../image/mobile/logotype-sm-dark.svg") no-repeat center center / cover;
+        }
+
+        .list {
+            top: 88px;
+        }
+    }
+}

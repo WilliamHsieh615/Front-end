@@ -226,7 +226,8 @@ footer p {
   width: 636px;
   padding: 48px 12px;
 }
-.section_article .card .date {
+.section_article .card time {
+  display: block;
   margin: 8px 0;
 }
 .section_article .card .tag_1 {
@@ -238,6 +239,7 @@ footer p {
   width: 88px;
   background: #0027D5;
   color: #FFFFFF;
+  border: 1px solid #0027D5;
   font-weight: 700;
   padding: 6px 12px;
   border-radius: 40px;
@@ -633,7 +635,8 @@ footer p {
 .blogSelect_section .swiper .card img {
   width: 100%;
 }
-.blogSelect_section .swiper .card .date {
+.blogSelect_section .swiper .card time {
+  display: block;
   margin: 8px 0;
 }
 .blogSelect_section .swiper .card .tag_1,
@@ -760,7 +763,8 @@ footer p {
   max-width: 416px;
   background: #FBFBFB;
 }
-.blog_main .container_card .card .date {
+.blog_main .container_card .card time {
+  display: block;
   margin: 8px 0;
 }
 .blog_main .container_card .card .tag_1,
