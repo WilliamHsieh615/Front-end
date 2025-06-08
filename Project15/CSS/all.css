@@ -1150,6 +1150,7 @@ article::after {
     padding: 30px;
     border-bottom: none;
     position: relative;
+    overflow: hidden;
   }
   .cart_main .cart .sum {
     width: 100%;
