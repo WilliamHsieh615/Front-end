@@ -1169,12 +1169,11 @@ article::after {
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 0;
-    transform: translateX(100%);
+    right: -100px;
     transition: all 0.5s ease-in-out;
   }
   .cart_main .cart .item.show-trash .trashIcon {
-    transform: translateX(0);
+    right: 0;
   }
   .cart_main .transactionDetail {
     color: #3F5D45;
