@@ -21,3 +21,30 @@ document.querySelectorAll('.cart_main .item').forEach(item => {
         }
     });
 });
+
+let items = document.querySelectorAll(".list .item");
+
+items.forEach(function (item) {
+    let count = 0;
+    const plusBtn = item.querySelector(".plus");
+    const minusBtn = item.querySelector(".minus");
+    const numberDisplay = item.querySelector(".number");
+    const priceText = item.querySelector(".price").textContent;
+    const sumDisplay = item.querySelector(".sum");
+
+    // 從 "NT$ 450" 取出數字 450
+    const unitPrice = parseInt(priceText.replace(/[^\d]/g, ''));
+
+    item.querySelector(".amount").addEventListener("click", function (e) {
+        e.preventDefault(); // 防止 <a href="#"> 往上跳
+
+        if (e.target.classList.contains("plus")) {
+            count++;
+        } else if (e.target.classList.contains("minus")) {
+            if (count > 0) count--;
+        }
+
+        numberDisplay.textContent = count;
+        sumDisplay.textContent = `NT$ ${unitPrice * count}`;
+    });
+});

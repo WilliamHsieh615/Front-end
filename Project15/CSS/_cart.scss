@@ -125,11 +125,13 @@
             }
         }
 
-        button {
+        .checkoutButton {
+            display: block;
             width: 100%;
             font-size: 24px;
             line-height: 20px;
             font-weight: 400;
+            text-align: center;
             color: $secondary-color;
             background: $tertiary-color;
             padding: 16px 0;
