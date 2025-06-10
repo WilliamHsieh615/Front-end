@@ -19,9 +19,11 @@ $secondary-font_family: 'Helvetica Neue', sans-serif;
 @import "register";
 @import "retrieve";
 @import "cart";
+@import "aside";
 @import "checkout-delivery";
 @import "checkout-payment";
 @import "checkout-invoice";
+@import "checkout";
 @import "checkout-payment_success";
 
 @keyframes shiny {

@@ -4,7 +4,7 @@
 
     .banner_photo {
         aspect-ratio: 16 / 9;
-        background: url("../image/photo/photo-1473256599800-b48c7c88cd7e.avif") no-repeat center center / cover;
+        background: url("../image/photo/banner-home.avif") no-repeat center center / cover;
     }
 
     .list {
@@ -44,18 +44,18 @@
     }
 
     .select {
-        background: url("../image/photo/photo-1490914327627-9fe8d52f4d90.avif") no-repeat center center / cover;
+        background: url("../image/photo/link1-home.avif") no-repeat center center / cover;
         border-right: 1px solid #FFFFFF;
     }
 
     .referral {
-        background: url("../image/photo/photo-1504114133367-631ecd3db3ca.avif") no-repeat center center / cover;
+        background: url("../image/photo/link2-home.avif") no-repeat center center / cover;
         border-left: 1px solid #FFFFFF;
         border-right: 1px solid #FFFFFF;
     }
 
     .new {
-        background: url("../image/photo/photo-1499638472904-ea5c6178a300.avif") no-repeat center center / cover;
+        background: url("../image/photo/link3-home.avif") no-repeat center center / cover;
         border-left: 1px solid #FFFFFF;
     }
 }
@@ -123,13 +123,13 @@ article {
     .slogan1_photo {
         width: 460px;
         aspect-ratio: 1 / 1;
-        background: url("../image/photo/photo-1519730722595-a5ff788dea4d.avif") no-repeat center center / cover;
+        background: url("../image/photo/article1-home.avif") no-repeat center center / cover;
     }
 
     .slogan2_photo {
         width: 460px;
         aspect-ratio: 1 / 1;
-        background: url("../image/photo/photo-1501432781167-c0ccfd492297.avif") no-repeat center center / cover;
+        background: url("../image/photo/article2-home.avif") no-repeat center center / cover;
     }
 
     .content {
@@ -180,7 +180,7 @@ article {
             h2 {
                 width: 100%;
                 align-self: center;
-                background: url("../image/photo/photo-1519730722595-a5ff788dea4d.avif") no-repeat center center / cover;
+                background: url("../image/photo/article1-home.avif") no-repeat center center / cover;
             }
         }
 
@@ -188,7 +188,7 @@ article {
             h2 {
                 width: 100%;
                 align-self: center;
-                background: url("../image/photo/photo-1501432781167-c0ccfd492297.avif") no-repeat center center / cover;
+                background: url("../image/photo/article2-home.avif") no-repeat center center / cover;
             }
         }
 
@@ -252,3 +252,78 @@ article {
 }
 
 /* ------------------------------- */
+
+.home_main{
+
+    .meals {
+        .product {
+            width: 100%;
+            position: relative;
+        }
+
+        .product .tag {
+            writing-mode: vertical-lr;
+            background: $secondary-color;
+            color: $primary-color;
+            line-height: 20px;
+            letter-spacing: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            bottom: 70%;
+            left: 10%;
+            right: 75%;
+        }
+
+        .product img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 20 / 21;
+            object-fit: cover;
+        }
+
+        .product ul {
+            display: flex;
+            color: $secondary-color;
+            font-size: 20px;
+        }
+
+        .product ul .name {
+            width: 55%;
+            padding: 16px 0;
+            text-align: center;
+            border: 1px solid $primary-color;
+        }
+
+        .product ul .price {
+            width: 45%;
+            padding: 16px 0;
+            text-align: center;
+            border-top: 1px solid $primary-color;
+            border-bottom: 1px solid $primary-color;
+            border-right: 1px solid $primary-color;
+        }
+
+        .product a {
+            width: 100%;
+            text-decoration: none;
+            display: block;
+            font-size: 24px;
+            color: $secondary-color;
+            line-height: 82px;
+            text-align: center;
+            background: $primary-color;
+        }
+
+        .product a:hover {
+            background: $secondary-color;
+            color: #FFFFFF;
+        }
+    }
+
+    .arrow {
+        color: $secondary-color;
+    }
+}

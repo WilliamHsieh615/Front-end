@@ -85,7 +85,7 @@
     }
 
 
-    .transactionDetail {
+    .transactionSummary {
         width: 30%;
 
         .order {
@@ -162,7 +162,7 @@
             width: 100%;
         }
 
-        .transactionDetail {
+        .transactionSummary {
             width: 100%;
         }
     }
@@ -210,7 +210,7 @@
             }
         }
 
-        .transactionDetail {
+        .transactionSummary {
             color: $secondary-color;
 
             .order {

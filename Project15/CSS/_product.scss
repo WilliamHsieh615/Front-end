@@ -1,7 +1,7 @@
 .product_banner {
     margin: 0 40px;
     aspect-ratio: 16 / 9;
-    background: url("../image/photo/photo-1512484457149-266d165a4eca.avif") no-repeat center center / cover;
+    background: url("../image/photo/banner-product.avif") no-repeat center center / cover;
 
     h2 {
         width: 90px;
@@ -65,28 +65,48 @@
         justify-content: center;
         gap: 20px;
 
-        li img {
+        .product {
+            position: relative;
+        }
+
+        .product .tag {
+            writing-mode: vertical-lr;
+            background: $secondary-color;
+            color: $primary-color;
+            line-height: 20px;
+            letter-spacing: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            bottom: 70%;
+            left: 10%;
+            right: 75%;
+        }
+
+        .product img {
             display: block;
             width: 300px;
             aspect-ratio: 20 / 21;
             object-fit: cover;
         }
 
-        li ul {
+        .product ul {
             display: flex;
             color: $secondary-color;
             font-size: 20px;
         }
 
-        li ul .name {
-            width: 60%;
+        .product ul .name {
+            width: 55%;
             padding: 16px 0;
             text-align: center;
             border: 1px solid $primary-color;
         }
 
-        li ul .price {
-            width: 40%;
+        .product ul .price {
+            width: 45%;
             padding: 16px 0;
             text-align: center;
             border-top: 1px solid $primary-color;
@@ -94,7 +114,8 @@
             border-right: 1px solid $primary-color;
         }
 
-        li a {
+        .product a {
+            width: 100%;
             text-decoration: none;
             display: block;
             font-size: 24px;
@@ -104,7 +125,7 @@
             background: $primary-color;
         }
 
-        li a:hover {
+        .product a:hover {
             background: $secondary-color;
             color: #FFFFFF;
         }
@@ -154,8 +175,8 @@
     }
 }
 
-@media (max-width: 750px){
-    .pagenation{
+@media (max-width: 750px) {
+    .pagenation {
         justify-content: center;
         margin: 30px 30px;
     }

@@ -30,6 +30,7 @@
     <meta property="og:image:alt" content="Sweetaste甜點店">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../CSS/all.css">
 
 </head>
@@ -45,9 +46,9 @@
             <div class="banner_photo"></div>
 
             <ul class="list">
-                <li class="select"><a href="#">本日精選</a></li>
-                <li class="referral"><a href="#">人氣推薦</a></li>
-                <li class="new"><a href="#">新品上市</a></li>
+                <li class="select"><a href="#mySwiper">本日精選</a></li>
+                <li class="referral"><a href="#mySwiper">人氣推薦</a></li>
+                <li class="new"><a href="#mySwiper">新品上市</a></li>
             </ul>
 
         </div>
@@ -84,7 +85,12 @@
 
             <h2></h2>
 
+            <div id="mySwiper" class="swiper mySwiper">
+                <ul class="swiper-wrapper meals"></ul>
 
+                <div class="swiper-button-prev arrow"></div>
+                <div class="swiper-button-next arrow"></div>
+            </div>
 
         </main>
 
@@ -93,9 +99,12 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../JS/axios.js"></script>
+    <script src="../JS/swiper.js"></script>
     <script src="../JS/header.js"></script>
+    <script src="../JS/product.js"></script>
 
 </body>
 
