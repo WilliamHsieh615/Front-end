@@ -1122,7 +1122,7 @@ article::after {
      object-fit: cover;
 }
 .cart_main .cart .info {
-  width: 50%;
+  width: 51%;
   display: flex;
   justify-content: space-between;
 }
