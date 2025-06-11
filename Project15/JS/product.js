@@ -474,6 +474,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cart_list.appendChild(li);
         });
 
+        bindSwipeEvents();
         renderCheckoutSummary();
         bindCartEvents();
     }
