@@ -1101,6 +1101,12 @@ article::after {
   background: #EAF0ED;
   padding: 16px 0;
 }
+.cart_main .cart .cart_is_empty {
+  text-align: center;
+  padding: 60px 0;
+  font-size: 20px;
+  font-weight: 300;
+}
 .cart_main .cart .item {
   width: 100%;
   border-bottom: 1px solid #EAF0ED;

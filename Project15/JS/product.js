@@ -446,7 +446,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         cart_list.innerHTML = "";
         if (shoppingCart.length === 0) {
-            cart_list.innerHTML = "<li>購物車空空如也</li>";
+            cart_list.innerHTML = `<li class="cart_is_empty">您尚未加入任何商品</li>`;
             renderCheckoutSummary();
             return;
         }
