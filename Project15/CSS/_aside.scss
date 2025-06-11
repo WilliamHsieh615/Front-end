@@ -36,6 +36,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid $primary-color;
     }
 
     .subtotal,
@@ -67,7 +68,7 @@
 
     .item {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 20px;
 
         img {
@@ -102,7 +103,7 @@
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 770px) {
     .transactionDetail {
         width: 100%;
         gap: 0;
@@ -110,6 +111,11 @@
 
         &.showList {
             display: flex;
+        }
+
+        .item {
+            margin: 0 auto;
+            width: 260px;
         }
     }
 }

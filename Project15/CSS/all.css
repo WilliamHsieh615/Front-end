@@ -1122,8 +1122,9 @@ article::after {
      object-fit: cover;
 }
 .cart_main .cart .info {
+  width: 50%;
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
 }
 .cart_main .cart .info .name {
   display: flex;
@@ -1218,6 +1219,7 @@ article::after {
 
 @media (max-width: 900px) {
   .cart_main .cart .info {
+    width: auto;
     gap: 8px;
     flex-direction: column;
   }
@@ -1243,6 +1245,8 @@ article::after {
   .cart_main .cart .item {
     flex-wrap: wrap;
     padding: 30px;
+    justify-content: center;
+    gap: 10px;
     border-bottom: none;
     position: relative;
     overflow: hidden;
@@ -1317,6 +1321,7 @@ article::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #EAF0ED;
 }
 .transactionDetail .subtotal,
 .transactionDetail .freight {
@@ -1342,7 +1347,7 @@ article::after {
 }
 .transactionDetail .item {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
 }
 .transactionDetail .item img {
@@ -1372,7 +1377,7 @@ article::after {
   line-height: 20px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 770px) {
   .transactionDetail {
     width: 100%;
     gap: 0;
@@ -1380,6 +1385,10 @@ article::after {
   }
   .transactionDetail.showList {
     display: flex;
+  }
+  .transactionDetail .item {
+    margin: 0 auto;
+    width: 260px;
   }
 }
 .checkout-delivery_main form .input_container {
@@ -1756,7 +1765,7 @@ article::after {
   display: none;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 770px) {
   .checkout-delivery_main,
   .checkout-payment_main,
   .checkout-invoice_main {

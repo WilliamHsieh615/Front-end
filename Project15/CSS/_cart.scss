@@ -38,8 +38,9 @@
         }
 
         .info {
+            width: 50%;
             display: flex;
-            gap: 30px;
+            justify-content: space-between;
 
             .name {
                 display: flex;
@@ -90,7 +91,6 @@
             font-size: 24px;
         }
     }
-
 
     .transactionSummary {
         width: 30%;
@@ -154,6 +154,7 @@
     .cart_main {
         .cart {
             .info {
+                width: auto;
                 gap: 8px;
                 flex-direction: column;
             }
@@ -185,6 +186,8 @@
             .item {
                 flex-wrap: wrap;
                 padding: 30px;
+                justify-content: center;
+                gap: 10px;
                 border-bottom: none;
                 position: relative;
                 overflow: hidden;
