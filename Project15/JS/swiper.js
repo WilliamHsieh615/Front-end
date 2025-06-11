@@ -16,7 +16,7 @@ const swiper = new Swiper(".mySwiper", {
     mousewheel: true,
 
     breakpoints: {
-        500: {
+        550: {
             slidesPerView: 2,
         },
         850: {

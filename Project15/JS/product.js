@@ -267,7 +267,7 @@
 // });
 
 document.addEventListener("DOMContentLoaded", () => {
-    let product = [
+    const product = [
         { label: "新品上市", name: "草莓派", price: 60, photo: '../image/product/product1.avif' },
         { label: "新品上市", name: "焦糖蘋果派", price: 70, photo: "../image/product/product2.avif" },
         { label: "新品上市", name: "水果奶酪", price: 60, photo: "../image/product/product3.avif" },
@@ -282,14 +282,13 @@ document.addEventListener("DOMContentLoaded", () => {
         { label: "本日精選", name: "松露巧克力蛋糕", price: 120, photo: "../image/product/product12.avif" },
         { label: "本日精選", name: "七彩馬卡龍", price: 150, photo: "../image/product/product13.avif" },
         { label: "本日精選", name: "奶酪派", price: 120, photo: "../image/product/product14.avif" },
-        { label: "本日精選", name: "芒果果凍棒", price: 60, photo: "../image/product/product15.avif" },
+        { label: "本日精選", name: "芒果果凍棒", price: 60, photo: "../image/product/product15.avif" }
     ];
 
     const home_meals = document.querySelector(".home_main .meals");
     const home_list = document.querySelector(".home_banner .list");
     const product_meals = document.querySelector(".product_main .meals");
     const product_menu = document.querySelector(".product_main .menu");
-
     const all_product = document.querySelector(".product_main .menu .all");
     const select_product = document.querySelector(".product_main .menu .select");
     const referral_product = document.querySelector(".product_main .menu .referral");
@@ -302,21 +301,22 @@ document.addEventListener("DOMContentLoaded", () => {
     let selectProductArry = [];
     let referralProductArry = [];
     let newProductArry = [];
-
     let shoppingCart = [];
+
     loadCartFromLocalStorage();
 
-    product.forEach(function (item) {
-        let productListStr =
-            `<li class="product">
-                <span class="tag">${item.label}</span>
-                <img src="${item.photo}" alt="${item.name}">
-                <ul>
-                    <li class="name">${item.name}</li>
-                    <li class="price">NT$ ${item.price}</li>
-                </ul>
-                <a href="#" class="add_to_cart">加入購物車</a>
-            </li>`;
+    product.forEach((item) => {
+        let productListStr = `
+      <li class="product">
+        <span class="tag">${item.label}</span>
+        <img src="${item.photo}" alt="${item.name}">
+        <ul>
+          <li class="name">${item.name}</li>
+          <li class="price">NT$ ${item.price}</li>
+        </ul>
+        <a href="#" class="add_to_cart">加入購物車</a>
+      </li>`;
+
         allProductStr += productListStr;
         if (item.label === "新品上市") {
             newProductStr += productListStr;
@@ -365,64 +365,36 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    if (all_product) { all_product.textContent = `所有甜點 (${product.length})`; }
-    if (select_product) { select_product.textContent = `本日精選 (${selectProductArry.length})`; }
-    if (referral_product) { referral_product.textContent = `人氣精選 (${referralProductArry.length})`; }
-    if (new_product) { new_product.textContent = `新品上市 (${newProductArry.length})`; }
+    if (all_product) all_product.textContent = `所有甜點 (${product.length})`;
+    if (select_product) select_product.textContent = `本日精選 (${selectProductArry.length})`;
+    if (referral_product) referral_product.textContent = `人氣精選 (${referralProductArry.length})`;
+    if (new_product) new_product.textContent = `新品上市 (${newProductArry.length})`;
 
-    if (product_meals) {
-        product_meals.addEventListener("click", function (e) {
+    [...document.querySelectorAll(".meals")].forEach(container => {
+        container.addEventListener("click", function (e) {
             if (e.target.classList.contains("add_to_cart")) {
                 e.preventDefault();
+                const productItem = e.target.closest(".product");
+                const name = productItem.querySelector(".name").textContent;
+                const price = Number(productItem.querySelector(".price").textContent.replace("NT$ ", ""));
+                const photo = productItem.querySelector("img").src;
 
-                let productItem = e.target.closest(".product");
-                let name = productItem.querySelector(".name").textContent;
-                let price = productItem.querySelector(".price").textContent.replace("NT$ ", "");
-                let photo = productItem.querySelector("img").getAttribute("src");
-
-                let productData = {
-                    name: name,
-                    price: Number(price),
-                    photo: photo,
-                    quantity: 1
-                };
-
+                const productData = { name, price, photo, quantity: 1 };
                 addToCart(productData);
             }
         });
-    }
-
-    if (home_meals) {
-        home_meals.addEventListener("click", function (e) {
-            if (e.target.classList.contains("add_to_cart")) {
-                e.preventDefault();
-
-                let productItem = e.target.closest(".product");
-                let name = productItem.querySelector(".name").textContent;
-                let price = productItem.querySelector(".price").textContent.replace("NT$ ", "");
-                let photo = productItem.querySelector("img").getAttribute("src");
-
-                let productData = {
-                    name: name,
-                    price: Number(price),
-                    photo: photo,
-                    quantity: 1
-                };
-
-                addToCart(productData);
-            }
-        });
-    }
+    });
 
     function addToCart(productData) {
-        let index = shoppingCart.findIndex(item => item.name === productData.name);
+        const index = shoppingCart.findIndex(item => item.name === productData.name);
         if (index > -1) {
-            shoppingCart[index].quantity += 1;
+            shoppingCart[index].quantity++;
         } else {
             shoppingCart.push(productData);
         }
         saveCartToLocalStorage();
         renderCart();
+        renderTransactionDetail();
     }
 
     function saveCartToLocalStorage() {
@@ -431,104 +403,113 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function loadCartFromLocalStorage() {
         const data = localStorage.getItem("shoppingCart");
-        if (data) {
-            shoppingCart = JSON.parse(data);
-        }
+        shoppingCart = data ? JSON.parse(data) : [];
     }
 
     const cart_list = document.querySelector(".cart_main .cart .list");
-    if (cart_list) {
-        renderCart();
-    }
 
     function renderCart() {
         if (!cart_list) return;
-
-        cart_list.innerHTML = "";
-        if (shoppingCart.length === 0) {
-            cart_list.innerHTML = `<li class="cart_is_empty">您尚未加入任何商品</li>`;
-            renderCheckoutSummary();
-            return;
-        }
+        cart_list.innerHTML = shoppingCart.length === 0 ? `<li class="cart_is_empty">您尚未加入任何商品</li>` : "";
 
         shoppingCart.forEach((item, index) => {
-            let sum = item.price * item.quantity;
+            const sum = item.price * item.quantity;
             const li = document.createElement("li");
-            li.classList.add("item");
+            li.className = "item";
             li.innerHTML = `
-                <img src="${item.photo}" alt="${item.name}">
-                <div class="info">
-                    <div class="name">
-                        <h3>${item.name}</h3>
-                        <p class="price">NT$ ${item.price}</p>
-                    </div>
-                    <div class="amount">
-                        <a href="#" class="minus" data-index="${index}">-</a>
-                        <p class="number">${item.quantity}</p>
-                        <a href="#" class="plus" data-index="${index}">+</a>
-                    </div>
-                </div>
-                <p class="sum">NT$ ${sum}</p>
-                <a href="#" class="bi bi-trash3-fill trashIcon" data-index="${index}"></a>
-            `;
+        <img src="${item.photo}" alt="${item.name}">
+        <div class="info">
+          <div class="name">
+            <h3>${item.name}</h3>
+            <p class="price">NT$ ${item.price}</p>
+          </div>
+          <div class="amount">
+            <a href="#" class="minus" data-index="${index}">-</a>
+            <p class="number">${item.quantity}</p>
+            <a href="#" class="plus" data-index="${index}">+</a>
+          </div>
+        </div>
+        <p class="sum">NT$ ${sum}</p>
+        <a href="#" class="bi bi-trash3-fill trashIcon" data-index="${index}"></a>`;
             cart_list.appendChild(li);
         });
 
-        bindSwipeEvents();
-        renderCheckoutSummary();
         bindCartEvents();
+        renderCheckoutSummary();
+        bindSwipeEvents();
     }
 
     function bindCartEvents() {
-        const minusBtns = document.querySelectorAll(".cart_main .cart .minus");
-        const plusBtns = document.querySelectorAll(".cart_main .cart .plus");
-        const trashIcons = document.querySelectorAll(".cart_main .cart .trashIcon");
+        cart_list.querySelectorAll(".minus").forEach(btn => btn.addEventListener("click", updateQty));
+        cart_list.querySelectorAll(".plus").forEach(btn => btn.addEventListener("click", updateQty));
+        cart_list.querySelectorAll(".trashIcon").forEach(btn => btn.addEventListener("click", removeItem));
+    }
 
-        minusBtns.forEach(btn => {
-            btn.addEventListener("click", (e) => {
-                e.preventDefault();
-                const idx = e.target.dataset.index;
-                if (shoppingCart[idx].quantity > 1) {
-                    shoppingCart[idx].quantity--;
-                } else {
-                    shoppingCart.splice(idx, 1);
-                }
-                saveCartToLocalStorage();
-                renderCart();
-            });
-        });
+    function updateQty(e) {
+        e.preventDefault();
+        const idx = e.target.dataset.index;
+        if (e.target.classList.contains("minus")) {
+            shoppingCart[idx].quantity--;
+            if (shoppingCart[idx].quantity <= 0) shoppingCart.splice(idx, 1);
+        } else {
+            shoppingCart[idx].quantity++;
+        }
+        saveCartToLocalStorage();
+        renderCart();
+        renderTransactionDetail();
+    }
 
-        plusBtns.forEach(btn => {
-            btn.addEventListener("click", (e) => {
-                e.preventDefault();
-                const idx = e.target.dataset.index;
-                shoppingCart[idx].quantity++;
-                saveCartToLocalStorage();
-                renderCart();
-            });
-        });
-
-        trashIcons.forEach(icon => {
-            icon.addEventListener("click", (e) => {
-                e.preventDefault();
-                const idx = e.target.dataset.index;
-                shoppingCart.splice(idx, 1);
-                saveCartToLocalStorage();
-                renderCart();
-            });
-        });
+    function removeItem(e) {
+        e.preventDefault();
+        const idx = e.target.dataset.index;
+        shoppingCart.splice(idx, 1);
+        saveCartToLocalStorage();
+        renderCart();
+        renderTransactionDetail();
     }
 
     function renderCheckoutSummary() {
         const container = document.querySelector('.transactionSummary');
+        if (!container) return;
+        const subtotal = shoppingCart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+        const freight = subtotal > 0 ? 300 : 0;
+        const total = subtotal + freight;
+        container.querySelector('.subtotal p').textContent = `NT$ ${subtotal}`;
+        container.querySelector('.freight p').textContent = `NT$ ${freight}`;
+        container.querySelector('.total p').textContent = `NT$ ${total}`;
+    }
+
+    function renderTransactionDetail() {
+        const container = document.querySelector(".transactionDetail");
         if (!container) return;
 
         const subtotal = shoppingCart.reduce((acc, item) => acc + item.price * item.quantity, 0);
         const freight = subtotal > 0 ? 300 : 0;
         const total = subtotal + freight;
 
-        container.querySelector('.subtotal p').textContent = `NT$ ${subtotal}`;
-        container.querySelector('.freight p').textContent = `NT$ ${freight}`;
-        container.querySelector('.total p').textContent = `NT$ ${total}`;
+        container.querySelector(".subtotal p").textContent = `NT$ ${subtotal}`;
+        container.querySelector(".freight p").textContent = `NT$ ${freight}`;
+        container.querySelector(".total p").textContent = `NT$ ${total}`;
+
+        const ul = container.querySelector(".item_container");
+        ul.innerHTML = shoppingCart.length === 0 ? `<li>購物車是空的</li>` : "";
+
+        shoppingCart.forEach(item => {
+            const sum = item.price * item.quantity;
+            const li = document.createElement("li");
+            li.className = "item";
+            li.innerHTML = `
+        <img src="${item.photo}" alt="${item.name}">
+        <div class="info">
+          <h4>${item.name}</h4>
+          <p class="price">NT$ ${item.price}</p>
+          <p class="amount">${item.quantity} 件</p>
+          <div class="sum">NT$ ${sum}</div>
+        </div>`;
+            ul.appendChild(li);
+        });
     }
+
+    renderCart();
+    renderTransactionDetail();
 });
