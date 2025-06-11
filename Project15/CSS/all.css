@@ -1247,15 +1247,7 @@ article::after {
     position: relative;
     overflow: hidden;
   }
-  .cart_main .cart .sum {
-    width: 100%;
-    padding: 8px 0;
-    border-top: 1px solid #EAF0ED;
-    border-bottom: 1px solid #EAF0ED;
-    margin-top: 8px;
-    text-align: end;
-  }
-  .cart_main .cart .trashIcon {
+  .cart_main .cart .item .trashIcon {
     width: 100px;
     background: #EAF0ED;
     display: flex;
@@ -1269,6 +1261,14 @@ article::after {
   }
   .cart_main .cart .item.show-trash .trashIcon {
     right: 0;
+  }
+  .cart_main .cart .sum {
+    width: 100%;
+    padding: 8px 0;
+    border-top: 1px solid #EAF0ED;
+    border-bottom: 1px solid #EAF0ED;
+    margin-top: 8px;
+    text-align: end;
   }
   .cart_main .transactionSummary {
     color: #3F5D45;

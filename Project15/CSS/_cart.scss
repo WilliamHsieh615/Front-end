@@ -188,6 +188,23 @@
                 border-bottom: none;
                 position: relative;
                 overflow: hidden;
+
+                .trashIcon {
+                    width: 100px;
+                    background: $primary-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: -100px;
+                    transition: all 0.5s ease-in-out;
+                }
+
+                &.show-trash .trashIcon {
+                    right: 0;
+                }
             }
 
             .sum {
@@ -197,23 +214,6 @@
                 border-bottom: 1px solid $primary-color;
                 margin-top: 8px;
                 text-align: end;
-            }
-
-            .trashIcon {
-                width: 100px;
-                background: $primary-color;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                right: -100px;
-                transition: all 0.5s ease-in-out;
-            }
-
-            .item.show-trash .trashIcon {
-                right: 0;
             }
         }
 
