@@ -56,6 +56,18 @@ header {
             }
         }
 
+        .cart_count {
+            background-color: #e00;
+            color: #fff;
+            border-radius: 999px;
+            padding: 2px 6px;
+            font-size: 12px;
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            display: none;
+        }
+
         .cart_line {
             width: 30px;
             height: 1px;

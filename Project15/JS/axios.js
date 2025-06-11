@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     axios.get("../HTML/header.html")
         .then(res => {
             document.getElementById("header").innerHTML = res.data;
+            updateCartCount();
         })
         .catch(err => console.error("載入 header 發生錯誤：", err));
 

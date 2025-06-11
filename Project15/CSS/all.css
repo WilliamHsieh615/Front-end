@@ -165,6 +165,17 @@ header .cart_wrapper .cart {
 header .cart_wrapper .cart:hover {
   transform: translateX(20px);
 }
+header .cart_wrapper .cart_count {
+  background-color: #e00;
+  color: #fff;
+  border-radius: 999px;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  display: none;
+}
 header .cart_wrapper .cart_line {
   width: 30px;
   height: 1px;
