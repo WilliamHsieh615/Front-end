@@ -6,6 +6,39 @@ body {
     text-shadow: 0 0 5px #fff2b3;
 }
 
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1061; // sweetalert2 對話框的層級是 1060，與 bootstrap 的設定相同
+    display: flex;
+}
+
+.door {
+    width: 50%;
+    height: 100%;
+    transition: all 1.5s ease-in-out;
+    filter: drop-shadow(0 0 10px rgba(212,175,55,0.7));
+}
+
+.left-door {
+    background: linear-gradient(to right, #4b2e1e, #3a2418);
+    border-right: 10px solid rgba(#d4af37, 0.3);
+    box-shadow: inset 5px 0 10px rgba(0,0,0,0.8);
+}
+
+.right-door {
+    background: linear-gradient(to left, #4b2e1e, #3a2418);
+    border-left: 10px solid rgba(#d4af37, 0.3);
+    box-shadow: inset -5px 0 10px rgba(0,0,0,0.8);
+}
+
+.left-door, .right-door {
+  transition: transform 3s ease-in-out;
+}
+
 .wrap {
     width: 100vw;
     height: 100vh;

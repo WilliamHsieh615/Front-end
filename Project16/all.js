@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", () => {
+    (() => {
+        document.querySelector('.left-door').style.transform = 'translateX(-100%)';
+        document.querySelector('.right-door').style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            document.querySelector('.intro').style.display = 'none';
+        }, 3000);
+    })();
+});
+
 function checkisMuggle(name) {
     return new Promise((resolve, reject) => {
         const trueOrFalse = Math.floor(Math.random() * 3);
@@ -69,17 +79,30 @@ function sortingProcess() {
     Swal.fire({
         background: '#1e1e2f',
         color: '#f8f8f8',
-        title: "請輸入你的名字",
-        input: "text",
+        title: "歡迎來到霍格華茲",
+        text: "孩子～來選擇你的學院吧！！",
         imageUrl: "image/sortingHat.png",
         imageWidth: 200,
         imageHeight: 280,
         allowOutsideClick: false,
-        showCancelButton: true,
-        confirmButtonText: "開始分類",
-        cancelButtonText: "我還沒準備好",
+        confirmButtonText: "確定",
         confirmButtonColor: '#c62828',
-        cancelButtonColor: '#8b0000'
+    }).then(() => {
+        return Swal.fire({
+            background: '#1e1e2f',
+            color: '#f8f8f8',
+            title: "請輸入你的名字",
+            input: "text",
+            imageUrl: "image/sortingHat.png",
+            imageWidth: 200,
+            imageHeight: 280,
+            allowOutsideClick: false,
+            showCancelButton: true,
+            confirmButtonText: "開始分類",
+            cancelButtonText: "我還沒準備好",
+            confirmButtonColor: '#c62828',
+            cancelButtonColor: '#8b0000'
+        });
     }).then(result => {
         if (result.isConfirmed && result.value.trim()) {
             const name = result.value.trim();
@@ -103,7 +126,7 @@ function sortingProcess() {
                     return showLoadingWithTimer("分類帽思考中...", "請稍候...正在觀察你的個性", 3000).then(() => name);
                 })
                 .then(name => sortingHat(name))
-                .then(({ name, house, message}) => {
+                .then(({ name, house, message }) => {
                     return Swal.fire({
                         background: '#1e1e2f',
                         color: '#f8f8f8',
