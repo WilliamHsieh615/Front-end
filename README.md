@@ -18,7 +18,7 @@
 | 14 | 六角西餐廳 | 模擬餐廳主頁設計，整合 jQuery 與 SCSS，實作 RWD 響應式選單與頁面滾動效果，練習 DOM 操作與模組化開發 | HTML、CSS（SCSS）、JavaScript（jQuery） | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project14/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project14) |
 | 15 | Sweetaste甜品電商網 | 模擬餐廳主頁設計，整合 jQuery 與 SCSS，實作 RWD 響應式選單與頁面滾動效果，練習 DOM 操作與模組化開發 | HTML、CSS（SCSS）、JavaScript（jQuery） | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project15/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project15) |
 | 16 | 哈利波特分類帽 | 使用 JavaScript 與 Promise 製作互動小遊戲，模擬分類帽根據使用者姓名隨機分派學院，搭配 SweetAlert2 彈跳提示提升使用體驗 | HTML、CSS（SCSS）、JavaScript | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project16/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project16) |
-| 17 | 飲料店訂餐系統 |  | HTML、Bootstrap、JavaScript (Vue.js) | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project17/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project17) |
+| 17 | 飲料店訂餐系統 | 開發線上飲料店訂購系統，整合 Vue.js 進行資料綁定、表單處理與訂單流程控制，提升使用者操作體驗 | HTML、Bootstrap、JavaScript (Vue.js) | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project17/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project17) |
 
 
 
