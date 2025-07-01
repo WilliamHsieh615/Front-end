@@ -257,4 +257,17 @@ h2 {
     animation: none;
 }
 
+@media (max-width: 800px) {
+    .right span{
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .scroll-btn-left,
+    .scroll-btn-right{
+        font-size: 2rem;
+    }
+}
+
 

@@ -107,7 +107,7 @@ button {
 /* ====================<< Mode >>==================== */
 
 .wrap{
-    max-width: 1025px;
+    width: 1025px;
     margin: 0 auto;
     background: rgb(250, 250, 250);
 }
