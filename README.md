@@ -1,6 +1,6 @@
 # 前端作品集
 
-## 前端切版
+## 前端切版 作品
 | 編號 | 專案名稱 | 專案簡介 | 技術使用 | Demo 連結 | GitHub 原始碼 |
 |------|-----------|--------------------------------------------------|-------------------------------------------|------------------|-------------------|
 | 1 | 六角學院形象官網 | 設計一頁式企業形象官網，展示品牌風格與服務內容 | HTML、CSS | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project1/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project1) |
@@ -10,7 +10,7 @@
 | 5 | 時空之門｜視差動畫展示頁 | 使用 SCSS 製作視差滾動與動畫特效，打造創意互動頁面 | HTML、CSS（SCSS） | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project7/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project7) |
 | 6 | 送你一道彩虹｜滑鼠互動畫面 | 以彩虹為主題設計動畫與滑鼠互動視覺效果 | HTML、CSS（SCSS） | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project8/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project8) |
 
-## JavaScript
+## JavaScript 作品
 | 編號 | 專案名稱 | 專案簡介 | 技術使用 | Demo 連結 | GitHub 原始碼 |
 |------|-----------|--------------------------------------------------|-------------------------------------------|------------------|-------------------|
 | 1 | 六角互動官網 | 導入 jQuery 增強頁面互動性，打造品牌形象網站 | HTML、CSS、JavaScript（jQuery） | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project9/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project9) |
