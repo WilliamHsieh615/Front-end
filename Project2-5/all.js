@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     (() => {
         document.querySelector('.left-door').style.transform = 'translateX(-100%)';
         document.querySelector('.right-door').style.transform = 'translateX(100%)';
@@ -6,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('.intro').style.display = 'none';
         }, 3000);
     })();
+
 });
 
 function checkisMuggle(name) {
@@ -74,6 +76,13 @@ function showLoadingWithTimer(title, htmlText, timer) {
         },
         willClose: () => clearInterval(timerInterval),
     });
+}
+
+function showRestart() {
+    setTimeout(() => {
+        const restart = document.querySelector(".restart");
+        restart.classList.add("visible");
+    }, 1000);
 }
 
 function sortingProcess() {
@@ -150,6 +159,8 @@ function sortingProcess() {
                             confirmButtonColor: '#c62828',
                             allowOutsideClick: false
                         });
+                    }).then(() => {
+                        showRestart();
                     });
                 })
                 .catch(error => {
@@ -174,6 +185,8 @@ function sortingProcess() {
                             confirmButtonColor: '#8b0000',
                             allowOutsideClick: false
                         });
+                    }).then(() => {
+                        showRestart();
                     });
                 });
 
@@ -200,8 +213,10 @@ function sortingProcess() {
                 confirmButtonText: "離開",
                 confirmButtonColor: '#8b0000',
                 allowOutsideClick: false
+            }).then(() => {
+                showRestart();
             });
         }
     });
 }
-sortingProcess();
+ sortingProcess();

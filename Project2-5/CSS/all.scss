@@ -113,8 +113,35 @@ body {
     position: absolute;
     bottom: 3%;
     right: 3%;
+    opacity: 0;
+    pointer-events: none;
 
-    &:hover {
-        color: orange;
+    &.visible {
+        animation: fadeIn 0.5s ease-in forwards, shiny 1s ease-in-out 0.5s infinite;
+        pointer-events: auto;
+
+        &:hover {
+            color: orange;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+}
+
+@keyframes shiny {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
     }
 }
