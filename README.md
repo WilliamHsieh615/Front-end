@@ -18,6 +18,7 @@
 | 3 | 念佛計數器｜送給阿嬤的互動工具 | JavaScript 實作計數功能，設計互動介面送給阿嬤使用 | HTML、CSS、JavaScript | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project2-3/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project2-3) |
 | 4 | 待辦事項清單 | 開發簡潔的待辦清單應用，練習資料處理與 DOM 操作 | HTML、CSS（SCSS）、JavaScript | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project2-4/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project2-4) |
 | 5 | 霍格華茲分類帽｜哈利波特魔法互動體驗 | 使用 JavaScript 與 Promise 製作互動小遊戲，模擬分類帽根據使用者姓名隨機分派學院，搭配 SweetAlert2 彈跳提示提升使用體驗 | HTML、CSS（SCSS）、JavaScript (sweetalert2) | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project2-5/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project2-5) |
+| 6 | 霍格華茲分類帽｜哈利波特魔法互動體驗 | 使用 JavaScript 與 Promise 製作互動小遊戲，模擬分類帽根據使用者姓名隨機分派學院，搭配 SweetAlert2 彈跳提示提升使用體驗 | HTML、CSS（SCSS）、JavaScript (sweetalert2) | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project2-6/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project2-6) |
 
 
 
