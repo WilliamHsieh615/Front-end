@@ -1,0 +1,281 @@
+[
+  {
+    "name": "太陽",
+    "englishName": "Sun",
+    "type": "Star",
+    "image": "image/Sun.jpg",
+    "description": "主要由氫和氦構成，透過核融合釋放能量與光，維持地球氣候與生命所需，是所有行星繞行的引力核心。"
+  },
+  {
+    "name": "水星",
+    "englishName": "Mercury",
+    "type": "RockyPlanet",
+    "hasLife": false,
+    "image": "image/RockyPlanet/Mercury.jpg",
+    "description": "是最靠近太陽，沒有大氣遮蔽，晝夜溫差超過攝氏600度，表面佈滿撞擊坑，是觀測內太陽系行星的典型岩質行星。"
+  },
+  {
+    "name": "金星",
+    "englishName": "Venus",
+    "type": "RockyPlanet",
+    "hasLife": false,
+    "image": "image/RockyPlanet/Venus.jpg",
+    "description": "因濃厚二氧化碳大氣及硫酸雲層展現強烈溫室效應，地表溫度高達約470 °C，是最炙熱的行星之一，具極高壓力環境。"
+  },
+  {
+    "name": "地球",
+    "englishName": "Earth",
+    "type": "RockyPlanet",
+    "hasLife": true,
+    "image": "image/RockyPlanet/Earth.jpg",
+    "description": "擁有液態水、大氣與磁場，支撐複雜生命存在，是目前唯一確認有生命的行星，亦具活躍板塊與氣候系統。"
+  },
+  {
+    "name": "火星",
+    "englishName": "Mars",
+    "type": "RockyPlanet",
+    "hasLife": false,
+    "image": "image/RockyPlanet/Mars.jpg",
+    "description": "其外觀呈紅色，表面覆蓋氧化鐵塵土，極地冰帽與古老乾河道跡象顯示其過去可能存在液態水與微小氣候變化。"
+  },
+  {
+    "name": "木星",
+    "englishName": "Jupiter",
+    "type": "GasGiant",
+    "hasLife": false,
+    "image": "image/GasGiant/Jupiter.jpg",
+    "description": "是太陽系中質量最大行星，具有強大磁場與著名大紅斑風暴，環繞79顆以上衛星，核心可能含液態金屬氫，環系稠密。"
+  },
+  {
+    "name": "土星",
+    "englishName": "Saturn",
+    "type": "GasGiant",
+    "hasLife": false,
+    "image": "image/GasGiant/Saturn.jpg",
+    "description": "以壯觀行星環系聞名，環由冰粒與岩石組成，本體氣態結構密度低於水，其衛星 Titan 擁有液態甲烷湖與厚大氣。"
+  },
+  {
+    "name": "天王星",
+    "englishName": "Uranus",
+    "type": "GasGiant",
+    "hasLife": false,
+    "image": "image/GasGiant/Uranus.jpg",
+    "description": "其自轉軸傾斜接近90度，呈橫躺姿態，其大氣含有甲烷導致藍綠色外觀，是冷冰巨行星之一。"
+  },
+  {
+    "name": "海王星",
+    "englishName": "Neptune",
+    "type": "GasGiant",
+    "hasLife": false,
+    "image": "image/GasGiant/Neptune.jpg",
+    "description": "其風速為太陽系最快，呈深藍色，有暴風雲系統，氣候活動活躍，是外太陽系最遠的大型行星之一。"
+  },
+  {
+    "name": "冥王星",
+    "englishName": "Pluto",
+    "type": "DwarfPlanet",
+    "hasLife": false,
+    "image": "image/DwarfPlanet/Pluto.jpg",
+    "description": "位於柯伊伯帶，表面覆蓋氮與甲烷冰，擁有伴星 Charon，曾為第九行星，2006年重新分類為矮行星。"
+  },
+  {
+    "name": "穀神星",
+    "englishName": "Ceres",
+    "type": "DwarfPlanet",
+    "hasLife": false,
+    "image": "image/DwarfPlanet/Ceres.jpg",
+    "description": "位於火星與木星之間的小行星帶中，其是小行星帶中最大天體，由 NASA Dawn 探測器探訪，可能有地下冰與鹽泉活動。"
+  },
+  {
+    "name": "鬩神星",
+    "englishName": "Eris",
+    "type": "DwarfPlanet",
+    "hasLife": false,
+    "image": "image/DwarfPlanet/Eris.jpg",
+    "description": "其質量略大於冥王星，其發現促成矮行星分類調整，位於柯伊伯帶深處，表面可能覆蓋冰質物質。"
+  },
+  {
+    "name": "妊神星",
+    "englishName": "Haumea",
+    "type": "DwarfPlanet",
+    "hasLife": false,
+    "image": "image/DwarfPlanet/Haumea.jpg",
+    "description": "旋轉極快，導致其形狀扁長，表面可能含冰質與暗物質，擁有環系與至少兩顆小衛星。"
+  },
+  {
+    "name": "鳥神星",
+    "englishName": "Makemake",
+    "type": "DwarfPlanet",
+    "hasLife": false,
+    "image": "image/DwarfPlanet/Makemake.jpg",
+    "description": "被認為覆蓋甲烷與乙烷冰，表面反射率高，是柯伊伯帶中常見高亮度矮行星之一。"
+  },
+  {
+    "name": "共工星",
+    "englishName": "Gonggong",
+    "type": "DwarfPlanet",
+    "hasLife": false,
+    "image": "image/DwarfPlanet/Gonggong.jpg",
+    "description": "位於柯伊伯帶，外觀呈紅色調，被懷疑可能有一顆衛星與水冰成分存在。"
+  },
+  {
+    "name": "創神星",
+    "englishName": "Quaoar",
+    "type": "DwarfPlanet",
+    "hasLife": false,
+    "image": "image/DwarfPlanet/Quaoar.jpg",
+    "description": "位於柯伊伯帶，表面亮度中等，可能有微弱環系統，軌道穩定且遠離太陽。"
+  },
+  {
+    "name": "賽德娜",
+    "englishName": "Sedna",
+    "type": "DwarfPlanet",
+    "hasLife": false,
+    "image": "image/DwarfPlanet/Sedna.jpg",
+    "description": "擁有極為偏心的軌道，是遠日點極遠的遠外太陽系矮行星，環繞太陽周期達數千年。"
+  },
+  {
+    "name": "亡神星",
+    "englishName": "Orcus",
+    "type": "DwarfPlanet",
+    "hasLife": false,
+    "image": "image/DwarfPlanet/Orcus.jpg",
+    "description": "被視為冥王星的“雙胞胎”，同樣位於柯伊伯帶，大小與軌道類似，表面可能含冰質物質。"
+  },
+  {
+    "name": "月亮",
+    "englishName": "Moon",
+    "type": "Satellite",
+    "host": "地球",
+    "image": "image/Satellite/Moon.jpg",
+    "description": "月亮是地球唯一衛星，影響潮汐與自轉穩定，表面布滿撞擊坑與月海，是人類唯一登陸過的外天體。"
+  },
+  {
+    "name": "火衛一",
+    "englishName": "Phobo",
+    "type": "Satellite",
+    "host": "火星",
+    "image": "image/Satellite/Phobo.jpg",
+    "description": "是火星最大衛星，為不規則形狀，表面坑洞眾多，可能為捕獲的小行星，軌道高度接近火星。"
+  },
+  {
+    "name": "火衛二",
+    "englishName": "Deimos",
+    "type": "Satellite",
+    "host": "火星",
+    "image": "image/Satellite/Deimos.jpg",
+    "description": "火衛二較火衛一尺寸小，表面較平滑，同樣可能源自被捕獲的小天體，亮度低且軌道慢。"
+  },
+  {
+    "name": "木衛一",
+    "englishName": "Io",
+    "type": "Satellite",
+    "host": "木星",
+    "image": "image/Satellite/Io.jpg",
+    "description": "是太陽系火山活動最劇烈的衛星，表面不斷噴出硫磺和熔岩，地質變化頻繁、地形鮮明。"
+  },
+  {
+    "name": "木衛二",
+    "englishName": "Europa",
+    "type": "Satellite",
+    "host": "木星",
+    "image": "image/Satellite/Europa.jpg",
+    "description": "冰殼下可能有全球性液態海洋，是尋找外太陽系生命的重要目標，表面裂紋明顯。"
+  },
+  {
+    "name": "木衛三",
+    "englishName": "Ganymede",
+    "type": "Satellite",
+    "host": "木星",
+    "image": "image/Satellite/Ganymede.jpg",
+    "description": "是太陽系最大的衛星，擁有磁場與分層結構，表面有冰殼與古老撞擊地貌。"
+  },
+  {
+    "name": "木衛四",
+    "englishName": "Callisto",
+    "type": "Satellite",
+    "host": "木星",
+    "image": "image/Satellite/Callisto.jpg",
+    "description": "表面密布坑洞，是保存最古老地表之一，可能有地下海洋並持續冷卻中。"
+  },
+  {
+    "name": "土衛二",
+    "englishName": "Enceladus",
+    "type": "Satellite",
+    "host": "土星",
+    "image": "image/Satellite/Enceladus.jpg",
+    "description": "南極噴發冰晶羽狀物，可能擁有地下鹹水海洋，是有機物探測重點。"
+  },
+  {
+    "name": "土衛六",
+    "englishName": "Titan",
+    "type": "Satellite",
+    "host": "土星",
+    "image": "image/Satellite/Titan.jpg",
+    "description": "擁有厚實大氣與甲烷湖泊，類似地球早期狀態，可能有複雜碳氫化合物化學環境。"
+  },
+  {
+    "name": "土衛八",
+    "englishName": "Iapetus",
+    "type": "Satellite",
+    "host": "土星",
+    "image": "image/Satellite/Iapetus.jpg",
+    "description": "表面左右色差明顯，有赤道山脊與不對稱形狀，是土星系中最奇特衛星之一。"
+  },
+  {
+    "name": "天衛五",
+    "englishName": "Miranda",
+    "type": "Satellite",
+    "host": "天王星",
+    "image": "image/Satellite/Miranda.jpg",
+    "description": "表面呈拼貼狀，峽谷與裂縫交錯，地貌疑似由劇烈地質作用與撞擊重組而成。"
+  },
+  {
+    "name": "天衛八",
+    "englishName": "Titania",
+    "type": "Satellite",
+    "host": "天王星",
+    "image": "https://placehold.co/800x800?text=No+Image+Available&bg=ffffff&fg=000000",
+    "description": "是天王星最大衛星之一，表面覆蓋冰層與撞擊地形，可能有輕微內部活動。"
+  },
+  {
+    "name": "海衛一",
+    "englishName": "Triton",
+    "type": "Satellite",
+    "host": "海王星",
+    "image": "image/Satellite/Triton.jpg",
+    "description": "以逆行軌道繞行海王星，表面有冰火山噴發，可能源自被海王星捕獲的小天體。"
+  },
+  {
+    "name": "冥衛一",
+    "englishName": "Charon",
+    "type": "Satellite",
+    "host": "冥王星",
+    "image": "image/Satellite/Charon.jpg",
+    "description": "與冥王星互鎖自轉構成雙星系統，地表有峽谷和平滑冰原地形。"
+  },
+  {
+    "name": "妊衛一",
+    "englishName": "Dysnomia",
+    "type": "Satellite",
+    "host": "妊神星",
+    "image": "https://placehold.co/800x800?text=No+Image+Available&bg=ffffff&fg=000000",
+    "description": "是妊神星唯一已確認衛星，環境資訊稀少，形狀與組成仍在研究中。"
+  },
+  {
+    "name": "鳥衛一",
+    "englishName": "MK1",
+    "type": "Satellite",
+    "host": "鳥神星",
+    "image": "https://placehold.co/800x800?text=No+Image+Available&bg=ffffff&fg=000000",
+    "description": "鳥神星的小型伴星，規模小、亮度低，目前資訊仍非常有限。"
+  },
+  {
+    "name": "鬩衛一",
+    "englishName": "QW1",
+    "type": "Satellite",
+    "host": "鬩神星",
+    "image": "https://placehold.co/800x800?text=No+Image+Available&bg=ffffff&fg=000000",
+    "description": "為鬩神星的伴隨衛星，於2007年被發現，規模小，細節仍待探究。"
+  }
+]

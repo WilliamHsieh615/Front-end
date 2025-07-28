@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>太陽系天體系統</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul id="scene">
+        <li data-depth="0.2">
+            <img src="./image/background.jpg" alt="background" />
+        </li>
+    </ul>
+
+    <a class="mapLink" href="#" title="探索星圖">
+        <img src="./image/astronaut.png" alt="astronaut">
+    </a>
+    <div class="map"><a class="bi bi-x-circle xIcon"></a><img src="./image/map.jpg" alt="太陽系圖" class="solarSystemMap"></div>
+
+    <h1>太陽系天體系統</h1>
+
+    <div class="search">
+        <a class="bi bi-search searchIcon" href="#"></a>
+        <input type="search" placeholder="搜尋你想了解的天體" class="searchInput">
+    </div>
+
+    <div class="container">
+        <div class="swiper">
+            <div class="cardContainer swiper-wrapper"></div>
+        </div>
+        <div class="swiper-button-prev prevBtn"></div>
+        <div class="swiper-button-next nextBtn"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/parallax-js@3.1.0/dist/parallax.min.js"></script>
+    <script>
+        const scene = document.getElementById("scene");
+        new Parallax(scene);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./all.js"></script>
+</body>
+
+</html>
