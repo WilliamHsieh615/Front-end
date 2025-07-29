@@ -177,9 +177,13 @@ const map = document.querySelector(".map");
 const xIcon = map.querySelector(".xIcon");
 mapLink.addEventListener("click", (e) => {
 	e.preventDefault();
-	map.style.display = "flex";
+	map.style.opacity = "1";
+	map.style.zIndex = "20"
 });
 xIcon.addEventListener("click", (e) => {
 	e.preventDefault();
-	map.style.display = "none";
+	map.style.opacity = "0";
+	setTimeout(() => {
+        map.style.zIndex = "-2";
+    }, 500);
 });

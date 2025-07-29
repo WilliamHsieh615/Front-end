@@ -275,7 +275,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    opacity: 0;
+    z-index: -2;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .map .xIcon {
@@ -294,15 +296,53 @@ body {
     width: 100%;
 }
 
-h1 {
-    font-size: 3rem;
+.title {
     text-align: center;
     padding: 50px 20px;
+    color: var(--milkyway-dust);
+}
+
+.title h1,
+.title p {
+    position: relative;
+    background: linear-gradient(90deg,
+            var(--milkyway-dust) 0%,
+            #fff 45%,
+            var(--solar-yellow) 50%,
+            #fff 55%,
+            var(--milkyway-dust) 100%);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s infinite linear;
+}
+
+.title h1 {
+    font-size: 3rem;
+}
+
+.title p {
+    font-size: 2rem;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: -100%;
+    }
 }
 
 @media (max-width: 400px) {
-    h1 {
+    .title h1 {
         font-size: 2.5rem;
+    }
+
+    .title p {
+        font-size: 1.5rem;
     }
 }
 
