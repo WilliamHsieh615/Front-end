@@ -20,7 +20,10 @@
 | 5 | 霍格華茲分類帽｜哈利波特魔法互動體驗 | 使用 JavaScript 與 Promise 製作互動小遊戲，模擬分類帽根據使用者姓名隨機分派學院，搭配 SweetAlert2 彈跳提示提升使用體驗 | HTML、CSS（SCSS）、JavaScript (sweetalert2) | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project2-5/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project2-5) |
 | 6 | 太陽系天體系統｜宇宙中的卡片探索旅程 | 以原型繼承並使用 ES6 class 語法建立天體類別架構，載入 JSON 資料動態渲染卡片，搭配 Swiper 輪播與 Parallax 背景呈現互動式宇宙探索體驗 | HTML、CSS、JavaScript（Axios、Swiper.js、Parallax.js)、JSON | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project2-6/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project2-6) |
 
-
+## Vue.js 作品
+| 編號 | 專案名稱 | 專案簡介 | 技術使用 | Demo 連結 | GitHub 原始碼 |
+|------|-----------|--------------------------------------------------|-------------------------------------------|------------------|-------------------|
+| 1 | 餅乾庫存管理系統 | 一個以 Vue 3 建構的前端庫存管理介面，動態載入餅乾商品資料，並可即時調整庫存與商品資訊，支援編輯與確認模式切換 | Vue 3 Composition API、Axios、Bootstrap 5、原始 JSON 資料處理、雙向綁定、條件渲染與事件監聽 | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project3-1/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project3-1) |
 
 
 
