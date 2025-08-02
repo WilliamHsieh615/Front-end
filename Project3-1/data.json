@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "樂事洋芋片",
+        "description": "經典原味洋芋片，酥脆爽口",
+        "price": 35,
+        "stock": 20
+    },
+    {
+        "id": 2,
+        "name": "品客洋芋片",
+        "description": "馬鈴薯製成，濃郁起司風味",
+        "price": 45,
+        "stock": 18
+    },
+    {
+        "id": 3,
+        "name": "咔辣姆久",
+        "description": "重口味辣味洋芋圈，刺激味蕾",
+        "price": 30,
+        "stock": 34
+    },
+    {
+        "id": 4,
+        "name": "奇多起司棒",
+        "description": "濃厚起司風味，香酥不膩",
+        "price": 40,
+        "stock": 10
+    },
+    {
+        "id": 5,
+        "name": "多力多滋玉米片",
+        "description": "墨西哥風味玉米片，適合搭配莎莎醬",
+        "price": 50,
+        "stock": 25
+    },
+    {
+        "id": 6,
+        "name": "玉米濃湯脆片",
+        "description": "玉米濃湯口味餅乾，甜鹹交織",
+        "price": 38,
+        "stock": 20
+    },
+    {
+        "id": 7,
+        "name": "可樂果",
+        "description": "台式經典點心，蒜香濃郁超涮嘴",
+        "price": 25,
+        "stock": 18
+    },
+    {
+        "id": 8,
+        "name": "浪味仙",
+        "description": "酥脆輕盈，入口即化的鹹香零嘴",
+        "price": 28,
+        "stock": 20
+    },
+    {
+        "id": 9,
+        "name": "玉黍叔",
+        "description": "玉米香氣濃郁，甜鹹好滋味",
+        "price": 30,
+        "stock": 20
+    },
+    {
+        "id": 10,
+        "name": "蚵仔煎",
+        "description": "創意餅乾，重現夜市蚵仔煎風味",
+        "price": 42,
+        "stock": 20
+    },
+    {
+        "id": 11,
+        "name": "鹹蔬餅",
+        "description": "綜合蔬菜口味，低油酥脆零嘴",
+        "price": 32,
+        "stock": 20
+    },
+    {
+        "id": 12,
+        "name": "卡迪那薯條",
+        "description": "厚切酥脆薯條餅乾，經典鹽味",
+        "price": 35,
+        "stock": 20
+    }
+]
