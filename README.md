@@ -23,7 +23,7 @@
 ## Vue.js 作品
 | 編號 | 專案名稱 | 專案簡介 | 技術使用 | Demo 連結 | GitHub 原始碼 |
 |------|-----------|--------------------------------------------------|-------------------------------------------|------------------|-------------------|
-| 1 | 餅乾庫存管理系統 | 一個以 Vue 3 建構的前端庫存管理介面，動態載入餅乾商品資料，並可即時調整庫存與商品資訊，支援編輯與確認模式切換 | Vue 3 Composition API、Axios、Bootstrap 5、原始 JSON 資料處理、雙向綁定、條件渲染與事件監聽 | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project3-1/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project3-1) |
+| 1 | 餅乾庫存管理系統 | 一個以 Vue 3 建構的前端庫存管理介面，動態載入餅乾商品資料，並可即時調整庫存與商品資訊，支援編輯與確認模式切換 | Vue 3 (Composition API)、Axios、Bootstrap 5、JSON | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project3-1/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project3-1) |
 
 
 
