@@ -57,7 +57,7 @@
                                 <p class="text-muted my-0">$ {{ item.subtotal }}</p>
                             </div>
                             <div class="ms-auto">
-                                <button class="btn btn-sm btn-outline-danger" @click="removeProduct(i)"><i
+                                <button class="btn btn-sm btn-outline-danger" @click="removeProduct(item, i)"><i
                                         class="bi bi-trash3-fill"></i></button>
                             </div>
                         </li>
@@ -131,8 +131,15 @@
                     } 
                 };
 
-                const removeProduct = (i) => {
+                const removeProduct = (item, i) => {
                     cart.value.splice(i, 1);
+
+                    const message = `您已將 ${item.productItem.name} 移除購物車`;
+                    toasts.value.push(message);
+
+                    setTimeout(() => {
+                        toasts.value.shift();
+                    }, 3000);
                 }
 
                 const totalPrice = computed(() => {
