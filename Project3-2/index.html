@@ -7,14 +7,200 @@
 
     <title>會員狀態管理</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-J8u5vms4IjwVYny+MqlZs5iOqVfd5X0m2h5dUqz0G6gWyK0cZhyO1sOWHdYBMLQ9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ksm0fny9A9AgbUw2+Z2vZAZ+eZ7JYoU5pJHSMbmNkIpcXebwzY9OfnKjY2nYfQj5"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+            background: #f5f6f8;
+            color: #1f2937;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap {
+            width: 420px;
+            margin: 0 30px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+            position: relative;
+        }
+
+        .container {
+            --bs-gutter-x: 0;
+        }
+
+        .link {
+            display: flex;
+            justify-content: center;
+        }
+
+        .link a {
+            width: 50%;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #6b7280;
+            font-weight: 600;
+            padding: 20px 10px;
+            transition: color .2s, background .2s;
+        }
+
+        .link .login-link{
+            border-radius: 8px 0 0;
+        }
+
+        .link .register-link{
+            border-radius: 0 8px 0 0;
+        }
+
+        .link a:hover {
+            background: #f1f5f9;
+            color: #111827;
+        }
+
+        .link a.active {
+            background: #4f46e5;
+            color: #fff;
+        }
+
+        form h2 {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 800;
+            color: #111827;
+        }
+
+        form{
+            padding: 32px 28px;
+        }
+
+        .email,
+        .password,
+        .nickname {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #374151;
+        }
+
+        .email-input,
+        .password-input,
+        .nickname-input {
+            position: relative;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 44px 12px 44px;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 15px;
+            background: #fff;
+            transition: border-color .2s, box-shadow .2s, background .2s;
+        }
+
+        input::placeholder {
+            color: #9ca3af;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, .12);
+        }
+
+        .email-icon,
+        .password-icon,
+        .accout-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #9ca3af;
+            pointer-events: none;
+        }
+
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #9ca3af;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 8px;
+            transition: background .15s, color .15s;
+        }
+
+        .eye-icon:hover {
+            background: #f3f4f6;
+            color: #6b7280;
+        }
+
+        .password-input input {
+            padding-left: 44px;
+            padding-right: 44px;
+        }
+
+        .email-input input {
+            padding-left: 44px;
+        }
+
+        .nickname input {
+            padding-left: 44px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px 14px;
+            border: none;
+            border-radius: 10px;
+            background: #4f46e5;
+            color: #fff;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform .03s ease, box-shadow .2s ease, background .2s ease;
+            box-shadow: 0 8px 20px rgba(79, 70, 229, .25);
+        }
+
+        button[type="submit"]:hover {
+            background: #4338ca;
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(1px);
+            box-shadow: 0 6px 16px rgba(79, 70, 229, .28);
+        }
+
+    </style>
 
 </head>
 
@@ -24,11 +210,11 @@
     <div id="app" class="wrap container">
 
         <div class="link">
-            <a href="#" class="login-link">登入</a>
-            <a href="#" class="register-link">註冊</a>
+            <a href="#" class="login-link" :class="{'active': link === 'login'}" @click="link = 'login'">登入</a>
+            <a href="#" class="register-link" :class="{'active': link === 'register'}" @click="link = 'register'">註冊</a>
         </div>
 
-        <form action="/page.html" method="post" class="login-form">
+        <form action="/page.html" method="post" class="login-form" v-if="link === 'login'">
             <h2>登入</h2>
             <div class="email">
                 <label for="email">Email</label>
@@ -40,16 +226,15 @@
             <div class="password">
                 <label for="password">Password</label>
                 <div class="password-input">
-                    <input type="password" name="password" id="password" placeholder="請輸入密碼" required>
+                    <input :type="showPassword ? 'text' : 'password'" name="password" id="password" placeholder="請輸入密碼" required>
                     <i class="bi bi-lock-fill password-icon"></i>
-                    <a href="#" class="bi bi-eye-slash-fill eye-icon"></a>
-                    <a href="#" class="bi bi-eye-fill eye-icon"></a>
+                    <a href="#" class="eye-icon" @click="eyeToggle"><i :class="showPassword ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></i></a>
                 </div>
             </div>
             <button type="submit">登入</button>
         </form>
 
-        <form action="" method="post" class="registe-form">
+        <form action="" method="post" class="register-form" v-else-if="link === 'register'">
             <h2>註冊</h2>
             <div class="email">
                 <label for="email">Email</label>
@@ -58,20 +243,19 @@
                     <i class="bi bi-envelope-fill email-icon"></i>
                 </div>
             </div>
-            <div class="nickname">
-                <label for="nickname">Nickname</label>
-                <div>
-                    <input type="text" name="nickname" id="nickname" placeholder="請輸入暱稱" required>
-                    <i class="bi bi-person-fill accout-icon"></i>
-                </div>
-            </div>
             <div class="password">
                 <label for="password">Password</label>
                 <div class="password-input">
-                    <input type="password" name="password" id="password" placeholder="請輸入密碼" required>
+                    <input :type="showPassword ? 'text' : 'password'" name="password" id="password" placeholder="請輸入密碼" required>
                     <i class="bi bi-lock-fill password-icon"></i>
-                    <a href="#" class="bi bi-eye-slash-fill eye-icon"></a>
-                    <a href="#" class="bi bi-eye-fill eye-icon"></a>
+                    <a href="#" class="eye-icon" @click.prevent="eyeToggle"><i :class="showPassword ? 'bi bi-eye-fill' : 'bi-eye-slash-fill'"></i></a>
+                </div>
+            </div>
+            <div class="nickname">
+                <label for="nickname">Nickname</label>
+                <div class="nickname-input">
+                    <input type="text" name="nickname" id="nickname" placeholder="請輸入暱稱" required>
+                    <i class="bi bi-person-fill accout-icon"></i>
                 </div>
             </div>
             <button type="submit">註冊</button>
@@ -81,37 +265,23 @@
 
     <script>
 
-        const { createApp, ref, onMounted } = Vue;
+        const { createApp, ref } = Vue;
 
         createApp({
-            setup() {
+            setup(){
 
-                const items = ref([]);
-                console.log(items);
+                const link = ref('login');
 
-                const isEdit = ref(false);
+                const showPassword = ref(false);
+                const eyeToggle = (() => {
+                    showPassword.value = !showPassword.value;
+                })
 
-                onMounted(() => {
-                    axios.get("./data.json")
-                        .then(res => {
-                            console.log(res.data);
-                            items.value = res.data;
-                        }).catch(err => {
-                            console.log("no data");
-                        });
-                });
-
-                const increase = (item) => {
-                    item.stock++;
-                };
-
-                const decrease = (item) => {
-                    if (item.stock > 0) item.stock--;
-                };
-
-                return { items, increase, decrease, isEdit };
+                return {link, showPassword, eyeToggle};
             }
-        }).mount('#app');
+        }).mount("#app")
+
+
 
     </script>
 
