@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>會員狀態管理</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-J8u5vms4IjwVYny+MqlZs5iOqVfd5X0m2h5dUqz0G6gWyK0cZhyO1sOWHdYBMLQ9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ksm0fny9A9AgbUw2+Z2vZAZ+eZ7JYoU5pJHSMbmNkIpcXebwzY9OfnKjY2nYfQj5"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app" class="wrap container">
+
+        <div class="content">
+
+            <p>歡迎回來 {{  }} ！</p>
+            <a href="#" class="logout">登出</a>
+
+        </div>
+        
+
+    </div>
+
+    <script>
+
+        const { createApp, ref, onMounted } = Vue;
+
+        createApp({
+            setup() {
+
+                const items = ref([]);
+                console.log(items);
+
+                const isEdit = ref(false);
+
+                onMounted(() => {
+                    axios.get("./data.json")
+                        .then(res => {
+                            console.log(res.data);
+                            items.value = res.data;
+                        }).catch(err => {
+                            console.log("no data");
+                        });
+                });
+
+                const increase = (item) => {
+                    item.stock++;
+                };
+
+                const decrease = (item) => {
+                    if (item.stock > 0) item.stock--;
+                };
+
+                return { items, increase, decrease, isEdit };
+            }
+        }).mount('#app');
+
+    </script>
+
+</body>
+
+</html>
