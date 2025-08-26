@@ -24,7 +24,7 @@
 | 編號 | 專案名稱 | 專案簡介 | 技術使用 | Demo 連結 | GitHub 原始碼 |
 |------|-----------|--------------------------------------------------|-------------------------------------------|------------------|-------------------|
 | 1 | 餅乾庫存管理系統 | 一個以 Vue 3 建構的前端庫存管理介面，動態載入餅乾商品資料，並可即時調整庫存與商品資訊，支援編輯與確認模式切換 | Vue 3 (Composition API)、Axios、Bootstrap 5、JSON | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project3-1/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project3-1) |
-| 2 | 會員狀態管理 |  |  | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project3-2/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project3-2) |
+| 2 | 會員狀態管理 | 以 Vue 3 建構的會員登入/註冊介面，支援 email 驗證、密碼顯示切換與登入狀態維護，並可透過 cookie 管理會員身份，前端動態顯示會員資訊與登出功能 | Vue 3 (Composition API)、Axios、Bootstrap 5、SweetAlert2、Cookie | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project3-2/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project3-2) |
 | 3 | 3C 商城 | 這是一個以 Vue 3 建構的 3C 商品購物車介面，支援加入商品、調整數量與即時總金額計算。 | Vue 3 (Composition API)、Axios、Bootstrap 5、JSON | [🔗 作品](https://williamhsieh615.github.io/Front-end/Project3-3/index.html) | [🔗 原始碼](https://github.com/WilliamHsieh615/Front-end/tree/main/Project3-3) |
 
 
