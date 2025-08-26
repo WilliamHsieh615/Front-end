@@ -159,7 +159,6 @@
             cursor: pointer;
             padding: 6px;
             border-radius: 8px;
-            /* transition: background 3s, color 3s; */
         }
 
         .eye-icon:hover {
@@ -288,21 +287,32 @@
 
                 const api = 'https://todolist-api.hexschool.io/';
 
+                // 登入
                 const loginField = reactive({
                     email: '',
                     password: ''
                 })
 
-                const registerField = reactive({
-                    email: '',
-                    password: '',
-                    nickname: ''
-                })
+                const setCookie = (name, value, days = 1) => {
+                    const d = new Date();
+                    d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
+                    document.cookie = `${name}=${value};path=/;expires=${d.toUTCString()}`;
+                }
+
+                const getCookie = (name) => {
+                    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+                    return match ? match[2] : null;
+                }
 
                 const login = async () => {
                     try {
                         const result = await axios.post(`${api}users/sign_in`, loginField, { headers: { 'Content-Type': 'application/json' } });
                         console.log("登入成功", result);
+                        console.log(result.data.token);
+
+                        setCookie("token", result.data.token, 1);
+                        setCookie("nickname", result.data.nickname, 1);
+
                         Swal.fire({
                             icon: "success",
                             title: result.data.nickname + " 登入成功",
@@ -336,6 +346,13 @@
                         });
                     }
                 }
+
+                // 註冊
+                const registerField = reactive({
+                    email: '',
+                    password: '',
+                    nickname: ''
+                })
 
                 const register = async () => {
                     try {
