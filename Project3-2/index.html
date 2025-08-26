@@ -7,14 +7,17 @@
 
     <title>會員狀態管理</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
-
         * {
             box-sizing: border-box;
         }
@@ -63,11 +66,11 @@
             transition: color .2s, background .2s;
         }
 
-        .link .login-link{
+        .link .login-link {
             border-radius: 8px 0 0;
         }
 
-        .link .register-link{
+        .link .register-link {
             border-radius: 0 8px 0 0;
         }
 
@@ -88,7 +91,7 @@
             color: #111827;
         }
 
-        form{
+        form {
             padding: 32px 28px;
         }
 
@@ -156,7 +159,7 @@
             cursor: pointer;
             padding: 6px;
             border-radius: 8px;
-            transition: background .15s, color .15s;
+            /* transition: background 3s, color 3s; */
         }
 
         .eye-icon:hover {
@@ -199,7 +202,6 @@
             transform: translateY(1px);
             box-shadow: 0 6px 16px rgba(79, 70, 229, .28);
         }
-
     </style>
 
 </head>
@@ -214,47 +216,54 @@
             <a href="#" class="register-link" :class="{'active': link === 'register'}" @click="link = 'register'">註冊</a>
         </div>
 
-        <form action="/page.html" method="post" class="login-form" v-if="link === 'login'">
+        <form @submit.prevent="login" class="login-form" v-if="link === 'login'">
             <h2>登入</h2>
             <div class="email">
                 <label for="email">Email</label>
                 <div class="email-input">
-                    <input type="email" name="email" id="email" placeholder="請輸入電子信箱" required>
+                    <input type="email" name="email" id="email" placeholder="請輸入電子信箱" v-model="loginField.email"
+                        required>
                     <i class="bi bi-envelope-fill email-icon"></i>
                 </div>
             </div>
             <div class="password">
                 <label for="password">Password</label>
                 <div class="password-input">
-                    <input :type="showPassword ? 'text' : 'password'" name="password" id="password" placeholder="請輸入密碼" required>
+                    <input :type="showPassword ? 'text' : 'password'" name="password" id="password" placeholder="請輸入密碼"
+                        v-model="loginField.password" required>
                     <i class="bi bi-lock-fill password-icon"></i>
-                    <a href="#" class="eye-icon" @click="eyeToggle"><i :class="showPassword ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></i></a>
+                    <a href="#" class="eye-icon" @click.prevent="togglePassword"><i
+                            :class="showPassword ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></i></a>
                 </div>
             </div>
             <button type="submit">登入</button>
         </form>
 
-        <form action="" method="post" class="register-form" v-else-if="link === 'register'">
+        <form @submit.prevent="register" class="register-form" v-else-if="link === 'register'">
             <h2>註冊</h2>
             <div class="email">
                 <label for="email">Email</label>
                 <div class="email-input">
-                    <input type="email" name="email" id="email" placeholder="請輸入電子信箱" required>
+                    <input type="email" name="email" id="email" placeholder="請輸入電子信箱" v-model="registerField.email"
+                        required>
                     <i class="bi bi-envelope-fill email-icon"></i>
                 </div>
             </div>
             <div class="password">
                 <label for="password">Password</label>
                 <div class="password-input">
-                    <input :type="showPassword ? 'text' : 'password'" name="password" id="password" placeholder="請輸入密碼" required>
+                    <input :type="showPassword ? 'text' : 'password'" name="password" id="password" placeholder="請輸入密碼"
+                        v-model="registerField.password" required>
                     <i class="bi bi-lock-fill password-icon"></i>
-                    <a href="#" class="eye-icon" @click.prevent="eyeToggle"><i :class="showPassword ? 'bi bi-eye-fill' : 'bi-eye-slash-fill'"></i></a>
+                    <a href="#" class="eye-icon" @click.prevent="togglePassword"><i
+                            :class="showPassword ? 'bi bi-eye-fill' : 'bi-eye-slash-fill'"></i></a>
                 </div>
             </div>
             <div class="nickname">
                 <label for="nickname">Nickname</label>
                 <div class="nickname-input">
-                    <input type="text" name="nickname" id="nickname" placeholder="請輸入暱稱" required>
+                    <input type="text" name="nickname" id="nickname" placeholder="請輸入暱稱"
+                        v-model="registerField.nickname" required>
                     <i class="bi bi-person-fill accout-icon"></i>
                 </div>
             </div>
@@ -265,22 +274,101 @@
 
     <script>
 
-        const { createApp, ref } = Vue;
+        const { createApp, ref, reactive } = Vue;
 
         createApp({
-            setup(){
+            setup() {
 
                 const link = ref('login');
 
                 const showPassword = ref(false);
-                const eyeToggle = (() => {
+                const togglePassword = () => {
                     showPassword.value = !showPassword.value;
+                }
+
+                const api = 'https://todolist-api.hexschool.io/';
+
+                const loginField = reactive({
+                    email: '',
+                    password: ''
                 })
 
-                return {link, showPassword, eyeToggle};
+                const registerField = reactive({
+                    email: '',
+                    password: '',
+                    nickname: ''
+                })
+
+                const login = async () => {
+                    try {
+                        const result = await axios.post(`${api}users/sign_in`, loginField, { headers: { 'Content-Type': 'application/json' } });
+                        console.log("登入成功", result);
+                        Swal.fire({
+                            icon: "success",
+                            title: result.data.nickname + " 登入成功",
+                            text: "歡迎回來！！",
+                            confirmButtonColor: "#4f46e5",
+                            timer: 2000,
+                            timerProgressBar: true,
+                        }).then(() => {
+                            window.location.href = '/page.html';
+                        });
+                    } catch (error) {
+                        console.error("登入失敗", error);
+
+                        let message;
+                        if (error.response && (error.response.status === 400 ||
+                            error.response.status === 401 ||
+                            error.response.status === 404)) {
+                            message = error.response.data.message;
+                        } else {
+                            message = "請稍後再試！！";
+                        }
+
+                        Swal.fire({
+                            icon: "warning",
+                            title: "登入失敗",
+                            text: message,
+                            confirmButtonColor: "#d33",
+                        }).then(() => {
+                            loginField.email = '';
+                            loginField.password = '';
+                        });
+                    }
+                }
+
+                const register = async () => {
+                    try {
+                        const result = await axios.post(`${api}users/sign_up`, registerField, { headers: { 'Content-Type': 'application/json' } });
+                        console.log("註冊成功", result);
+                        Swal.fire({
+                            icon: "success",
+                            title: `${registerField.nickname} 註冊成功`,
+                            text: "將傳送至登入頁",
+                            confirmButtonColor: "#4f46e5",
+                            timer: 2000,
+                            timerProgressBar: true,
+                        }).then(() => {
+                            window.location.href = '/index.html';
+                        });
+                    } catch (error) {
+                        console.error("註冊失敗", error);
+                        Swal.fire({
+                            icon: "warning",
+                            title: "註冊失敗",
+                            text: error.response.status === 400 ? error.response.data.message : "請稍後再試！！",
+                            confirmButtonColor: "#d33",
+                        }).then(() => {
+                            registerField.email = '';
+                            registerField.password = '';
+                            registerField.nickname = '';
+                        });
+                    }
+                }
+
+                return { link, showPassword, togglePassword, loginField, registerField, register, login };
             }
         }).mount("#app")
-
 
 
     </script>
