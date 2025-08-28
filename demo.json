@@ -1,0 +1,196 @@
+[
+    {
+        "category": "切版 作品",
+        "projects": [
+            {
+                "name": "六角學院形象官網",
+                "description": "設計一頁式企業形象官網，展示品牌風格與服務內容",
+                "technology": [
+                    "HTML",
+                    "CSS"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project1-1/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project1-1"
+            },
+            {
+                "name": "名片設計練習",
+                "description": "以多邊形設計呈現個人名片版型，訓練排版與美感",
+                "technology": [
+                    "HTML",
+                    "CSS"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project1-2/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project1-2"
+            },
+            {
+                "name": "梅介其的履歷頁面",
+                "description": "製作個人履歷網站，包含技能條列與自我介紹區塊",
+                "technology": [
+                    "HTML",
+                    "CSS"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project1-3/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project1-3"
+            },
+            {
+                "name": "畫廊展示頁",
+                "description": "實作圖片畫廊與燈箱效果，提升圖片展示互動性",
+                "technology": [
+                    "HTML",
+                    "CSS"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project1-4/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project1-4"
+            },
+            {
+                "name": "時空之門｜視差動畫展示頁",
+                "description": "使用 SCSS 製作視差滾動與動畫特效，打造創意互動頁面",
+                "technology": [
+                    "HTML",
+                    "CSS",
+                    "SCSS"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project1-5/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project1-5"
+            },
+            {
+                "name": "送你一道彩虹｜滑鼠互動畫面",
+                "description": "以彩虹為主題設計動畫與滑鼠互動視覺效果",
+                "technology": [
+                    "HTML",
+                    "CSS",
+                    "SCSS"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project1-6/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project1-6"
+            }
+        ]
+    },
+    {
+        "category": "JavaScript 作品",
+        "projects": [
+            {
+                "name": "六角互動官網",
+                "description": "導入 jQuery 增強頁面互動性，打造品牌形象網站",
+                "technology": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "jQuery"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project2-1/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project2-1"
+            },
+            {
+                "name": "六角學習平台首頁",
+                "description": "運用 Bootstrap 與 jQuery 實現 RWD 與視差滾動",
+                "technology": [
+                    "HTML",
+                    "CSS",
+                    "SCSS",
+                    "Bootstrap",
+                    "JavaScript",
+                    "jQuery"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project2-2/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project2-2"
+            },
+            {
+                "name": "念佛計數器｜送給阿嬤的互動工具",
+                "description": "JavaScript 實作計數功能，設計互動介面送給阿嬤使用",
+                "technology": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project2-3/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project2-3"
+            },
+            {
+                "name": "待辦事項清單",
+                "description": "開發簡潔的待辦清單應用，練習資料處理與 DOM 操作",
+                "technology": [
+                    "HTML",
+                    "CSS",
+                    "SCSS",
+                    "JavaScript"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project2-4/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project2-4"
+            },
+            {
+                "name": "霍格華茲分類帽｜哈利波特魔法互動體驗",
+                "description": "使用 JavaScript 與 Promise 製作互動小遊戲，模擬分類帽根據使用者姓名隨機分派學院，搭配 SweetAlert2 彈跳提示提升使用體驗",
+                "technology": [
+                    "HTML",
+                    "CSS",
+                    "SCSS",
+                    "JavaScript",
+                    "SweetAlert2"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project2-5/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project2-5"
+            },
+            {
+                "name": "太陽系天體系統｜宇宙中的卡片探索旅程",
+                "description": "以原型繼承並使用 ES6 class 語法建立天體類別架構，載入 JSON 資料動態渲染卡片，搭配 Swiper 輪播與 Parallax 背景呈現互動式宇宙探索體驗",
+                "technology": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Axios",
+                    "Swiper.js",
+                    "Parallax.js",
+                    "JSON"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project2-6/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project2-6"
+            }
+        ]
+    },
+    {
+        "category": "Vue.js 作品",
+        "projects": [
+            {
+                "name": "餅乾庫存管理系統",
+                "description": "一個以 Vue 3 建構的前端庫存管理介面，動態載入餅乾商品資料，並可即時調整庫存與商品資訊，支援編輯與確認模式切換",
+                "technology": [
+                    "Vue 3",
+                    "Composition API",
+                    "Axios",
+                    "Bootstrap 5",
+                    "JSON"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project3-1/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project3-1"
+            },
+            {
+                "name": "會員狀態管理",
+                "description": "以 Vue 3 建構的會員登入/註冊介面，支援 email 驗證、密碼顯示切換與登入狀態維護，並可透過 cookie 管理會員身份，前端動態顯示會員資訊與登出功能",
+                "technology": [
+                    "Vue 3",
+                    "Composition API",
+                    "Axios",
+                    "Bootstrap 5",
+                    "SweetAlert2",
+                    "Cookie"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project3-2/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project3-2"
+            },
+            {
+                "name": "3C 商城",
+                "description": "這是一個以 Vue 3 建構的 3C 商品購物車介面，支援加入商品、調整數量與即時總金額計算。",
+                "technology": [
+                    "Vue 3",
+                    "Composition API",
+                    "Axios",
+                    "Bootstrap 5",
+                    "JSON"
+                ],
+                "previewUrl": "https://williamhsieh615.github.io/frontend-portfolio/Project3-3/index.html",
+                "repoUrl": "https://github.com/WilliamHsieh615/frontend-portfolio/tree/main/Project3-3"
+            }
+        ]
+    }
+]
