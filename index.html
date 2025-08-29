@@ -47,6 +47,10 @@
             color: #1e3a8a;
         }
 
+        .container{
+            overflow-x: auto;
+        }
+
         table {
             min-width: 950px;
             border-collapse: collapse;
@@ -132,28 +136,30 @@
         <main>
             <section v-for="(classification, i) in demo" :key="i">
                 <h2>{{ classification.category }}</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="number">編號</th>
-                            <th class="name">專案名稱</th>
-                            <th class="description">專案簡介</th>
-                            <th class="technology">技術使用</th>
-                            <th class="previewUrl">Demo<br>連結</th>
-                            <th class="repoUrl">GitHub<br>原始碼</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="(project, j) in classification.projects" :key="j">
-                            <td class="number">{{ j+1 }}</td>
-                            <td class="name">{{ project.name }}</td>
-                            <td class="description">{{ project.description }}</td>
-                            <td class="technology">{{ project.technology.join('、') }}</td>
-                            <td class="previewUrl"><a :href="project.previewUrl" target="_blank">🔗 作品</a></td>
-                            <td class="repoUrl"><a :href="project.repoUrl" target="_blank">🔗 原始碼</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="number">編號</th>
+                                <th class="name">專案名稱</th>
+                                <th class="description">專案簡介</th>
+                                <th class="technology">技術使用</th>
+                                <th class="previewUrl">Demo<br>連結</th>
+                                <th class="repoUrl">GitHub<br>原始碼</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(project, j) in classification.projects" :key="j">
+                                <td class="number">{{ j+1 }}</td>
+                                <td class="name">{{ project.name }}</td>
+                                <td class="description">{{ project.description }}</td>
+                                <td class="technology">{{ project.technology.join('、') }}</td>
+                                <td class="previewUrl"><a :href="project.previewUrl" target="_blank">🔗 作品</a></td>
+                                <td class="repoUrl"><a :href="project.repoUrl" target="_blank">🔗 原始碼</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </main>
 
