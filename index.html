@@ -36,6 +36,7 @@
             max-width: 1100px;
             margin: 2rem auto;
             padding: 1rem;
+            overflow-x: auto;
         }
 
         h2 {
@@ -47,29 +48,55 @@
         }
 
         table {
-            width: 100%;
+            min-width: 800px;
             border-collapse: collapse;
-            margin-bottom: 2rem;
             background: #fff;
             border-radius: 12px;
-            overflow: hidden;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin: 0 auto;
+        }
+
+        tr:nth-child(even) {
+            background: #f9fafb;
         }
 
         th,
         td {
             padding: 12px 15px;
-            text-align: left;
         }
 
         th {
+            text-align: center;
             background: #f3f4f6;
             font-weight: bold;
             color: #374151;
         }
 
-        tr:nth-child(even) {
-            background: #f9fafb;
+        td {
+            text-align: left;
+        }
+
+        .number {
+            width: 50px;
+            text-align: center;
+        }
+
+        .name {
+            width: 100px;
+        }
+
+        .description {
+            width: 500px;
+        }
+
+        .technology {
+            width: 250px;
+        }
+
+        .previewUrl,
+        .repoUrl {
+            width: 100px;
+            text-align: center;
         }
 
         a {
@@ -108,22 +135,22 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>編號</th>
-                            <th>專案名稱</th>
-                            <th>專案簡介</th>
-                            <th>技術使用</th>
-                            <th>Demo<br>連結</th>
-                            <th>GitHub<br>原始碼</th>
+                            <th class="number">編號</th>
+                            <th class="name">專案名稱</th>
+                            <th class="description">專案簡介</th>
+                            <th class="technology">技術使用</th>
+                            <th class="previewUrl">Demo<br>連結</th>
+                            <th class="repoUrl">GitHub<br>原始碼</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr v-for="(project, j) in classification.projects" :key="j">
-                            <td>{{ j+1 }}</td>
-                            <td>{{ project.name }}</td>
-                            <td>{{ project.description }}</td>
-                            <td>{{ project.technology.join('、') }}</td>
-                            <td><a :href="project.previewUrl" target="_blank">🔗 作品</a></td>
-                            <td><a :href="project.repoUrl" target="_blank">🔗 原始碼</a></td>
+                            <td class="number">{{ j+1 }}</td>
+                            <td class="name">{{ project.name }}</td>
+                            <td class="description">{{ project.description }}</td>
+                            <td class="technology">{{ project.technology.join('、') }}</td>
+                            <td class="previewUrl"><a :href="project.previewUrl" target="_blank">🔗 作品</a></td>
+                            <td class="repoUrl"><a :href="project.repoUrl" target="_blank">🔗 原始碼</a></td>
                         </tr>
                     </tbody>
                 </table>

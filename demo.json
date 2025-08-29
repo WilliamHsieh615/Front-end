@@ -155,8 +155,7 @@
                 "name": "餅乾庫存管理系統",
                 "description": "一個以 Vue 3 建構的前端庫存管理介面，動態載入餅乾商品資料，並可即時調整庫存與商品資訊，支援編輯與確認模式切換",
                 "technology": [
-                    "Vue 3",
-                    "Composition API",
+                    "Vue 3 (Composition API)",
                     "Axios",
                     "Bootstrap 5",
                     "JSON"
@@ -168,8 +167,7 @@
                 "name": "會員狀態管理",
                 "description": "以 Vue 3 建構的會員登入/註冊介面，支援 email 驗證、密碼顯示切換與登入狀態維護，並可透過 cookie 管理會員身份，前端動態顯示會員資訊與登出功能",
                 "technology": [
-                    "Vue 3",
-                    "Composition API",
+                    "Vue 3 (Composition API)",
                     "Axios",
                     "Bootstrap 5",
                     "SweetAlert2",
@@ -182,8 +180,7 @@
                 "name": "3C 商城",
                 "description": "這是一個以 Vue 3 建構的 3C 商品購物車介面，支援加入商品、調整數量與即時總金額計算。",
                 "technology": [
-                    "Vue 3",
-                    "Composition API",
+                    "Vue 3 (Composition API)",
                     "Axios",
                     "Bootstrap 5",
                     "JSON"
