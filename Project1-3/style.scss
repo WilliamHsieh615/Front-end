@@ -1,0 +1,241 @@
+html,
+body {
+    background-color: #A7D8F2;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 40px 0;
+    color: #2E8B57;
+    background: linear-gradient(120deg, #2E8B57 0%, #A7D8F2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
+}
+
+/* ---------- index.html ---------- */
+.card-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+        position: relative;
+        z-index: 1;
+        max-width: 416px;
+        width: 65%;
+        height: 600px;
+        color: #fff;
+        background-size: cover;
+        background-position: center;
+        border-radius: 32px;
+        transition: all 0.5s;
+        padding: 32px;
+
+        &:hover {
+
+            width: 100%;
+
+            a {
+                height: 50px;
+                opacity: 1;
+            }
+        }
+
+        &:nth-child(1) {
+            background-image: url(https://github.com/0404kai/2025-layout-img/blob/main/week8/product1.jpg?raw=true);
+        }
+
+        &:nth-child(2) {
+            background-image: url(https://github.com/0404kai/2025-layout-img/blob/main/week8/product2.jpg?raw=true);
+        }
+
+        &:nth-child(3) {
+            background-image: url(https://github.com/0404kai/2025-layout-img/blob/main/week8/product3.jpg?raw=true);
+        }
+
+        &:nth-child(4) {
+            background-image: url(https://github.com/0404kai/2025-layout-img/blob/main/week8/product4.jpg?raw=true);
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
+            background-color: #fff;
+            border-radius: 100px;
+            transition: all 0.5s;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding: 30px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .card-list {
+        flex-wrap: wrap;
+    }
+}
+
+/* ---------- page.html ---------- */
+
+form {
+    background-color: #FFF8E7;
+    padding: 40px 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 28px;
+        color: #FF6F61;
+    }
+
+    div {
+        margin-bottom: 20px;
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="time"],
+        select {
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+            background-color: #ffffff;
+            font-size: 14px;
+            color: #333;
+
+            &:focus {
+                outline: none;
+                border-color: #FF6F61;
+                box-shadow: 0 0 6px rgba(255, 111, 97, 0.5);
+            }
+        }
+
+        input[type="checkbox"] {
+            accent-color: #FFD166;
+            margin-right: 6px;
+        }
+
+        .question label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            input[type="number"] {
+                width: 60px;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .monthInput {
+        p {
+            font-size: 12px;
+            margin-bottom: 8px;
+            color: #666;
+        }
+
+        label {
+            display: inline-flex;
+            align-items: center;
+            width: 30%;
+            margin-bottom: 6px;
+
+            input[type="checkbox"] {
+                margin-right: 6px;
+            }
+        }
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        background: #FFD166;
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            filter: brightness(1.1);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    form {
+        padding: 30px;
+
+        h1 {
+            font-size: 24px;
+        }
+
+        button[type="submit"] {
+            font-size: 14px;
+        }
+    }
+
+    .monthInput label {
+        width: 45%;
+    }
+}

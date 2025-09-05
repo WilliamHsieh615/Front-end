@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>七逃旅遊網</title>
+
+    <link rel="icon" href="./logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <form action="index.html" method="get">
+
+            <h1>旅行說明會預約表單</h1>
+
+            <div class="tripInput">
+                <label for="trip">行程</label>
+                <select name="trip" id="trip" required>
+                    <option value="" disabled selected>-- 請選擇有興趣的行程 --</option>
+                    <option value="bali">峇里島渡假漫遊 (4月－10月，乾季最適合)</option>
+                    <option value="JP">日本深度賞櫻計畫 (3月下旬－4月上旬)</option>
+                    <option value="NZ">紐西蘭雪山探險 (6月－9月，冬季滑雪旺季)</option>
+                    <option value="MAR">摩洛哥迷幻之旅 (3月－5月 或 9月－11月，氣候舒適)</option>
+                </select>
+            </div>
+
+            <div class="monthInput">
+                <label for="month">月份</label>
+                <p>請選擇想安排旅遊的月份(可複選)</p>
+                <label for="january"><input type="checkbox" id="january" name="january"> 一月</label>
+                <label for="february"><input type="checkbox" id="february" name="february"> 二月</label>
+                <label for="march"><input type="checkbox" id="march" name="march"> 三月</label>
+                <label for="april"><input type="checkbox" id="april" name="april"> 四月</label>
+                <label for="may"><input type="checkbox" id="may" name="may"> 五月</label>
+                <label for="june"><input type="checkbox" id="june" name="june"> 六月</label>
+                <label for="july"><input type="checkbox" id="july" name="july"> 七月</label>
+                <label for="august"><input type="checkbox" id="august" name="august"> 八月</label>
+                <label for="september"><input type="checkbox" id="september" name="september"> 九月</label>
+                <label for="october"><input type="checkbox" id="october" name="october"> 十月</label>
+                <label for="november"><input type="checkbox" id="november" name="november"> 十一月</label>
+                <label for="december"><input type="checkbox" id="december" name="december"> 十二月</label>
+            </div>
+
+            <div class="nameInput">
+                <label for="name">姓名</label>
+                <input type="text" name="name" id="name" placeholder="請輸入姓名" required>
+            </div>
+
+            <div class="countInput">
+                <label for="count">人數</label>
+                <input type="number" name="count" id="count" placeholder="請輸入欲參加旅遊團人數" min="0" required>
+            </div>
+
+            <div class="emailInput">
+                <label for="email">電子信箱</label>
+                <input type="email" name="email" id="email" placeholder="請輸入電子信箱" required>
+            </div>
+
+            <div class="phoneInput">
+                <label for="phone">聯絡電話</label>
+                <input type="tel" name="phone" id="phone" pattern="[0-9]{8,11}" placeholder="請輸入聯絡電話" required>
+            </div>
+
+            <div class="contactTimeInput">
+                <label for="contactTime">聯絡時間</label>
+                <input type="time" name="contactTime" id="contactTime" placeholder="請輸入方便聯絡時間" required>
+            </div>
+
+            <div class="question">
+                <label for="baby"><input type="checkbox" id="baby" name="baby"> 參加旅行團中是否包含五歲以下幼童，人數：<input type="number" name="babyCount" id="babyCount" min="0"></label>
+                <label for="older"><input type="checkbox" id="older" name="older"> 參加旅行團中是否包含七十歲以上年長者，人數：<input type="number" name="olderCount" id="olderCount" min="0"></label>
+                <label for="vegan"><input type="checkbox" id="vegan" name="vegan"> 參加旅行團中是否包含素食者，人數：<input type="number" name="veganCount" id="veganCount" min="0"></label>
+                <label for="disabled"><input type="checkbox" id="disabled" name="disabled"> 參加旅行團中是否包含行動不便者，人數：<input type="number" name="disabledCount" id="disabledCount" min="0"></label>
+            </div>
+
+            <button type="submit">送出</button>
+
+        </form>
+
+    </div>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function(e){
+            e.preventDefault();
+            alert("表單送出成功，專員將與您聯繫，煩請留意電話！");
+            location.href = "./index.html";
+        });
+    </script>
+
+</body>
+
+</html>
