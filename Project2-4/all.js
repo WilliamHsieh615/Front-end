@@ -3,30 +3,41 @@ const save = document.querySelector(".save");
 const list = document.querySelector(".list");
 const clear = document.querySelector(".clear");
 
-let data = [];
+let data = JSON.parse(localStorage.getItem("todoList")) || [];
+renderData();
 
 save.addEventListener("click", function (e) {
     if (text.value == '') {
         alert("請輸入內容！");
         return;
     }
-    let item = {};
-    item.content = text.value;
+    let item = {
+        content: text.value,
+        completed: false
+    };
     data.push(item);
     renderData();
     text.value = "";
-})
+});
 
 list.addEventListener("click", function (e) {
     let number = e.target.getAttribute("data-index");
-    if (e.target.getAttribute("class") == "delete") {
+
+    // 刪除待辦
+    if (e.target.classList.contains("delete")) {
         let result = confirm("您確定要刪除嗎？");
         if (result) {
             data.splice(number, 1);
             renderData();
-        } else return;
+        }
     }
-})
+
+    // 勾選完成
+    if (e.target.classList.contains("check")) {
+        data[number].completed = e.target.checked;
+        renderData();
+    }
+});
 
 clear.addEventListener("click", function (e) {
     if (data.length !== 0) {
@@ -34,32 +45,27 @@ clear.addEventListener("click", function (e) {
         if (result) {
             data = [];
             renderData();
-        } else {
-            return;
         }
     } else {
         alert("您尚未輸入內容！");
-        return;
     }
-})
+});
 
 function renderData() {
     let str = '';
     data.forEach(function (item, i) {
-        str += `<li><input type="checkbox" data-index=${i} class="check" id="check"><label for="check">${item.content} <label><input class="delete" data-index=${i} type="button" for="complete" value="刪除待辦"></li>`;
+        let checked = item.completed ? "checked" : "";
+        let style = item.completed ? "text-decoration: line-through;" : "text-decoration: none;";
+
+        str += `<li>
+                    <input type="checkbox" data-index="${i}" class="check" id="check${i}" ${checked}>
+                    <label for="check${i}" style="${style}">${item.content}</label>
+                    <input class="delete" data-index="${i}" type="button" value="刪除待辦">
+                </li>`;
     });
-    const list = document.querySelector(".list");
     list.innerHTML = str;
 
-    const checks = document.querySelectorAll(".check");
-    checks.forEach(function (value) {
-        value.addEventListener('click', function (e) {
-            const content = e.target.closest("li").querySelector("label");
-            if (e.target.checked) {
-                content.setAttribute("style", "text-decoration: line-through;");
-            } else if (e.target.checked == false) {
-                content.setAttribute("style", "text-decoration: none;");
-            }
-        });
-    });
+    // 存到 localStorage
+    localStorage.setItem("todoList", JSON.stringify(data));
 }
+
