@@ -5,6 +5,7 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .wrap {
@@ -21,6 +22,7 @@ a {
 }
 
 .title {
+  width: 2000px;
   font-family: "Poppins", sans-serif;
   font-size: 4rem;
   font-weight: 800;
@@ -28,14 +30,35 @@ a {
   margin: 40px 0;
   color: #2E8B57;
   background: linear-gradient(120deg, #2E8B57 0%, #A7D8F2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, text-shadow 0.3s ease;
+  animation-name: marquee;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
 }
 .title:hover {
   transform: scale(1.05);
   text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+}
+.title img {
+  width: 4rem;
+  height: auto;
+  vertical-align: middle;
 }
 @media (max-width: 768px) {
   .title {
