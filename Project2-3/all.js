@@ -9,7 +9,7 @@ el_btn_plus.addEventListener("click", function (e) {
     el_box.textContent = count;
 })
 el_btn_minus.addEventListener("click", function (e) {
-    count--;
+    count>0 ? count-- : count = 0;
     el_box.textContent = count;
 })
 el_btn_clear.addEventListener("click", function (e) {
