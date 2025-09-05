@@ -179,6 +179,8 @@ form div select:focus {
   box-shadow: 0 0 6px rgba(255, 111, 97, 0.5);
 }
 form div input[type=checkbox] {
+  width: 16px;
+  height: 16px;
   accent-color: #FFD166;
   margin-right: 6px;
 }
